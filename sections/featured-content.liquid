@@ -1,0 +1,160 @@
+<div class="rich-text">
+  <hr>
+  {% if section.settings.section_title != blank %}
+  <div class="section-header rich-text__heading rich-text__heading--{{ section.settings.text_size }}">
+    <p class="h1">{{ section.settings.section_title | escape }}</p>
+  </div>
+  {% endif %}
+  {% if section.settings.text != blank %}
+  <div class="rte rich-text__text--{{ section.settings.text_size }}">
+    {{ section.settings.text }}
+  </div>
+  {% endif %}
+</div>
+
+
+
+{% schema %}
+{
+"name": {
+"de": "Rich Text",
+"he": "Rich text",
+"en": "טקסט",
+"es": "Texto enriquecido",
+"fr": "Texte enrichi",
+"it": "Rich text",
+"ja": "リッチテキスト",
+"pt-BR": "Rich text"
+},
+"settings": [
+{
+"type": "text",
+"id": "section_title",
+"label": {
+"de": "Titel",
+"he": "Heading",
+"en": "כותרת",
+"es": "Título",
+"fr": "Titre",
+"it": "Heading",
+"ja": "見出し",
+"pt-BR": "Título"
+},
+"default": {
+"de": "Über Ihre Marke sprechen",
+"he": "Talk about your brand",
+"en": "מידע אודות המותג שלך",
+"es": "Habla de tu marca",
+"fr": "Parler de votre marque",
+"it": "Parla del tuo brand",
+"ja": "あなたのブランドについて語る",
+"pt-BR": "Fale sobre a sua marca"
+}
+},
+{
+"type": "richtext",
+"id": "text",
+"label": {
+"de": "Text",
+"he": "Text",
+"en": "טקסט", 
+"es": "Texto",
+"fr": "Texte",
+"it": "Testo",
+"ja": "テキスト",
+"pt-BR": "Texto"
+},
+"default": {
+"de": "<p>Nutzen Sie diesen Text, um Infos über Ihre Marke mitzuteilen. Beschreiben Sie ein Produkt, kündigen Sie etwas an oder heißen Sie Kunden willkommen.</p>",
+"he": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+"en": "<p>ניתן להשתמש בחלק זה על מנת לשתף מידע נוסף אודות המותג שלך עם לקוחותיך. פירוט אודות מוצר בחנות או הכרזה חשובה.</p> ",
+"es": "<p>Usa este texto para compartir información sobre tu marca con tus clientes. Describe un producto, comparte anuncios o recibe clientes en tu tienda.</p>",
+"fr": "<p>Utilisez ce texte pour partager des informations sur votre marque. Décrivez un produit, partagez des annonces, ou souhaitez la bienvenue à vos clients.</p>",
+"it": "<p>Utilizza questo testo per condividere le informazioni sul tuo brand con i clienti. Descrivi un prodotto, condividi gli annunci o dai il benvenuto ai clienti nel tuo negozio.</p>",
+"ja": "<p>このテキストを使用して、あなたのブランドに関する情報をお客様と共有します。商品を説明したり、告知の共有をしたり、あるいはあなたのストアのお客様を歓迎します。</p>",
+"pt-BR": "<p>Use este texto para compartilhar informações sobre sua marca com seus clientes. Descreva um produto, compartilhe novidades ou receba os clientes em sua loja.</p>"
+}
+},
+{
+"type": "select",
+"id": "text_size",
+"label": {
+"de": "Größe",
+"he": "Size",
+"en": "גודל",
+"es": "Tamaño",
+"fr": "Taille",
+"it": "Misura",
+"ja": "サイズ",
+"pt-BR": "Tamanho"
+},
+"default": "medium",
+"options": [
+{
+"label": {
+"de": "Klein",
+"he": "Small",
+"en": "קטן",
+"es": "Pequeño",
+"fr": "Petite",
+"it": "Small",
+"ja": "小",
+"pt-BR": "Pequeno"
+},
+"value": "small"
+},
+{
+"label": {
+"de": "Mitte",
+"he": "Medium",
+"en": "בינוני",
+"es": "Mediano",
+"fr": "Moyenne",
+"it": "Medium",
+"ja": "中",
+"pt-BR": "Médio"
+},
+"value": "medium"
+},
+{
+"label": {
+"de": "Groß",
+"he": "Large",
+"en": "גדול",
+"es": "Grande",
+"fr": "Grande",
+"it": "Large",
+"ja": "大",
+"pt-BR": "Grande"
+},
+"value": "large"
+}
+]
+}
+],
+"presets": [
+{
+"name": {
+"de": "Rich Text",
+"he": "Rich text",
+"en": "טקסט",
+"es": "Texto enriquecido",
+"fr": "Texte enrichi",
+"it": "Rich text",
+"ja": "リッチテキスト",
+"pt-BR": "Rich text"
+},
+"category": {
+"de": "Text",
+"he": "Text",
+"en": "טקסט",
+"es": "Texto",
+"fr": "Texte",
+"it": "Testo",
+"ja": "テキスト",
+"pt-BR": "Texto"
+}
+}
+]
+}
+{% endschema %}

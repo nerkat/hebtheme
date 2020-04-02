@@ -1,0 +1,276 @@
+<style>
+  .text--img-bg-color{
+    background-color:{{ section.settings.text_bg_color }};
+  }
+  .heading_color{
+    color:{{ section.settings.heading_color }} !important;
+  }
+  .featured-row__subtext{
+    color:{{ section.settings.text_color }};
+  }
+</style>
+<div class="feature-row feature-row--{{ section.id }} text--img-bg-color">
+  {% capture image_layout %}
+  <div class="feature-row__item">
+    {% if section.settings.image != blank %}
+    {%- assign image = section.settings.image -%}
+    {%- assign max_width =  -%}
+    {%- assign max_height = 650 -%}
+
+    {%- include 'image-logic' with width: max_width, height: max_height -%}
+
+    {%- assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    <div class="lazyload__image-wrapper no-js" style="max-width: {{ max_width }}px">
+      <div style="padding-top:{{ 1 | divided_by: image.aspect_ratio | times: 100}}%;">
+        {%- assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+        <img
+             class="lazyload no-js"
+             data-src="{{ img_url }}"
+             data-widths="[125, 180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+             data-aspectratio="{{ image.aspect_ratio }}"
+             data-sizes="auto"
+             alt="{{ image.alt | escape }}"
+             {% comment %}style="max-height: {{ height }}px;">{% endcomment %}>
+      </div>
+    </div>
+
+    <noscript>
+      {{ image | img_url: '640x640' | img_tag: section.settings.image.alt }}
+    </noscript>
+    {% else %}
+    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+    {% endif %}
+  </div>
+  {% endcapture %}
+
+  <div class="feature-row">
+    {% if section.settings.layout == 'left' %}
+    {{ image_layout }}
+    {% endif %}
+
+    <div class="feature-row__item feature-row__text feature-row__text--{{ section.settings.layout }} text-right">
+      {% if section.settings.title != blank %}
+      <h2 class="heading_color">{{ section.settings.title | escape }}</h2>
+      {% endif %}
+      {% if section.settings.text != blank %}
+      <div class="rte featured-row__subtext">{{ section.settings.text }}</div>
+      {% endif %}
+      {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+      <a href="{{ section.settings.button_link }}" class="btn">
+        {{ section.settings.button_label | escape }}
+      </a>
+      {% endif %}
+    </div>
+
+    {% if section.settings.layout == 'right' %}
+    {{ image_layout }}
+    {% endif %}
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+"name": {
+"de": "Bild mit Text",
+"he": "קידום מכירות",
+"en": "תמונה עם טקסט",
+"es": "Imagen con texto",
+"fr": "Image avec texte",
+"it": "Immagine con testo",
+"ja": "テキスト付き画像",
+"pt-BR": "Imagem com texto"
+},
+"class": "index-section",
+"settings": [
+{
+"type": "image_picker",
+"id": "image",
+"label": {
+"de": "Foto",
+"he": "Image",
+"en": "תמונה",
+"es": "Imagen",
+"fr": "Image",
+"it": "Immagine",
+"ja": "画像",
+"pt-BR": "Imagem"
+},
+"info": {
+"de": "960 x 540px empfohlen",
+"he": "960 x 540px recommended",
+"en": "גודל מומלץ: 960x540px",
+"es": "960 x 540px recomendado",
+"fr": "960 x 540px recommandé",
+"it": "Dimensione consigliata: 960 x 540px",
+"ja": "960 x 540pxピクセルを推奨",
+"pt-BR": "960 x 540px recomendado"
+}
+},
+{
+"type": "select",
+
+"id": "layout",
+"label": {
+"de": "Fotoausrichtung",
+"he": "Image alignment",
+"en": "יישור תמונה",
+"es": "Alineación de imagen",
+"fr": "Alignement de l'image",
+"it": "Allineamento immagine",
+"ja": "画像アラインメント",
+"pt-BR": "Alinhamento da imagem"
+},
+"default": "left",
+"options": [
+{
+"value": "left",
+"label": {
+"de": "Links",
+"he": "Left",
+"en": "לשמאל",
+"es": "Izquierda",
+"fr": "Gauche",
+"it": "Sinistra",
+"ja": "左",
+"pt-BR": "Esquerda"
+}
+},
+{
+"value": "right",
+"label": {
+"de": "Rechts",
+"he": "Right",
+"en": "לימין",
+"es": "Derecha",
+"fr": "Droite",
+"it": "Destra",
+"ja": "右",
+"pt-BR": "Direita"
+}
+}
+]
+},
+{
+"type": "text",
+"id": "title",
+"label": {
+"de": "Titel",
+"he": "Heading",
+"en": "כותרת",
+"es": "Título",
+"fr": "Titre",
+"it": "Heading",
+"ja": "見出し",
+"pt-BR": "Título"
+},
+"default": {
+"de": "Bild mit Text",
+"he": "Image with text",
+"en": "תמונה עם טקסט",
+"es": "Imagen con texto",
+"fr": "Image avec texte",
+"it": "Immagine con testo",
+"ja": "テキスト付き画像",
+"pt-BR": "Imagem com texto"
+}
+},
+{
+"type": "richtext",
+"id": "text",
+"label": {
+"de": "Text",
+"he": "Text",
+"en": "טקסט",
+"es": "Texto",
+"fr": "Texte",
+"it": "Testo",
+"ja": "テキスト",
+"pt-BR": "Texto"
+},
+"default": {
+"de": "<p>Kombinieren Sie große Schrift mit einem Foto, um einen Fokus auf Ihr ausgewähltes Produkt, die Kategorie oder einen Blogpost zu legen. Dazu Details zur Verfügbarkeit, Stil oder ein Review.</p>",
+"he": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+"en": "<p>צרף טקסט גדול עם תמונה כדי לתת מיקוד למוצר שבחרת, לקולקציה או לפוסט בבלוג. הוסף פרטים על זמינות, סגנון או אפילו ספק ביקורת.</p> ",
+"es": "<p>Vincula un texto largo con una imagen para dar visibilidad a tu producto, colección o publicación de blog elegida. Agrega detalles sobre disponibilidad, estilo, o incluso ofrece una reseña.</p>",
+"fr": "<p>Ajoutez une image à un long texte pour mettre l'accent sur un produit de votre choix, une collection, ou un article de blog. Ajoutez des détails sur la disponibilité, le style, ou mettez un commentaire client en avant.</p>",
+"it": "<p>Associa un testo di grandi dimensioni a un'immagine per dare importanza al prodotto, alla collezione o all'articolo del blog di tua scelta. Aggiungi dettagli sulla disponibilità, sullo stile o fornisci una recensione.</p>",
+"ja": "<p>あなたが選んだ商品、コレクション、またはブログ投稿に注目を集めるため、大きなテキストと画像を組み合わせます。可用性、スタイル、またはレビュー提供についての詳細を追加します。</p>",
+"pt-BR": "<p>Emparelhe textos grandes com uma imagem para dar foco ao produto, coleção ou post do blog escolhido. Adicione detalhes sobre disponibilidade, estilo ou até mesmo um comentário.</p>"
+}
+},
+{
+"type": "color",
+"id": "text_bg_color",
+"label": "צבע רקע לטקסט",
+"default": "#ffffff"
+},
+{
+"type": "color",
+"id": "heading_color",
+"label": "צבע הכותרת",
+"default": "#333"
+},
+{
+"type": "color",
+"id": "text_color",
+"label": "צבע הטקסט",
+"default": "#333"
+},
+
+{
+"type": "text",
+"id": "button_label",
+"label": {
+"de": "Button-Etikett",
+"he": "Button label",
+"en": "טקסט ללחצן",
+"es": "Etiqueta de botón",
+"fr": "Texte du bouton",
+"it": "Etichetta pulsante",
+"ja": "ボタンラベル",
+"pt-BR": "Etiqueta do botão"
+}
+},
+{
+"type": "url",
+"id": "button_link",
+"label": {
+"de": "Button-Etikett",
+"he": "Button link",
+"en": "קישור",
+"es": "Enlace de botón",
+"fr": "Lien du bouton",
+"it": "Link pulsante",
+"ja": "ボタンリンク",
+"pt-BR": "Link do botão"
+}
+}
+],
+"presets": [
+{
+"name": {
+"de": "Bild mit Text",
+"he": "Image with text",
+"en": "תמונה עם טקסט",
+"es": "Imagen con texto",
+"fr": "Image avec texte",
+"it": "Immagine con testo",
+"ja": "テキスト付き画像",
+"pt-BR": "Imagem com texto"
+},
+"category": {
+"de": "Foto",
+"he": "Image",
+"en": "תמונה",
+"es": "Imagen",
+"fr": "Image",
+"it": "Immagine",
+"ja": "画像",
+"pt-BR": "Imagem"
+}
+}
+]
+}
+{% endschema %}

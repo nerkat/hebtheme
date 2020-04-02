@@ -1,0 +1,16 @@
+<div class="full-width-container wishlist-container">
+  <!-- Hero Banner -->
+  <div class="grid-item large--two-thirds push--large--one-sixth">
+
+    <h1>{{ page.title }}</h1>
+  </div>
+  <!-- Product Tile Grid -->
+  <div class="grid-item large--two-thirds push--large--one-sixth">
+      <div class="wishlist-grid flex grid">
+        {% for product in collections.all.products %}
+          {% include 'product-tile' %}
+        {% endfor %}
+
+      </div>
+  </div>
+</div> 

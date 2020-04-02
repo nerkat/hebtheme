@@ -1,0 +1,48 @@
+    {% case media.media_type %}
+      {% when 'image' %}
+      {%- capture img_wrapper_id -%}productPhotoWrapper-{{ section.id }}-{{ media.id }}{%- endcapture -%}
+              {%- assign max_width = 700 -%}
+              {%- assign max_height = 1024 -%}
+
+              {%- include 'image-logic' with width: max_width, height: max_height -%}
+
+              {%- assign img_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+              <div id="{{ img_wrapper_id }}" class="lazyload__image-wrapper{% unless media.src == featured_image.src %} hide{% endunless %}" data-image-id="{{ media.id }}" style="max-width: {{ max_width }}px">
+                <div class="no-js product__image-wrapper" style="padding-top:{{ 1 | divided_by: media.aspect_ratio | times: 100}}%;">
+                  <img id="{{ img_id }}"
+                       {% if forloop.first == true %}
+                       src="{{ featured_image | img_url: '300x300' }}"
+                       {% endif %}
+                       class="lazyload no-js lazypreload"
+                       data-src="{{ img_url }}"
+                       data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                       data-aspectratio="{{ image.aspect_ratio }}"
+                       data-sizes="auto"
+                       alt="{{ media.alt | escape }}"
+                       {% if section.settings.product_image_zoom_enable %} data-zoom="{{ media | img_url: '1024x1024', scale: 2 }}"{% endif %}>
+                </div>
+              </div>
+              {% if forloop.first == true %}
+              <noscript>
+                <img src="{{ media | img_url: '580x' }}"
+                     srcset="{{ media | img_url: '580x' }} 1x, {{ image | img_url: '580x', scale: 2 }} 2x"
+                     alt="{{ media.alt }}" style="opacity:1;">
+              </noscript>
+              {% endif %}
+      {% when 'external_video' %}
+        <divid="{{ img_wrapper_id }}" class="lazyload__image-wrapper{% unless media.src == featured_image.src %} hide{% endunless %}" data-image-id="{{ media.id }}" style="max-width: {{ max_width }}px" style="padding-top: {{ 1 | divided_by: media.aspect_ratio | times: 100}}%;" data-media-id="{{ media.id }}">
+          {{ media | external_video_tag }}
+        </div>
+      {% when 'video' %}
+        <divid="{{ img_wrapper_id }}" class="lazyload__image-wrapper{% unless media.src == featured_image.src %} hide{% endunless %}" data-image-id="{{ media.id }}" style="max-width: {{ max_width }}px" data-media-id="{{ media.id }}">
+          {{ media | video_tag: controls: true }}
+        </div>
+      {% when 'model' %}
+        <divid="{{ img_wrapper_id }}" class="lazyload__image-wrapper{% unless media.src == featured_image.src %} hide{% endunless %}" data-image-id="{{ media.id }}" style="max-width: {{ max_width }}px" data-media-id="{{ media.id }}">
+          {{ media | model_viewer_tag }}
+        </div>
+      {% else %}
+        <divid="{{ img_wrapper_id }}" class="lazyload__image-wrapper{% unless media.src == featured_image.src %} hide{% endunless %}" data-image-id="{{ media.id }}" style="max-width: {{ max_width }}px" data-media-id="{{ media.id }}">
+          {{ media | media_tag }}
+        </div>
+    {% endcase %}

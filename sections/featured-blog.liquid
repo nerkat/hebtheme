@@ -1,0 +1,302 @@
+<div class="featured-blog featured-blog--{{ section.id }}" data-section-id="{{ section.id }}">
+
+  {%- assign blog = blogs[section.settings.blog] -%}
+  {% case section.settings.post_limit %}
+  {% when 3 %}
+  {%- assign grid_width = 'small--one-whole medium--one-third large--one-third' -%}
+  {%- assign width = '345' -%}
+  {%- assign height = '550' -%}
+  {% when 2 %}
+  {%- assign grid_width = 'small--one-whole medium--one-half large--one-half' -%}
+  {%- assign width = '540' -%}
+  {%- assign height = '600' -%}
+  {% when 1 %}
+  {% if section.settings.blog_show_image %}
+  {%- assign grid_width = 'small--one-whole medium--one-half large--one-half' -%}
+  {%- assign width = '345' -%}
+  {%- assign height = '550' -%}
+  {% else %}
+  {%- assign grid_width = 'text-center one-whole' -%}
+  {% endif %}
+  {% else %}
+  {%- assign grid_width = 'small--one-whole medium--one-third large--one-third' -%}
+  {% endcase %}
+
+
+  
+  {% if section.settings.title != blank %}
+  <div class="wrapper"> 
+    <div class="section-header ">
+      <h2 class="section-header--left h1 text-center">{{ section.settings.title | escape }}</h2>
+    </div>
+  </div>
+  {% endif %}
+
+  {% unless blog.articles_count == 0 %}
+  <div class="wrapper">  
+    <div class="grid-uniform home-blog-slider">
+      {% for article in blog.articles limit: section.settings.post_limit %}
+      <div class="grid-item">
+        <div class="featured-blog__post text-center">
+          <a href="{{ article.url }}">
+          {% if section.settings.blog_show_image %}
+          {% if article.image != blank %}
+          {%- assign image = article.image.src -%}
+
+          {%- assign max_width = width | plus: 0 -%}
+          {%- assign max_height = height | plus: 0 -%}
+
+          {%- include 'image-logic' with width: max_width, height: max_height -%}
+
+          {%- assign img_url =  article.image.src | img_url: 'original' -%}
+          <img src="{{ img_url }}" class="article__with-image">
+          {% else %}
+          <img src="{{ 'placeholder.jpg' | asset_url }}" alt="placeholder" class="article__without-image"/>
+          {% endif %}
+          {% endif %}
+
+          {% unless section.settings.post_limit == 1 and section.settings.blog_show_image %}
+          {% include 'featured-blog', article: article %}
+          {% endunless %}
+          </a>
+        </div>
+      </div>
+
+      {% if section.settings.post_limit == 1 and section.settings.blog_show_image %}
+      <div class="grid-item {{ grid_width }}">
+        <div class="featured-blog__post">
+          {% include 'featured-blog', article: article %}
+        </div>
+      </div>
+      {% endif %}
+
+      {% endfor %}
+    </div> </div>
+
+  {% else %}
+  {% include 'onboarding-featured-blog' %}
+  {% endunless %}
+
+  {% if blog == empty %}
+  {% include 'onboarding-featured-blog' %}
+  {% endif %}
+
+  {% if section.settings.show_view_all %}
+  <div class="section-header text-center">
+    <a href="{{ blog.url }}" class="btn">
+      {{ 'blogs.article.view_all' | t }}
+    </a>
+  </div>
+  {% endif %}
+
+</div>
+<style>
+  .featured-blog .section-header h2{
+    color:{{ section.settings.heading_color }}!important;
+  }
+  .featured-blog__post h2 a{
+    color:{{ section.settings.text_heading_color }}!important;
+  }
+  .featured-blog__post .rte--indented-images{
+    color:{{ section.settings.text_color }}!important;
+  }
+  .featured-blog{
+    background-color:{{ section.settings.background_color }}!important;
+  }
+</style>
+
+{% schema %}
+{
+"name": {
+"de": "Blogposts",
+"he": "Blog posts",
+"en": "רשומות מהבלוג",
+"es": "Artículos del blog",
+"fr": "Articles de blog",
+"it": "Articoli del blog",
+"ja": "ブログ記事",
+"pt-BR": "Posts do blog"
+},
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": {
+"de": "Titel",
+"he": "Heading",
+"en": "כותרת",
+"es": "Título",
+"fr": "Titre",
+"it": "Heading",
+"ja": "見出し",
+"pt-BR": "Título"
+},
+"default": {
+"de": "Blog",
+"he": "Blog",
+"en": "בלוג",
+"es": "Blog",
+"fr": "Blog",
+"it": "Blog",
+"ja": "ブログ",
+"pt-BR": "Blog"
+}
+},
+{
+"id": "blog",
+"type": "blog",
+"label": {
+"de": "Blog",
+"he": "Blog",
+"en": "בלוג",
+"es": "Blog",
+"fr": "Blog",
+"it": "Blog",
+"ja": "ブログ",
+"pt-BR": "Blog"
+}
+},
+{
+"type": "range",
+"id": "post_limit",
+"label": {
+"de": "Posts",
+"he": "Posts",
+"en": "פוסטים",
+"es": "Publicaciones",
+"fr": "Articles",
+"it": "Articoli",
+"ja": "投稿",
+"pt-BR": "Posts"
+},
+"min": 3,
+"max": 90,
+"step": 1,
+"default": 6
+},
+{
+"type": "checkbox",
+"id": "blog_show_date",
+"label": {
+"de": "Datum anzeigen",
+"he": "Show date",
+"en": "הצגת תאריך",
+"es": "Mostrar fecha",
+"fr": "Afficher la date",
+"it": "Mostra data",
+"ja": "日付を表示する",
+"pt-BR": "Exibir data"
+},
+"default": true
+},
+{
+"type": "checkbox",
+"id": "blog_show_author",
+"label": {
+"de": "Verfasser anzeigen",
+"he": "Show author",
+"en": "הצגת כותב/ת פוסט",
+"es": "Mostrar autor",
+"fr": "Afficher l'auteur",
+"it": "Mostra autore",
+"ja": "執筆者を表示する",
+"pt-BR": "Exibir autor(a)"
+},
+"default": false
+},
+{
+"type": "checkbox",
+"id": "blog_show_image",
+"label": {
+"de": "Titelbild anzeigen",
+"he": "Show cover image",
+"en": "הצגת תמונת רקע",
+"es": "Mostrar imagen de portada",
+"fr": "Afficher l'image de couverture",
+"it": "Mostra immagine di copertina",
+"ja": "表紙画像を表示する",
+"pt-BR": "Exibir imagem da capa"
+},
+"default": false
+},
+{
+"type": "checkbox",
+"id": "blog_show_excerpt",
+"label": {
+"de": "Auszug anzeigen",
+"he": "Show excerpt",
+"en": "הצגת ציטוט",
+"es": "Mostrar extracto",
+"fr": "Afficher l'extrait",
+"it": "Mostra riassunto",
+"ja": "抜粋を表示する",
+"pt-BR": "Exibir resumo"
+},
+"default": true
+},
+{
+"type": "checkbox",
+"id": "show_view_all",
+"label": {
+"de": "Schaltfläche \"Alle anzeigen\" anzeigen",
+"he": "Show 'View all' button",
+"en": "הצגת כפתור 'הצג הכל'",
+"es": "Mostrar el botón 'Ver todo'",
+"fr": "Afficher le bouton « Tout afficher »",
+"it": "Mostra il pulsante \"Visualizza tutto\"",
+"ja": "「すべて表示」ボタンを表示する",
+"pt-BR": "Exibir botão 'Ver tudo'"
+},
+"default": false
+},
+{
+"type": "color",
+"id": "background_color",
+"label": "צבע רקע",
+"default": "#ffffff"
+},
+{
+"type": "color",
+"id": "heading_color",
+"label": "צבע כותרת הבלוג"
+},
+{
+"type": "color",
+"id": "text_heading_color",
+"label": "צבע כותרת הפוסט"
+},
+{
+"type": "color",
+"id": "text_color",
+"label": "צבע הציטוט מתוך הפוסט"
+}
+],
+"presets": [
+{
+"name": {
+"de": "Blogposts",
+"he": "Blog posts",
+"en": "פוסטים מהבלוג",
+"es": "Artículos del blog",
+"fr": "Articles de blog",
+"it": "Articoli del blog",
+"ja": "ブログ記事",
+"pt-BR": "Posts do blog"
+},
+"category": {
+"de": "Blog",
+"he": "Blog",
+"en": "בלוג",
+"es": "Blog",
+"fr": "Blog",
+"it": "Blog",
+"ja": "ブログ",
+"pt-BR": "Blog"
+},
+"settings": {
+"blog": "News"
+}
+}
+]
+}
+{% endschema %}

@@ -1,0 +1,316 @@
+<div class="feature-row__item">
+  <div class="full_image">
+    {% if section.settings.image != blank or section.settings.m_image != blank %}
+    <img class="desktop_image" src="{{ section.settings.image | img_url:'master' }}"/>
+    <img class="mobile_image" src="{{ section.settings.m_image | img_url:'master' }}"/>
+    {% else %}
+    {% capture current %}{% cycle 1, 2 %}{% endcapture %}
+    {% capture svg_tag_class %}placeholder-noblocks {% endcapture %}
+    {%- assign placeholder = 'placeholder-lifestyle-' | append: current -%}
+    {{ 'lifestyle-' | append: current | placeholder_svg_tag: svg_tag_class }}
+    {% endif %}
+    {% if section.settings.image_text != blank or section.settings.image_button != blank %}
+    <div class="full_image-content">  
+      <p>{{ section.settings.image_text }}</p>
+      {% if section.settings.button_url != blank and section.settings.image_button != blank %}
+      <a href="{{ section.settings.button_url }}" class="btn">{{ section.settings.image_button }}</a>
+      {% endif %}   
+    </div>
+    {% endif %}
+  </div>
+</div>
+<style>
+  .full_image-content p{
+    color:{{ section.settings.text_color }};
+    font-size: {{ section.settings.text_size }} !important;
+  }
+  .full_image-content a{
+    color:{{ section.settings.button_color }};
+  }
+</style>
+{% schema %}
+{
+"name": {
+"de": "Bild",
+"he": "קידום מכירות",
+"en": "תמונה",
+"es": "Imagen",
+"fr": "Image",
+"it": "Immagine",
+"ja": "テキスト付き画像",
+"pt-BR": "Imagem"
+},
+"class": "index-section",
+"settings": [
+{
+"type": "image_picker",
+"id": "image",
+"label": {
+"de": "Foto",
+"he": "Image",
+"en": "תמונה",
+"es": "Imagen",
+"fr": "Image",
+"it": "Immagine",
+"ja": "画像",
+"pt-BR": "Imagem"
+},
+"info": {
+"de": "1920 x 1080px empfohlen",
+"he": "1920 x 1080px recommended",
+"en": "גודל מומלץ: 1920X1080px",
+"es": "1920 x 1080px recomendado",
+"fr": "1920 x 1080px recommandé",
+"it": "Dimensione consigliata: 1920 x 1080px",
+"ja": "1920 x 1080pxピクセルを推奨",
+"pt-BR": "1920 x 1080px recomendado"
+}
+},
+{
+"type": "image_picker",
+"id": "m_image",
+"label": {
+"de": "Foto",
+"he": "Mobile Image",
+"en": "תמונה מותאמת למובייל",
+"es": "Imagen",
+"fr": "Image",
+"it": "Immagine",
+"ja": "画像",
+"pt-BR": "Imagem"
+},
+"info": {
+"de": "767x430px empfohlen",
+"he": "767x430px recommended",
+"en": "גודל מומלץ: 767x430px",
+"es": "767 x 430px recomendado",
+"fr": "767 x 430px recommandé",
+"it": "Dimensione consigliata: 767 x 430px",
+"ja": "767 x 430pxピクセルを推奨",
+"pt-BR": "767 x 430px recomendado"
+}
+},
+{
+"type": "text",
+"id": "image_text",
+"label": "טקסט"
+},
+{
+"type": "select",
+        "id": "text_size",
+        "label": {
+          "de": "Schriftgröße Hauptmenü",
+          "he": "Main menu font size",
+          "es": "Tamaño de fuente del menú principal",
+          "fr": "Taille de la police du menu principal",
+          "it": "Dimensione font menu principale",
+          "ja": "メインメニューのフォントサイズ",
+          "pt-BR": "Tamanho da fonte do menu principal",
+          "en": "גודל טקסט"
+        },
+        "options": [
+          {
+            "value": "45px",
+            "label": {
+              "de": "14px",
+              "he": "14px",
+              "es": "14px",
+              "fr": "14 px",
+              "it": "14 px",
+              "ja": "14ピクセル",
+              "pt-BR": "14px",
+              "en": "45px"
+            }
+          },
+          {
+            "value": "50px",
+            "label": {
+              "de": "15px",
+              "he": "15px",
+              "es": "15px",
+              "fr": "15 px",
+              "it": "15 px",
+              "ja": "15ピクセル",
+              "pt-BR": "15px",
+              "en": "50px"
+            }
+          },
+          {
+            "value": "55px",
+            "label": {
+              "de": "16px",
+              "he": "16px",
+              "es": "16px",
+              "fr": "16 px",
+              "it": "16 px",
+              "ja": "16ピクセル",
+              "pt-BR": "16px",
+              "en": "55px"
+            }
+          },
+          {
+            "value": "60px",
+            "label": {
+              "de": "17px",
+              "he": "17px",
+              "es": "17px",
+              "fr": "17 px",
+              "it": "17 px",
+              "ja": "17ピクセル",
+              "pt-BR": "17px",
+              "en": "60px"
+            }
+          },
+          {
+            "value": "65px",
+            "label": {
+              "de": "18px",
+              "he": "18px",
+              "es": "18px",
+              "fr": "18 px",
+              "it": "18 px",
+              "ja": "18ピクセル",
+              "pt-BR": "18px",
+              "en": "65px"
+            }
+          },
+          {
+            "value": "70px",
+            "label": {
+              "de": "19px",
+              "he": "19px",
+              "es": "19px",
+              "fr": "19 px",
+              "it": "19 px",
+              "ja": "19ピクセル",
+              "pt-BR": "19px",
+              "en": "70px"
+            }
+          },
+          {
+            "value": "75px",
+            "label": {
+              "de": "20px",
+              "he": "20px",
+              "es": "20px",
+              "fr": "20 px",
+              "it": "20 px",
+              "ja": "20ピクセル",
+              "pt-BR": "20px",
+              "en": "75px"
+            }
+          },
+          {
+            "value": "80px",
+            "label": {
+              "de": "21px",
+              "he": "21px",
+              "es": "21px",
+              "fr": "21 px",
+              "it": "21 px",
+              "ja": "21ピクセル",
+              "pt-BR": "21px",
+              "en": "80px"
+            }
+          },
+          {
+            "value": "85px",
+            "label": {
+              "de": "22px",
+              "he": "22px",
+              "es": "22px",
+              "fr": "22 px",
+              "it": "22 px",
+              "ja": "22ピクセル",
+              "pt-BR": "22px",
+              "en": "85px"
+            }
+          },
+          {
+            "value": "90px",
+            "label": {
+              "de": "23px",
+              "he": "23px",
+              "es": "23px",
+              "fr": "23 px",
+              "it": "23 px",
+              "ja": "23ピクセル",
+              "pt-BR": "23px",
+              "en": "90px"
+            }
+          },
+          {
+            "value": "95px",
+            "label": {
+              "de": "24px",
+              "he": "24px",
+              "es": "24px",
+              "fr": "24 px",
+              "it": "24 px",
+              "ja": "24ピクセル",
+              "pt-BR": "24px",
+              "en": "95px"
+            }
+          },
+          {
+            "value": "100px",
+            "label": {
+              "de": "25px",
+              "he": "25px",
+              "es": "25px",
+              "fr": "25 px",
+              "it": "25 px",
+              "ja": "25ピクセル",
+              "pt-BR": "25px",
+              "en": "100px"
+            }
+          }
+        ]
+      },
+{
+"type": "text",
+"id": "image_button",
+"label":"כיתוב ללחצן"
+},
+{
+"type": "url",
+"id": "button_url",
+"label":"קישור"
+},
+{
+"type": "color",
+"id": "text_color",
+"label": "צבע טקסט"
+},
+{
+"type": "color",
+"id": "button_color",
+"label": "צבע טקסט בלחצן"
+}
+],
+"presets": [
+{
+"name": {
+"de": "Bild mit Text",
+"he": "Image with text",
+"en": "תמונה",
+"es": "Imagen con texto",
+"fr": "Image avec texte",
+"it": "Immagine con testo",
+"ja": "テキスト付き画像",
+"pt-BR": "Imagem com texto"
+},
+"category": {
+"de": "Foto",
+"he": "Image",
+"en": "תמונה",
+"es": "Imagen",
+"fr": "Image",
+"it": "Immagine",
+"ja": "画像",
+"pt-BR": "Imagem"
+}
+}
+]
+}
+{% endschema %}

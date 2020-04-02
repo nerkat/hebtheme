@@ -1,0 +1,951 @@
+{
+  "current": {
+    "color_primary": "#4dd0e1",
+    "color_arrow": "#4dd0e1",
+    "color_secondary": "#dcdcdc",
+    "color_accent": "#dd2525",
+    "color_body_bg": "#fff",
+    "color_borders": "#ececec",
+    "color_header_background": "#ffffff",
+    "color_header_text": "#4dd0e1",
+    "color_header_cart_search": "rgba(0,0,0,0)",
+    "color_nav_bg": "#000000",
+    "color_nav_text": "#fff",
+    "color_body_text": "#000000",
+    "color_heading_text": "#000",
+    "color_footer_bg": "#303030",
+    "color_footer_bottom_bg": "#262626",
+    "color_footer_text": "#ffffff",
+    "color_footer_social_link": "#bbbbbb",
+    "type_base_font_new": "Amatic SC, cursive",
+    "type_base_size": "25px",
+    "body_font_weight": "400",
+    "type_header_font_new": "Amatic SC, cursive",
+    "type_header_size": "25px",
+    "header_font_weight": "600",
+    "type_accent_font_new": "Amatic SC, cursive",
+    "type_navigation_size": "25px",
+    "font_navigation_weight": "800",
+    "type_button_size": "34px",
+    "product_title_size": "48px",
+    "product_title_weight": "800",
+    "product_price_size": "33px",
+    "product_price_weight": "800",
+    "favicon": "",
+    "blog_enable": true,
+    "cart_notes_enable": true,
+    "cart_terms_enable": true,
+    "ajax_cart_method": "modal",
+    "share_image": "",
+    "social_twitter_link": "",
+    "social_facebook_link": "",
+    "social_pinterest_link": "",
+    "social_google_plus_link": "",
+    "social_instagram_link": "",
+    "social_snapchat_link": "",
+    "social_tumblr_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "social_fancy_link": "",
+    "social_sharing_style": "is-normal",
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "breadcrumbs": true,
+    "wishlist_ok": true,
+    "align_price": "center",
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/logo-wild_66c181a6-199b-46ef-b05d-26a0732bfa75.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#197bbd",
+    "checkout_button_color": "#197bbd",
+    "checkout_error_color": "#e32c2b",
+    "product_reviews_star_color": "#e5c649",
+    "type_navigation_transform": true,
+    "type_button_transform": true,
+    "type_base_font": "montserrat_n5",
+    "type_header_font": "montserrat_n7",
+    "type_accent_font": "montserrat_n5",
+    "agree_terms": "true",
+    "superscript_decimals": false,
+    "type_header_transform": true,
+    "collection_sidebar_filters": "tags",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "menu": "main-menu",
+          "logo_type": "png",
+          "logo": "<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" x=\"0px\" y=\"0px\" width=\"500px\" height=\"163.836px\" viewbox=\"0 0 500 163.836\" enable-background=\"new 0 0 500 163.836\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" xml:space=\"preserve\">\n<g>\n\t<defs>\n\t\t<polygon id=\"SVGID_1_\" points=\"294.157,80.886 274.205,63.559 276.124,61.36 296.071,78.702 \t\t\"><\/polygon>\n\t<\/defs>\n\t<clippath id=\"SVGID_2_\">\n\t\t<use xlink:href=\"#SVGID_1_\" overflow=\"visible\"><\/use>\n\t<\/clippath>\n\t<g clip-path=\"url(#SVGID_2_)\">\n\t\t<defs>\n\t\t\t<rect id=\"SVGID_3_\" x=\"-1558.71\" y=\"-82.534\" width=\"3621.802\" height=\"15192.487\"><\/rect>\n\t\t<\/defs>\n\t\t<clippath id=\"SVGID_4_\">\n\t\t\t<use xlink:href=\"#SVGID_3_\" overflow=\"visible\"><\/use>\n\t\t<\/clippath>\n\t\t<rect x=\"260.949\" y=\"48.106\" clip-path=\"url(#SVGID_4_)\" fill=\"#BCE5ED\" width=\"48.38\" height=\"46.041\"><\/rect>\n\t<\/g>\n<\/g>\n<g>\n\t<defs>\n\t\t<polygon id=\"SVGID_5_\" points=\"293.638,81.167 275.693,75.119 276.628,72.361 294.57,78.409 \t\t\"><\/polygon>\n\t<\/defs>\n\t<clippath id=\"SVGID_6_\">\n\t\t<use xlink:href=\"#SVGID_5_\" overflow=\"visible\"><\/use>\n\t<\/clippath>\n\t<g clip-path=\"url(#SVGID_6_)\">\n\t\t<defs>\n\t\t\t<rect id=\"SVGID_7_\" x=\"-1558.71\" y=\"-82.534\" width=\"3621.802\" height=\"15192.487\"><\/rect>\n\t\t<\/defs>\n\t\t<clippath id=\"SVGID_8_\">\n\t\t\t<use xlink:href=\"#SVGID_7_\" overflow=\"visible\"><\/use>\n\t\t<\/clippath>\n\t\t<rect x=\"262.437\" y=\"59.104\" clip-path=\"url(#SVGID_8_)\" fill=\"#BCE5ED\" width=\"45.391\" height=\"35.321\"><\/rect>\n\t<\/g>\n<\/g>\n<g>\n\t<defs>\n\t\t<polygon id=\"SVGID_9_\" points=\"289.665,94.872 286.84,94.104 290.82,79.399 293.626,80.17 \t\t\"><\/polygon>\n\t<\/defs>\n\t<clippath id=\"SVGID_10_\">\n\t\t<use xlink:href=\"#SVGID_9_\" overflow=\"visible\"><\/use>\n\t<\/clippath>\n\t<g clip-path=\"url(#SVGID_10_)\">\n\t\t<defs>\n\t\t\t<rect id=\"SVGID_11_\" x=\"-1558.71\" y=\"-82.534\" width=\"3621.802\" height=\"15192.487\"><\/rect>\n\t\t<\/defs>\n\t\t<clippath id=\"SVGID_12_\">\n\t\t\t<use xlink:href=\"#SVGID_11_\" overflow=\"visible\"><\/use>\n\t\t<\/clippath>\n\t\t<rect x=\"273.585\" y=\"66.156\" clip-path=\"url(#SVGID_12_)\" fill=\"#BCE5ED\" width=\"33.3\" height=\"41.972\"><\/rect>\n\t<\/g>\n<\/g>\n<g>\n\t<defs>\n\t\t<polygon id=\"SVGID_13_\" points=\"293.363,94.593 291.905,73.843 294.807,73.651 296.266,94.377 \t\t\"><\/polygon>\n\t<\/defs>\n\t<clippath id=\"SVGID_14_\">\n\t\t<use xlink:href=\"#SVGID_13_\" overflow=\"visible\"><\/use>\n\t<\/clippath>\n\t<g clip-path=\"url(#SVGID_14_)\">\n\t\t<defs>\n\t\t\t<rect id=\"SVGID_15_\" x=\"-1558.71\" y=\"-82.534\" width=\"3621.802\" height=\"15192.487\"><\/rect>\n\t\t<\/defs>\n\t\t<clippath id=\"SVGID_16_\">\n\t\t\t<use xlink:href=\"#SVGID_15_\" overflow=\"visible\"><\/use>\n\t\t<\/clippath>\n\t\t<rect x=\"278.644\" y=\"60.39\" clip-path=\"url(#SVGID_16_)\" fill=\"#BCE5ED\" width=\"30.882\" height=\"47.46\"><\/rect>\n\t<\/g>\n<\/g>\n<g>\n\t<defs>\n\t\t<polygon id=\"SVGID_17_\" points=\"291.979,74.207 285.738,55.645 288.496,54.717 294.738,73.274 \t\t\"><\/polygon>\n\t<\/defs>\n\t<clippath id=\"SVGID_18_\">\n\t\t<use xlink:href=\"#SVGID_17_\" overflow=\"visible\"><\/use>\n\t<\/clippath>\n\t<g clip-path=\"url(#SVGID_18_)\">\n\t\t<defs>\n\t\t\t<rect id=\"SVGID_19_\" x=\"-1558.71\" y=\"-82.534\" width=\"3621.802\" height=\"15192.487\"><\/rect>\n\t\t<\/defs>\n\t\t<clippath id=\"SVGID_20_\">\n\t\t\t<use xlink:href=\"#SVGID_19_\" overflow=\"visible\"><\/use>\n\t\t<\/clippath>\n\t\t<rect x=\"272.483\" y=\"41.46\" clip-path=\"url(#SVGID_20_)\" fill=\"#BCE5ED\" width=\"35.513\" height=\"46.007\"><\/rect>\n\t<\/g>\n<\/g>\n<g>\n\t<defs>\n\t\t<path id=\"SVGID_21_\" d=\"M311.843,30.336l2.418,3.484c17.569-16.99,40.65-28.198,64.875-31.512\n\t\t\tc-0.725,1.719-1.449,3.427-2.185,5.137c17.268-1.695,35.101,0.394,50.888,7.564c15.8,7.173,29.414,19.635,36.541,35.466\n\t\t\tc-10.131,0.804-20.121-2.095-30.128-3.818c-10.01-1.709-20.959-2.085-29.612,3.225c3.249,1.573,6.113,3.958,8.247,6.887\n\t\t\tc-21.576,5.282-43.174,10.567-64.754,15.845c2.665,1.619,4.688,4.264,5.526,7.264c-11.899,1.19-23.797,2.387-35.708,3.569\n\t\t\tc-7.16,0.715-18.217,3.973-22.835-3.659c-4.143-6.801,0.023-17.319,2.434-23.984C298.47,53.262,311.637,30.049,311.843,30.336\"><\/path>\n\t<\/defs>\n\t<clippath id=\"SVGID_22_\">\n\t\t<use xlink:href=\"#SVGID_21_\" overflow=\"visible\"><\/use>\n\t<\/clippath>\n\t<g clip-path=\"url(#SVGID_22_)\">\n\t\t<defs>\n\t\t\t<rect id=\"SVGID_23_\" x=\"-1558.71\" y=\"-82.534\" width=\"3621.802\" height=\"15192.487\"><\/rect>\n\t\t<\/defs>\n\t\t<clippath id=\"SVGID_24_\">\n\t\t\t<use xlink:href=\"#SVGID_23_\" overflow=\"visible\"><\/use>\n\t\t<\/clippath>\n\t\t<rect x=\"280.094\" y=\"-10.953\" clip-path=\"url(#SVGID_24_)\" fill=\"#5BC8DA\" width=\"197.54\" height=\"108.955\"><\/rect>\n\t<\/g>\n<\/g>\n<g>\n\t<defs>\n\t\t<path id=\"SVGID_25_\" d=\"M342.174,13.982c-10.21,5.202-19.677,11.873-27.913,19.838c-0.799-1.163-1.618-2.316-2.418-3.484\n\t\t\tc-0.206-0.287-13.373,22.925-14.293,25.468c-2.41,6.665-6.576,17.183-2.434,23.984c4.618,7.631,15.675,4.374,22.835,3.659\n\t\t\tc11.911-1.182,23.809-2.378,35.708-3.569c-0.716-2.556-2.335-4.816-4.425-6.439c-7.176-3.955-13.927-8.333-19.478-13.888\n\t\t\tC334.82,44.365,337.68,29.168,342.174,13.982\"><\/path>\n\t<\/defs>\n\t<clippath id=\"SVGID_26_\">\n\t\t<use xlink:href=\"#SVGID_25_\" overflow=\"visible\"><\/use>\n\t<\/clippath>\n\t<g clip-path=\"url(#SVGID_26_)\">\n\t\t<defs>\n\t\t\t<rect id=\"SVGID_27_\" x=\"-1558.71\" y=\"-82.534\" width=\"3621.802\" height=\"15192.487\"><\/rect>\n\t\t<\/defs>\n\t\t<clippath id=\"SVGID_28_\">\n\t\t\t<use xlink:href=\"#SVGID_27_\" overflow=\"visible\"><\/use>\n\t\t<\/clippath>\n\t\t<rect x=\"280.094\" y=\"0.727\" clip-path=\"url(#SVGID_28_)\" fill=\"#5BC8DA\" width=\"86.82\" height=\"97.275\"><\/rect>\n\t<\/g>\n<\/g>\n<g>\n\t<defs>\n\t\t<path id=\"SVGID_29_\" d=\"M367.563,67.85c-7.306-5.141-14.939-9.97-23.253-14.131v-2.9v2.9c7.845-15.695,11.016-31.4,15.797-47.112\n\t\t\tc-6.166,1.964-12.171,4.444-17.933,7.376c-4.494,15.186-7.354,30.383-12.417,45.554c5.551,5.57,12.302,9.948,19.478,13.902\n\t\t\tc-0.366-0.278-0.717-0.589-1.102-0.824C354.6,71.038,361.078,69.441,367.563,67.85\"><\/path>\n\t<\/defs>\n\t<clippath id=\"SVGID_30_\">\n\t\t<use xlink:href=\"#SVGID_29_\" overflow=\"visible\"><\/use>\n\t<\/clippath>\n\t<g clip-path=\"url(#SVGID_30_)\">\n\t\t<defs>\n\t\t\t<rect id=\"SVGID_31_\" x=\"-1558.71\" y=\"-82.534\" width=\"3621.802\" height=\"15192.487\"><\/rect>\n\t\t<\/defs>\n\t\t<clippath id=\"SVGID_32_\">\n\t\t\t<use xlink:href=\"#SVGID_31_\" overflow=\"visible\"><\/use>\n\t\t<\/clippath>\n\t\t<rect x=\"316.503\" y=\"-6.65\" clip-path=\"url(#SVGID_32_)\" fill=\"#BCE5ED\" width=\"64.319\" height=\"93.345\"><\/rect>\n\t<\/g>\n<\/g>\n<g>\n\t<defs>\n\t\t<path id=\"SVGID_33_\" d=\"M411.269,36.264c6.562-6.567,13.126-13.128,19.686-19.688c-1.044-0.517-2.051-1.087-3.115-1.567\n\t\t\tc-4.568-2.075-9.321-3.667-14.16-4.929c-9.463,8.79-15.262,21.263-25.7,29.088v2.914c4.093,6.815,10.731,11.707,17.537,16.495\n\t\t\tc2.45-0.612,4.915-1.214,7.371-1.807c-2.134-2.929-4.998-5.314-8.255-6.887c5.195-3.187,11.222-4.297,17.358-4.334\n\t\t\tC418.414,42.827,414.857,39.827,411.269,36.264\"><\/path>\n\t<\/defs>\n\t<clippath id=\"SVGID_34_\">\n\t\t<use xlink:href=\"#SVGID_33_\" overflow=\"visible\"><\/use>\n\t<\/clippath>\n\t<g clip-path=\"url(#SVGID_34_)\">\n\t\t<defs>\n\t\t\t<rect id=\"SVGID_35_\" x=\"-1558.71\" y=\"-82.534\" width=\"3621.802\" height=\"15192.487\"><\/rect>\n\t\t<\/defs>\n\t\t<clippath id=\"SVGID_36_\">\n\t\t\t<use xlink:href=\"#SVGID_35_\" overflow=\"visible\"><\/use>\n\t\t<\/clippath>\n\t\t<rect x=\"374.72\" y=\"-3.171\" clip-path=\"url(#SVGID_36_)\" fill=\"#BCE5ED\" width=\"69.501\" height=\"75.004\"><\/rect>\n\t<\/g>\n<\/g>\n<g>\n\t<defs>\n\t\t<path id=\"SVGID_37_\" d=\"M387.979,42.082v-2.914c10.438-7.825,16.237-20.298,25.682-29.088c-11.89-3.088-24.44-3.84-36.709-2.635\n\t\t\tc0.725-1.709,1.449-3.418,2.185-5.137c-6.46,0.875-12.815,2.339-19.029,4.298c-4.781,15.712-7.952,31.417-15.797,47.112\n\t\t\tc8.313,4.161,15.947,8.991,23.253,14.131c12.646-3.088,25.3-6.19,37.945-9.273C398.71,53.789,392.071,48.897,387.979,42.082\"><\/path>\n\t<\/defs>\n\t<clippath id=\"SVGID_38_\">\n\t\t<use xlink:href=\"#SVGID_37_\" overflow=\"visible\"><\/use>\n\t<\/clippath>\n\t<g clip-path=\"url(#SVGID_38_)\">\n\t\t<defs>\n\t\t\t<rect id=\"SVGID_39_\" x=\"-1558.71\" y=\"-82.534\" width=\"3621.802\" height=\"15192.487\"><\/rect>\n\t\t<\/defs>\n\t\t<clippath id=\"SVGID_40_\">\n\t\t\t<use xlink:href=\"#SVGID_39_\" overflow=\"visible\"><\/use>\n\t\t<\/clippath>\n\t\t<rect x=\"331.054\" y=\"-10.953\" clip-path=\"url(#SVGID_40_)\" fill=\"#5BC8DA\" width=\"95.862\" height=\"92.06\"><\/rect>\n\t<\/g>\n<\/g>\n<g>\n\t<defs>\n\t\t<path id=\"SVGID_41_\" d=\"M430.944,16.576c-6.55,6.559-13.114,13.121-19.676,19.688c3.569,3.563,7.146,6.563,10.722,9.284\n\t\t\tc4.098-0.015,8.259,0.433,12.262,1.124c10.007,1.709,19.997,4.623,30.128,3.804C457.733,35.702,445.397,23.924,430.944,16.576\"><\/path>\n\t<\/defs>\n\t<clippath id=\"SVGID_42_\">\n\t\t<use xlink:href=\"#SVGID_41_\" overflow=\"visible\"><\/use>\n\t<\/clippath>\n\t<g clip-path=\"url(#SVGID_42_)\">\n\t\t<defs>\n\t\t\t<rect id=\"SVGID_43_\" x=\"-1558.71\" y=\"-82.534\" width=\"3621.802\" height=\"15192.487\"><\/rect>\n\t\t<\/defs>\n\t\t<clippath id=\"SVGID_44_\">\n\t\t\t<use xlink:href=\"#SVGID_43_\" overflow=\"visible\"><\/use>\n\t\t<\/clippath>\n\t\t<rect x=\"398.012\" y=\"3.32\" clip-path=\"url(#SVGID_44_)\" fill=\"#5BC8DA\" width=\"79.622\" height=\"60.543\"><\/rect>\n\t<\/g>\n<\/g>\n<g>\n\t<defs>\n\t\t<rect id=\"SVGID_45_\" x=\"2.957\" y=\"27.329\" width=\"495.88\" height=\"136.507\"><\/rect>\n\t<\/defs>\n\t<clippath id=\"SVGID_46_\">\n\t\t<use xlink:href=\"#SVGID_45_\" overflow=\"visible\"><\/use>\n\t<\/clippath>\n\t<g clip-path=\"url(#SVGID_46_)\">\n\t\t<defs>\n\t\t\t<rect id=\"SVGID_47_\" x=\"-1558.71\" y=\"-82.534\" width=\"3621.802\" height=\"15192.487\"><\/rect>\n\t\t<\/defs>\n\t\t<clippath id=\"SVGID_48_\">\n\t\t\t<use xlink:href=\"#SVGID_47_\" overflow=\"visible\"><\/use>\n\t\t<\/clippath>\n\t\t<g clip-path=\"url(#SVGID_48_)\" enable-background=\"new    \">\n\t\t\t<g>\n\t\t\t\t<defs>\n\t\t\t\t\t<rect id=\"SVGID_49_\" x=\"-7.645\" y=\"23.524\" width=\"517.018\" height=\"145.824\"><\/rect>\n\t\t\t\t<\/defs>\n\t\t\t\t<clippath id=\"SVGID_50_\">\n\t\t\t\t\t<use xlink:href=\"#SVGID_49_\" overflow=\"visible\"><\/use>\n\t\t\t\t<\/clippath>\n\t\t\t\t<g clip-path=\"url(#SVGID_50_)\">\n\t\t\t\t\t<defs>\n\t\t\t\t\t\t<path id=\"SVGID_51_\" d=\"M498.594,95.654c-0.688-7.41-2.76-14.665-5.904-21.397c-1.648-3.323-3.409-6.612-5.557-9.635\n\t\t\t\t\t\t\tc-0.997-1.581-2.173-3.013-3.304-4.5c-1.103-1.483-2.484-2.759-4.179-3.696c0.688,1.86,1.854,3.239,2.973,4.665\n\t\t\t\t\t\t\tc1.101,1.446,2.262,2.862,3.232,4.393c2.108,2.971,3.813,6.187,5.421,9.439c3.069,6.575,5.075,13.671,5.753,20.882\n\t\t\t\t\t\t\tc1.356,14.434-3.37,29.361-13.208,40.06c-9.698,10.879-23.226,17.709-37.198,21.631c-14.047,3.785-28.822,6.349-43.084,2.811\n\t\t\t\t\t\t\tc-14.303-2.924-28.226-7.669-41.944-12.79c-13.707-5.174-27.226-10.87-40.624-16.834\n\t\t\t\t\t\t\tc-26.785-11.972-53.121-24.964-79.169-38.475c-13.005-6.774-26.01-13.68-38.773-20.746\n\t\t\t\t\t\t\tc-12.739-7.321-25.679-14.48-38.943-21.009c-13.295-6.501-26.9-12.531-41.226-16.946c-7.168-2.176-14.478-4.04-21.997-5.113\n\t\t\t\t\t\t\tc-7.504-1.012-15.242-1.44-22.868-0.655c-15.238,1.469-30.086,6.577-42.988,14.985C22.167,51.073,11.2,63.373,6.2,78.434\n\t\t\t\t\t\t\tc-4.956,14.94-4.367,31.677,2.782,46.071c1.828,3.573,4.11,6.971,6.884,9.994c2.974,3.141,6.147,5.353,9.32,7.513\n\t\t\t\t\t\t\tc3.187,2.124,10.653,6.418,13.938,8.248c0.438,0.175,1.474-0.729,2.34-1.352c0.466-0.356-0.782-1.492-0.51-1.516\n\t\t\t\t\t\t\tc3.457,1.917,1.682,0.948,1.715,0.948c0.07-1.116,0.295-2.203,0.658-3.254c0.081-0.936,0.203-1.943-0.104-2.174\n\t\t\t\t\t\t\tc-3.125-1.761-10.45-5.937-13.381-7.88c-2.901-1.95-5.772-4.021-7.834-6.225c-2.214-2.399-4.087-5.146-5.622-8.096\n\t\t\t\t\t\t\tc-6.049-11.944-6.75-26.819-2.476-39.694c4.251-13.016,13.817-23.993,25.472-31.653c11.684-7.716,25.415-12.442,39.387-14\n\t\t\t\t\t\t\tc6.991-0.809,14.033-0.517,21.081,0.329c7.052,0.918,14.042,2.601,20.956,4.6c13.832,4.072,27.253,9.81,40.424,16.042\n\t\t\t\t\t\t\tc13.167,6.314,26.062,13.172,38.939,20.253c13.065,6.948,26.135,13.589,39.323,20.167\n\t\t\t\t\t\t\tc26.351,13.082,52.968,25.652,80.051,37.189c13.552,5.733,27.214,11.223,41.102,16.179\n\t\t\t\t\t\t\tc13.889,4.895,27.953,9.424,42.516,12.159c7.242,1.286,14.791,2.16,22.184,1.022c7.332-0.773,14.631-2.213,21.729-4.213\n\t\t\t\t\t\t\tc14.171-4.008,27.981-10.955,37.93-22.154C495.146,125.922,500.013,110.492,498.594,95.654\"><\/path>\n\t\t\t\t\t<\/defs>\n\t\t\t\t\t<clippath id=\"SVGID_52_\">\n\t\t\t\t\t\t<use xlink:href=\"#SVGID_51_\" overflow=\"visible\"><\/use>\n\t\t\t\t\t<\/clippath>\n\t\t\t\t\t<g clip-path=\"url(#SVGID_52_)\">\n\t\t\t\t\t\t<defs>\n\t\t\t\t\t\t\t<rect id=\"SVGID_53_\" x=\"-7.645\" y=\"23.524\" width=\"517.018\" height=\"145.824\"><\/rect>\n\t\t\t\t\t\t<\/defs>\n\t\t\t\t\t\t<clippath id=\"SVGID_54_\">\n\t\t\t\t\t\t\t<use xlink:href=\"#SVGID_53_\" overflow=\"visible\"><\/use>\n\t\t\t\t\t\t<\/clippath>\n\t\t\t\t\t\t<rect x=\"-10.3\" y=\"14.072\" clip-path=\"url(#SVGID_54_)\" fill=\"#3B9CA9\" width=\"522.394\" height=\"163.02\"><\/rect>\n\t\t\t\t\t<\/g>\n\t\t\t\t<\/g>\n\t\t\t<\/g>\n\t\t<\/g>\n\t<\/g>\n<\/g>\n<g>\n\t<defs>\n\t\t<path id=\"SVGID_55_\" d=\"M171.749,140.28c3.318-7.828,9.25-11.918,15.125-14.927c5.842-3.16,12.022-5.316,17.38-7.984\n\t\t\tc5.733-2.744,11.551-5.395,17.416-7.89c5.871-2.518,11.665-4.82,17.21-7.49c5.565-2.664,11.041-5.616,16.478-8.723\n\t\t\tc5.542-3.088,11.17-6.086,16.815-8.987c11.315-5.795,22.775-11.246,34.283-16.531l34.604-15.573\n\t\t\tc11.628-5.149,23.641-9.655,36.069-12.729c24.724-6.336,51.407-6.247,75.528,2.09l-0.518,1.634\n\t\t\tc-12.015-3.634-24.546-5.353-37.029-5.187c-12.504,0.136-24.894,2.226-36.917,5.531c-12.04,3.3-23.658,7.992-34.995,13.355\n\t\t\tc-11.332,5.427-22.761,10.968-34.012,16.594c-11.274,5.634-22.452,11.416-33.429,17.526c-5.504,3.045-10.896,6.195-16.324,9.394\n\t\t\tc-5.505,3.188-11.133,6.286-16.938,9.11c-5.832,2.843-11.765,5.25-17.483,7.745c-5.743,2.489-11.406,5.117-17.044,7.847\n\t\t\tc-5.961,2.978-11.741,5.036-17.001,7.952c-2.638,1.41-5.101,3.003-7.452,4.5c-2.297,1.483-4.545,3.191-5.281,5.197L171.749,140.28\n\t\t\tz\"><\/path>\n\t<\/defs>\n\t<clippath id=\"SVGID_56_\">\n\t\t<use xlink:href=\"#SVGID_55_\" overflow=\"visible\"><\/use>\n\t<\/clippath>\n\t<g clip-path=\"url(#SVGID_56_)\">\n\t\t<defs>\n\t\t\t<rect id=\"SVGID_57_\" x=\"-1558.71\" y=\"-82.534\" width=\"3621.802\" height=\"15192.487\"><\/rect>\n\t\t<\/defs>\n\t\t<clippath id=\"SVGID_58_\">\n\t\t\t<use xlink:href=\"#SVGID_57_\" overflow=\"visible\"><\/use>\n\t\t<\/clippath>\n\t\t<rect x=\"158.491\" y=\"21.703\" clip-path=\"url(#SVGID_58_)\" fill=\"#3B9CA9\" width=\"307.42\" height=\"134.286\"><\/rect>\n\t<\/g>\n<\/g>\n<g>\n\t<text transform=\"matrix(1 0 0 1 29.71 146.4888)\" fill=\"#3B9CA9\" font-family=\"'AmaticSC-Bold'\" font-size=\"48.7424\"> <\/text>\n\t<text transform=\"matrix(1 0 0 1 43.4141 148.9683)\" fill=\"#3B9CA9\" font-family=\"'AmaticSC-Bold'\" font-size=\"59.1043\"> <\/text>\n\t<text transform=\"matrix(1 0 0 1 59.7876 150.271)\" fill=\"#3B9CA9\" font-family=\"'AmaticSC-Bold'\" font-size=\"74.3833\">w<\/text>\n\t<text transform=\"matrix(1 0 0 1 96.1792 146.9761)\" fill=\"#3B9CA9\" font-family=\"'AmaticSC-Bold'\" font-size=\"86.9965\">i<\/text>\n\t<text transform=\"matrix(1 0 0 1 117.7837 142.9937)\" fill=\"#3B9CA9\" font-family=\"'AmaticSC-Bold'\" font-size=\"95.0368\">l<\/text>\n\t<text transform=\"matrix(1 0 0 1 139.1758 138.7109)\" fill=\"#3B9CA9\" font-family=\"'AmaticSC-Bold'\" font-size=\"101.5322\">d<\/text>\n<\/g>\n<\/svg>",
+          "logo_image": "shopify:\/\/shop_images\/logo-wild_66c181a6-199b-46ef-b05d-26a0732bfa75.png",
+          "logo_max_width": "187",
+          "show_wishlist": true,
+          "show_announcement": false,
+          "announcement_text": "",
+          "announcement_link": "",
+          "bg_color": "#f3f3f3"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "1541416164809": {
+            "type": "url",
+            "settings": {
+              "payment_icon": "",
+              "width": "50%"
+            }
+          },
+          "1541481608292": {
+            "type": "textarea",
+            "settings": {
+              "time_period_heading": "שעות פתיחה",
+              "first_time_period": "א, ב, ד, ה - 08:30-18:00",
+              "second_time_period": "ג, ו - 08:30 - 14:00",
+              "width": "33%"
+            }
+          },
+          "text": {
+            "type": "text",
+            "settings": {
+              "title": "פרטי יצירת קשר",
+              "richtext": "<p><strong>מתחם PPLS, ראשון לציון. <\/strong><\/p>\n<p><strong>טלפון:&nbsp;054-449-2311&nbsp;<\/strong><\/p>\n<p><strong>chen@zissultd.com<\/strong><\/p>",
+              "width": "16%"
+            }
+          },
+          "1546813730644": {
+            "type": "menu",
+            "settings": {
+              "title": "מפת אתר",
+              "menu": "footer",
+              "width": "16%"
+            }
+          }
+        },
+        "block_order": [
+          "1541416164809",
+          "1541481608292",
+          "text",
+          "1546813730644"
+        ],
+        "settings": {
+          "enable_condition": true,
+          "social_enabled": false,
+          "show_payment_icons": false,
+          "legal_menu": ""
+        }
+      },
+      "slideshow": {
+        "type": "slideshow",
+        "blocks": {
+          "slide-0": {
+            "type": "image",
+            "settings": {
+              "slide": "shopify:\/\/shop_images\/banner.jpg",
+              "mobile_slide": "shopify:\/\/shop_images\/mobile-slide-1.jpg",
+              "text1": "שופיפיי בעברית",
+              "text1_size": "70px",
+              "text2": "לראשונה בעולם",
+              "text2_size": "90px",
+              "first_text_color": "#ffffff",
+              "second_text_color": "#ffffff",
+              "button": "",
+              "link": "shopify:\/\/collections\/all"
+            }
+          },
+          "slide-1": {
+            "type": "image",
+            "settings": {
+              "slide": "shopify:\/\/shop_images\/banner.jpg",
+              "mobile_slide": "shopify:\/\/shop_images\/mobile-slide-1.jpg",
+              "text1": "שופיפיי בעברית",
+              "text1_size": "45px",
+              "text2": "לראשונה בעולם",
+              "text2_size": "55px",
+              "first_text_color": "#ffffff",
+              "second_text_color": "#ffffff",
+              "button": "",
+              "link": ""
+            }
+          },
+          "slide-2": {
+            "type": "image",
+            "settings": {
+              "slide": "shopify:\/\/shop_images\/banner.jpg",
+              "mobile_slide": "shopify:\/\/shop_images\/mobile-slide-1.jpg",
+              "text1": "שופיפיי בעברית",
+              "text1_size": "45px",
+              "text2": "לראשונה בעולם",
+              "text2_size": "55px",
+              "first_text_color": "#ffffff",
+              "second_text_color": "#ffffff",
+              "button": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "slide-0",
+          "slide-1",
+          "slide-2"
+        ],
+        "settings": {
+          "slider_home_auto": true,
+          "slider_home_rate": "5000"
+        }
+      },
+      "collection-row-1": {
+        "type": "collection-rows",
+        "settings": {
+          "title": "קולקציה",
+          "home_featured_row": "frontpage",
+          "bg_color": "#f7f7f7",
+          "heading_color": "#6b6b6b",
+          "range": "10",
+          "product_show_saved_amount": false,
+          "product_show_compare_at_price": true
+        }
+      },
+      "1541068914620": {
+        "type": "image-with-text",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/307007296_-_Copy_2.jpg",
+          "layout": "right",
+          "title": "הסיפור שלנו",
+          "text": "<p>הרעיון לבנות תבנית שופיפיי בעברית התחיל עם גדילתה של קהילת השופיפיי בישראל. הצורך בממשק קל לתפעול, בשפה שלנו ללא הוצאות יקרות למתכנתים כדי להתאים את הקיים לקהל הישראלי היה שם תמיד. עכשיו לצורך יש מענה עם תבנית בעברית, מיושר לימין, עם פונטים ייחודיים לשפה ותמיכה שכולה בעברית.<\/p>",
+          "text_bg_color": "#292929",
+          "heading_color": "#ffffff",
+          "text_color": "#ffffff",
+          "button_label": "קרא עוד",
+          "button_link": "#"
+        }
+      },
+      "1541137603628": {
+        "type": "image-block",
+        "blocks": {
+          "1541137611436": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/one-of-three.jpg",
+              "title": "חולצות",
+              "title_size": "70px",
+              "button_link": "shopify:\/\/collections\/frontpage",
+              "text_color": "#ffffff"
+            }
+          },
+          "1541137643485": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/two-of-three.jpg",
+              "title": "נעליים",
+              "title_size": "70px",
+              "button_link": "shopify:\/\/collections\/frontpage",
+              "text_color": "#ffffff"
+            }
+          },
+          "1543926294649": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/product-banner.jpg",
+              "title": "אביזרים",
+              "title_size": "70px",
+              "button_link": "shopify:\/\/collections\/frontpage",
+              "text_color": "#ffffff"
+            }
+          }
+        },
+        "block_order": [
+          "1541137611436",
+          "1541137643485",
+          "1543926294649"
+        ],
+        "settings": {}
+      },
+      "1541157479160": {
+        "type": "testimonial",
+        "blocks": {
+          "1541157487558": {
+            "type": "image",
+            "settings": {
+              "enable_testimonial": true,
+              "image": "shopify:\/\/shop_images\/testimonial-pic.jpg",
+              "heading": "ליאור ר.",
+              "title": "מעולה קל ונח לשימוש, מעבר לכך חן והצוות מעניקים תמיכה תמיד וליווי בכל בעיה, מעדכנים ומעלים גרסאות ועדכונים באופן שוטף תמיד פועלים לשיפור חווית הלקוח, ממליץ בחום!",
+              "heading_color": "#ffffff",
+              "text_color": "#ffffff"
+            }
+          },
+          "1541157628378": {
+            "type": "image",
+            "settings": {
+              "enable_testimonial": true,
+              "image": "shopify:\/\/shop_images\/testimonial-pic.jpg",
+              "heading": "בר ו.",
+              "title": "הפתרון הכי יעיל ונוח לאתרי שופיפיי בעברית, שירות לקוחות מהיר ופתרון לכל הבעיות, מומלץ!",
+              "heading_color": "#ffffff",
+              "text_color": "#ffffff"
+            }
+          },
+          "1541158128892": {
+            "type": "image",
+            "settings": {
+              "enable_testimonial": true,
+              "image": "shopify:\/\/shop_images\/testimonial-pic.jpg",
+              "heading": "שירן",
+              "title": "בתור בעלת חברה לבניית אתרים אחד האתגרים שלוקחים הכי הרבה זמן הן מציאת תבנית שתומכת ב RTL הפיכתה לעברית ו.... תרגום התבנית לשפה העברית.עם התבנית של חן יש הכל במקום אחד עיצוב מגניב פיצרים מובנים בתוך התבנית עצמה ללא אפליקציות מיותרות,תמיכה מהירה של חן,והכי חשוב הכל כבר בעברית!!!!!!!!מה שחוסך לי המון שעות עבודה וכסף.",
+              "heading_color": "#ffffff",
+              "text_color": "#ffffff"
+            }
+          }
+        },
+        "block_order": [
+          "1541157487558",
+          "1541157628378",
+          "1541158128892"
+        ],
+        "settings": {
+          "bg_color": "#333333"
+        }
+      },
+      "1541160821755": {
+        "type": "featured-blog",
+        "settings": {
+          "title": "בלוג",
+          "blog": "news",
+          "post_limit": 6,
+          "blog_show_date": false,
+          "blog_show_author": false,
+          "blog_show_image": true,
+          "blog_show_excerpt": false,
+          "show_view_all": true,
+          "background_color": "#ffffff",
+          "heading_color": "#6b6b6b",
+          "text_heading_color": "#6b6b6b",
+          "text_color": "#6b6b6b"
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "social_sharing_blog": true,
+          "enable_sidebar": true
+        }
+      },
+      "map": {
+        "type": "map",
+        "settings": {
+          "heading": "",
+          "address": "",
+          "map_address": "",
+          "button": "Directions",
+          "show_pin": true,
+          "api_key": "AIzaSyBNQshiHS8fgmvkNAoiJd2cfaAxz1FuWe4",
+          "image": "",
+          "position": "center center"
+        }
+      },
+      "map_contact": {
+        "type": "map_contact",
+        "settings": {
+          "display_map": true,
+          "heading2": "",
+          "address2": "",
+          "map_address2": "Tel Aviv Museum of Art",
+          "button2": "",
+          "api_key2": "AIzaSyBNQshiHS8fgmvkNAoiJd2cfaAxz1FuWe4"
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "show_sort": true,
+          "background_color": "#f7f7f7",
+          "grid": "3",
+          "collection_sidebar_filters": "tags",
+          "title_collections": "קולקציות נוספות",
+          "title_1": "גברים",
+          "men_tags": "Blue,Green,Jackets,Jeans,L,M,Pink,Red,S,SALE,XL,XXL,Yellow,אביזרים",
+          "title_2": "נשים",
+          "women_tags": "Blue,Green,Jackets,Jeans,L,M,Pink,Red,S,SALE,XL,XXL,Yellow,אביזרים",
+          "title_3": "אביזרים",
+          "accessories_tags": "Blue,Green,Jackets,Jeans,L,M,Pink,Red,S,SALE,XL,XXL,Yellow,אביזרים",
+          "title_4": "SALE",
+          "sale_tags": "Blue,Green,Jackets,Jeans,L,M,Pink,Red,S,SALE,XL,XXL,Yellow,אביזרים",
+          "title_5": "מותג",
+          "brands_tag": "Blue,Green,Jackets,Jeans,L,M,Pink,Red,S,SALE,XL,XXL,Yellow,אביזרים",
+          "title_size": "מידה",
+          "size_tag": "XL,S,M,L,XXL",
+          "title_price": "טווח מחיר",
+          "price_tag": "0-500,501-1000,1001-1500,1501-2000,2001-2500,2501-3000",
+          "title_color": "צבעים",
+          "color_tag": "red,yellow,green",
+          "product_show_compare_at_price": false,
+          "product_show_saved_amount": false,
+          "product_reviews_enable": true,
+          "has_sidebar": true,
+          "top_background_image": "shopify:\/\/shop_images\/collection-banner.jpg",
+          "m_background_image": "shopify:\/\/shop_images\/collection-banner.jpg",
+          "top_bg_img_text": "קולקציה נשים",
+          "img_text_color": "#ffffff",
+          "show_loadmore": true,
+          "load_more_btn_text": "טען עוד",
+          "load_more_text_color": "#000000",
+          "load_more_bg_color": "#ffffff"
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "settings": {
+          "display_type": "all",
+          "layout": "grid",
+          "sort": "alphabetical",
+          "grid": "3"
+        }
+      },
+      "contact_time_duration": {
+        "type": "contact_time_duration",
+        "settings": {
+          "contact_form_image": "shopify:\/\/shop_images\/pexels-photo-768975_6ec92257-a9bb-4163-8d49-4bdb40b27df7.jpeg",
+          "our_time_heading": "שעות פעילות:",
+          "text_area": "פתוח בימים א-ה בין השעות 10:00-21:00<br>\nימי שבת 10:00-21:00<br>ימי שישי סגור",
+          "text_area_bg_color": "#f2f2f2"
+        }
+      },
+      "password-header": {
+        "type": "password-header",
+        "settings": {
+          "logo": "",
+          "logo_max_width": "100"
+        }
+      },
+      "password-content": {
+        "type": "password-content",
+        "settings": {
+          "header": "Coming Soon",
+          "newsletter_enable": true,
+          "newsletter_form_heading": "Find out when we open",
+          "newsletter_form_subheading": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>",
+          "newsletter_placeholder": "Your email",
+          "newsletter_button_text": "Submit",
+          "show_share_buttons": true
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "blocks": {
+          "1552051213759": {
+            "type": "page",
+            "settings": {
+              "title": "משלוחים",
+              "content_page": "shipping"
+            }
+          },
+          "1553373966065": {
+            "type": "html",
+            "settings": {
+              "title": "טבלת מידות",
+              "html_content": "",
+              "image": ""
+            }
+          },
+          "1552051320854": {
+            "type": "review",
+            "settings": {
+              "title": "מה לקוחותינו חושבים",
+              "review_enable": true
+            }
+          }
+        },
+        "block_order": [
+          "1552051213759",
+          "1553373966065",
+          "1552051320854"
+        ],
+        "settings": {
+          "product_image_zoom_enable": true,
+          "product_quantity_enable": true,
+          "product_quantity_message": false,
+          "product_incoming_message": false,
+          "product_vendor_enable": false,
+          "product_show_saved_amount": true,
+          "product_show_compare_at_price": true,
+          "related_products_enable": true,
+          "enable_payment_button": false,
+          "social_sharing_products": true,
+          "product_reviews_enable": true,
+          "add_to_cart_button_size": "medium",
+          "top_background_image": "shopify:\/\/shop_images\/product-banner.jpg",
+          "m_background_image": "shopify:\/\/shop_images\/product-banner.jpg",
+          "top_bg_img_text": "שם המוצר שבחרת",
+          "img_text_color": "#ffffff",
+          "related_product_bg_color": "#f7f7f7",
+          "related_product_text": "מוצרים קשורים",
+          "rp_text_color": "#8b8b8b"
+        }
+      },
+      "newsletter": {
+        "type": "newsletter",
+        "settings": {
+          "bg_image": "shopify:\/\/shop_images\/newsletter-bg.jpg",
+          "text_color": "#6b6b6b",
+          "button_text_color": "#ffffff",
+          "heading": "הירשם לרשימת התפוצה שלנו"
+        }
+      },
+      "our_clients": {
+        "type": "our_clients",
+        "blocks": {
+          "1542085219006": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/5.png",
+              "logo_url": "",
+              "logo_name": ""
+            }
+          },
+          "1542085229735": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/4.png",
+              "logo_url": "",
+              "logo_name": ""
+            }
+          },
+          "1542459332461": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/3.png",
+              "logo_url": "",
+              "logo_name": ""
+            }
+          },
+          "1542459348448": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/2_6964b682-9b0c-4542-861c-898ec7214e84.png",
+              "logo_url": "",
+              "logo_name": ""
+            }
+          },
+          "1542459357671": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/1.png",
+              "logo_url": "",
+              "logo_name": ""
+            }
+          }
+        },
+        "block_order": [
+          "1542085219006",
+          "1542085229735",
+          "1542459332461",
+          "1542459348448",
+          "1542459357671"
+        ],
+        "settings": {
+          "display_logos": false,
+          "bg_color": "#dcdcdc",
+          "max_height": "18px"
+        }
+      },
+      "1542367326373": {
+        "type": "full-image",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/banner-2_faa650c3-e987-44c6-b669-4557c4aa794b.jpg",
+          "m_image": "shopify:\/\/shop_images\/banner-2_faa650c3-e987-44c6-b669-4557c4aa794b.jpg",
+          "image_text": "תמונה לכל הרוחב פרסומית יפה עם הנעה לפעולה",
+          "text_size": "60px",
+          "image_button": "לקרוא עוד",
+          "button_url": "#",
+          "text_color": "#ffffff",
+          "button_color": "#ffffff"
+        }
+      },
+      "1542372058711": {
+        "type": "instagram-feeds",
+        "settings": {
+          "access_token": "7528336838.1677ed0.6d36e98f73974e3788f290e4f85c47b9",
+          "user_id": "7528336838",
+          "instagram_text": "עקבו אחרינו גם באינסטגרם",
+          "instagram_pic": "",
+          "background_color": "#f3f3f3",
+          "heading_color": "#6b6b6b"
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "blog_show_author": true
+        }
+      }
+    },
+    "content_for_index": [
+      "slideshow",
+      "1541068914620",
+      "collection-row-1",
+      "1542367326373",
+      "1541137603628",
+      "1541157479160",
+      "1541160821755",
+      "1542372058711"
+    ]
+  },
+  "presets": {
+    "Blue": {
+      "ajax_cart_method": "modal",
+      "cart_notes_enable": false,
+      "collection_sidebar_filters": "tags",
+      "color_accent": "#dd2525",
+      "color_body_bg": "#fff",
+      "color_body_text": "#585858",
+      "color_borders": "#ececec",
+      "color_footer_bg": "#f2f2f2",
+      "color_footer_social_link": "#bbbbbb",
+      "color_footer_text": "#636363",
+      "color_header_background": "#182e49",
+      "color_header_cart_search": "#0f243d",
+      "color_header_text": "#fff",
+      "color_heading_text": "#000",
+      "color_nav_bg": "#182e49",
+      "color_nav_text": "#fff",
+      "color_primary": "#528ec1",
+      "color_secondary": "#dcdcdc",
+      "share_facebook": true,
+      "share_pinterest": true,
+      "share_twitter": true,
+      "social_facebook_link": "",
+      "social_fancy_link": "",
+      "social_google_plus_link": "",
+      "social_instagram_link": "",
+      "social_pinterest_link": "",
+      "social_sharing_style": "is-normal",
+      "social_snapchat_link": "",
+      "social_tumblr_link": "",
+      "social_twitter_link": "",
+      "social_vimeo_link": "",
+      "social_youtube_link": "",
+      "type_accent_font": "montserrat_n5",
+      "type_base_font": "montserrat_n5",
+      "type_base_size": "13px",
+      "type_button_size": "14px",
+      "type_button_transform": true,
+      "type_header_font": "montserrat_n7",
+      "type_header_transform": true,
+      "type_navigation_size": "14px",
+      "type_navigation_transform": true,
+      "superscript_decimals": true,
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "logo": "",
+            "logo_max_width": "305"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "menu": {
+              "type": "menu",
+              "settings": {
+                "title": "Quick links",
+                "menu": "",
+                "width": "16%"
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+                "title": "Get in touch",
+                "richtext": "<p>Use this text to share information about your brand with your customers.<\/p>",
+                "width": "50%"
+              }
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {
+                "title": "Newsletter",
+                "width": "33%"
+              }
+            }
+          },
+          "block_order": [
+            "menu",
+            "text",
+            "newsletter"
+          ],
+          "settings": {
+            "social_enabled": false,
+            "legal_menu": ""
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slide-0": {
+              "type": "image",
+              "settings": {
+                "slide": "",
+                "link": ""
+              }
+            },
+            "slide-1": {
+              "type": "image",
+              "settings": {
+                "slide": "",
+                "link": ""
+              }
+            },
+            "slide-2": {
+              "type": "image",
+              "settings": {
+                "slide": "",
+                "link": ""
+              }
+            }
+          },
+          "block_order": [
+            "slide-0",
+            "slide-1",
+            "slide-2"
+          ],
+          "settings": {
+            "slider_home_auto": false,
+            "slider_home_rate": "5000"
+          }
+        },
+        "collection-list": {
+          "type": "collection-list",
+          "blocks": {
+            "collection-list-0": {
+              "type": "collection",
+              "settings": {
+                "collection": ""
+              }
+            },
+            "collection-list-1": {
+              "type": "collection",
+              "settings": {
+                "collection": ""
+              }
+            }
+          },
+          "block_order": [
+            "collection-list-0",
+            "collection-list-1"
+          ],
+          "settings": {}
+        },
+        "collection-row-1": {
+          "type": "collection-rows",
+          "settings": {
+            "home_featured_row": ""
+          }
+        },
+        "collection-row-2": {
+          "type": "collection-rows",
+          "settings": {
+            "home_featured_row": ""
+          }
+        },
+        "collection-row-3": {
+          "type": "collection-rows",
+          "settings": {
+            "home_featured_row": ""
+          }
+        }
+      },
+      "content_for_index": [
+        "slideshow",
+        "collection-list",
+        "collection-row-1",
+        "collection-row-2",
+        "collection-row-3"
+      ]
+    },
+    "Light": {
+      "ajax_cart_method": "modal",
+      "cart_notes_enable": false,
+      "collection_sidebar_filters": "tags",
+      "color_accent": "#545454",
+      "color_body_bg": "#f3f3f3",
+      "color_body_text": "#858585",
+      "color_borders": "#dedede",
+      "color_footer_bg": "#ffffff",
+      "color_footer_social_link": "#545454",
+      "color_footer_text": "#545454",
+      "color_header_background": "#ffffff",
+      "color_header_cart_search": "#f3f3f3",
+      "color_header_text": "#545454",
+      "color_heading_text": "#2f2f2f",
+      "color_nav_bg": "#9c756f",
+      "color_nav_text": "#ffffff",
+      "color_primary": "#9c756f",
+      "color_secondary": "#f3f3f3",
+      "share_facebook": true,
+      "share_pinterest": true,
+      "share_twitter": true,
+      "social_facebook_link": "",
+      "social_google_plus_link": "",
+      "social_instagram_link": "",
+      "social_sharing_style": "is-normal",
+      "social_twitter_link": "",
+      "type_accent_font": "lato_n7",
+      "type_base_font": "roboto_n4",
+      "type_base_size": "14px",
+      "type_button_size": "14px",
+      "type_button_transform": true,
+      "type_header_font": "times_new_roman_n7",
+      "type_header_transform": false,
+      "type_navigation_size": "14px",
+      "type_navigation_transform": true,
+      "superscript_decimals": true,
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "logo": "",
+            "logo_max_width": "305"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "menu": {
+              "type": "menu",
+              "settings": {
+                "title": "Quick links",
+                "menu": "",
+                "width": "16%"
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+                "title": "Get in touch",
+                "richtext": "<p>Use this text to share information about your brand with your customers.<\/p>",
+                "width": "50%"
+              }
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {
+                "title": "Newsletter",
+                "width": "33%"
+              }
+            }
+          },
+          "block_order": [
+            "menu",
+            "text",
+            "newsletter"
+          ],
+          "settings": {
+            "social_enabled": false,
+            "legal_menu": ""
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slide-0": {
+              "type": "image",
+              "settings": {
+                "slide": "",
+                "link": ""
+              }
+            }
+          },
+          "block_order": [
+            "slide-0"
+          ],
+          "settings": {
+            "slider_home_auto": false,
+            "slider_home_rate": "5000"
+          }
+        },
+        "collection-list": {
+          "type": "collection-list",
+          "blocks": {
+            "collection-list-0": {
+              "type": "collection",
+              "settings": {
+                "collection": ""
+              }
+            },
+            "collection-list-1": {
+              "type": "collection",
+              "settings": {
+                "collection": ""
+              }
+            }
+          },
+          "block_order": [
+            "collection-list-0",
+            "collection-list-1"
+          ],
+          "settings": {}
+        },
+        "collection-row-1": {
+          "type": "collection-rows",
+          "settings": {
+            "home_featured_row": ""
+          }
+        },
+        "collection-row-2": {
+          "type": "collection-rows",
+          "settings": {
+            "home_featured_row": ""
+          }
+        },
+        "collection-row-3": {
+          "type": "collection-rows",
+          "settings": {
+            "home_featured_row": ""
+          }
+        },
+        "featured-content": {
+          "type": "featured-content",
+          "settings": {}
+        },
+        "slideshow-2": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-2-0": {
+              "type": "image",
+              "settings": {
+                "slide": "",
+                "link": ""
+              }
+            }
+          },
+          "block_order": [
+            "slideshow-2-0"
+          ],
+          "settings": {
+            "slider_home_auto": false,
+            "slider_home_rate": "5000"
+          }
+        }
+      },
+      "content_for_index": [
+        "slideshow",
+        "collection-list",
+        "collection-row-1",
+        "collection-row-2",
+        "collection-row-3",
+        "slideshow-2",
+        "featured-content"
+      ]
+    }
+  }
+}

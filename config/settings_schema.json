@@ -1,0 +1,2972 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Hebrew Theme",
+    "theme_author": "Zissu LTD",
+    "theme_version": "1.0.64",
+    "theme_documentation_url": "https:\/\/www.zissultd.com\/products\/shopify-hebrew-theme",
+    "theme_support_url": "https:\/\/zissultd.zendesk.com\/hc\/he\/"
+  },
+  {
+    "name": {
+      "de": "Farben",
+      "he": "Colors",
+      "es": "Colores",
+      "fr": "Couleurs",
+      "it": "Colori",
+      "ja": "色",
+      "pt-BR": "Cores",
+      "en": "צבעים"
+    },
+    "settings": [
+      {
+        "type": "header",
+        "content": {
+          "de": "Allgemein",
+          "he": "General",
+          "es": "General",
+          "fr": "Généralités",
+          "it": "Generale",
+          "ja": "一般設定",
+          "pt-BR": "Geral",
+          "en": "כללי"
+        }
+      },
+      {
+        "type": "color",
+        "id": "color_primary",
+        "label": {
+          "de": "Primärer Inhalt",
+          "he": "Conteúdo principal",
+          "es": "Contenido principal",
+          "fr": "Contenu principal",
+          "it": "Contenuti primari",
+          "ja": "主要コンテンツ",
+          "pt-BR": "Conteúdo principal",
+          "en": "קישורים וכפתורים ראשיים"
+        },
+        "default": "#204a80"
+      },
+      {
+        "type": "color",
+        "id": "color_arrow",
+        "label": {
+          "de": "Primärer Inhalt",
+          "he": "Conteúdo principal",
+          "es": "Contenido principal",
+          "fr": "Contenu principal",
+          "it": "Contenuti primari",
+          "ja": "主要コンテンツ",
+          "pt-BR": "Conteúdo principal",
+          "en": "חיצים בסליידרים"
+        }
+      },
+      {
+        "type": "color",
+        "id": "color_secondary",
+        "label": {
+          "de": "Sekundärer Inhalt",
+          "he": "Secondary content",
+          "es": "Contenido secundario",
+          "fr": "Contenu secondaire",
+          "it": "Contenuti secondari",
+          "ja": "サブコンテンツ",
+          "pt-BR": "Conteúdo secundário",
+          "en": "תוכן משני"
+        },
+        "default": "#dcdcdc",
+        "info": {
+          "de": "Sekundäre Schaltflächen",
+          "he": "Secondary buttons",
+          "es": "Botones secundarios",
+          "fr": "Boutons secondaires",
+          "it": "Pulsanti secondari",
+          "ja": "サブボタン",
+          "pt-BR": "Botões secundários",
+          "en": "לחצנים משניים"
+        }
+      },
+      {
+        "type": "color",
+        "id": "color_accent",
+        "label": {
+          "de": "Akzente",
+          "he": "Accents",
+          "es": "Acentos",
+          "fr": "Accents",
+          "it": "Elementi in risalto",
+          "ja": "アクセント",
+          "pt-BR": "Destaques",
+          "en": "ביטוי"
+        },
+        "default": "#ffea00",
+        "info": {
+          "de": "Warenkorbmenge",
+          "he": "Cart quantity",
+          "es": "Cantidad del carrito",
+          "fr": "Quantité du panier",
+          "it": "Quantità del carrello",
+          "ja": "数量",
+          "pt-BR": "Quantidade no carrinho",
+          "en": "כמות עגלה"
+        }
+      },
+      {
+        "type": "color",
+        "id": "color_body_bg",
+        "label": {
+          "de": "Körperhintergrund",
+          "he": "Body background",
+          "es": "Fondo del cuerpo",
+          "fr": "Arrière-plan du corps",
+          "it": "Sfondo corpo del testo",
+          "ja": "本文の背景",
+          "pt-BR": "Plano de fundo do corpo",
+          "en": "רקע גוף"
+        },
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "color_borders",
+        "label": {
+          "de": "Rahmen",
+          "he": "Borders",
+          "es": "Bordes",
+          "fr": "Bordures",
+          "it": "Bordi",
+          "ja": "罫線",
+          "pt-BR": "Bordas",
+          "en": "מסגרת"
+        },
+        "default": "#ececec"
+      },
+      {
+        "type": "header",
+        "content": {
+          "de": "Header",
+          "he": "Header",
+          "es": "Encabezado",
+          "fr": "En-tête",
+          "it": "Header",
+          "ja": "ヘッダー",
+          "pt-BR": "Cabeçalho",
+          "en": "כותרת"
+        }
+      },
+      {
+        "type": "color",
+        "id": "color_header_background",
+        "label": {
+          "de": "Hintergrund",
+          "he": "Background",
+          "es": "Fondo",
+          "fr": "Arrière-plan",
+          "it": "Sfondo",
+          "ja": "背景",
+          "pt-BR": "Plano de fundo",
+          "en": "רקע כללי"
+        },
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "color_header_text",
+        "label": {
+          "de": "Text und Links",
+          "he": "Text and links",
+          "es": "Texto y enlaces",
+          "fr": "Texte et liens",
+          "it": "Testo e link",
+          "ja": "テキストとリンク",
+          "pt-BR": "Texto e links",
+          "en": "טקסט וקישורים"
+        },
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "color_header_cart_search",
+        "label": {
+          "de": "Warenkorb-Schaltfläche und Suchfeld",
+          "he": "Cart button and search field",
+          "es": "Botón de carrito y campo de búsqueda",
+          "fr": "Bouton du panier et champ de recherche",
+          "it": "Pulsante carrello e campo di ricerca",
+          "ja": "カートボタンと検索フィールド",
+          "pt-BR": "Botão de carrinho e campo de pesquisa",
+          "en": "לחצן סל קניות ושדה חיפוש"
+        },
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "color_nav_bg",
+        "label": {
+          "de": "Hintergrund Hauptmenü",
+          "he": "Main menu background",
+          "es": "Fondo del menú principal",
+          "fr": "Arrière-plan du menu principal",
+          "it": "Sfondo menu principale",
+          "ja": "メインメニューの背景",
+          "pt-BR": "Plano de fundo do menu principal",
+          "en": "רקע בתפריט הראשי"
+        },
+        "default": "#000"
+      },
+      {
+        "type": "color",
+        "id": "color_nav_text",
+        "label": {
+          "de": "Hauptmenüpunkte",
+          "he": "Main menu items",
+          "es": "Elementos del menú principal",
+          "fr": "Éléments du menu principal",
+          "it": "Voci del menu principale",
+          "ja": "メインメニューの項目",
+          "pt-BR": "Itens do menu principal",
+          "en": "פריטי תפריט ראשי"
+        },
+        "default": "#fff"
+      },
+      {
+        "type": "header",
+        "content": {
+          "de": "Text",
+          "he": "Text",
+          "es": "Texto",
+          "fr": "Texte",
+          "it": "Testo",
+          "ja": "テキスト",
+          "pt-BR": "Texto",
+          "en": "טקסט"
+        }
+      },
+      {
+        "type": "color",
+        "id": "color_body_text",
+        "label": {
+          "de": "Nachricht",
+          "he": "Body",
+          "es": "Cuerpo",
+          "fr": "Corps",
+          "it": "Corpo",
+          "ja": "ボディ",
+          "pt-BR": "Corpo",
+          "en": "גוף"
+        },
+        "default": "#333333"
+      },
+      {
+        "type": "color",
+        "id": "color_heading_text",
+        "label": {
+          "de": "Überschriften",
+          "he": "Headings",
+          "es": "Títulos",
+          "fr": "Titres",
+          "it": "Titoli",
+          "ja": "見出し",
+          "pt-BR": "Títulos",
+          "en": "כותרות"
+        },
+        "default": "#000000",
+        "info": {
+          "de": "Alle Überschriften und fett gedruckte Produktpreise",
+          "he": "All headings and bold product prices",
+          "es": "Todos los encabezados y precios de productos en negrita",
+          "fr": "Tous les titres et les prix des produits en gras",
+          "it": "Tutti i titoli e prezzi dei prodotti in grassetto",
+          "ja": "すべての見出しと太字の商品価格",
+          "pt-BR": "Todos os títulos e preços de produtos em negrito",
+          "en": "כל הכותרות ומחירי מוצרים נועזים"
+        }
+      },
+      {
+        "type": "header",
+        "content": {
+          "de": "Fußzeile",
+          "he": "תפריט תחתון",
+          "es": "Pie de página",
+          "fr": "Bas de page",
+          "it": "Footer",
+          "ja": "フッター",
+          "pt-BR": "Rodapé",
+          "en": "תפריט תחתון"
+        }
+      },
+      {
+        "type": "color",
+        "id": "color_footer_bg",
+        "label": {
+          "de": "Hintergrund",
+          "he": "Background",
+          "es": "Fondo",
+          "fr": "Arrière-plan",
+          "it": "Sfondo",
+          "ja": "背景",
+          "pt-BR": "Plano de fundo",
+          "en": "רקע כללי"
+        },
+        "default": "#f2f2f2"
+      },
+      {
+        "type": "color",
+        "id": "color_footer_bottom_bg",
+        "label": {
+          "de": "Hintergrund",
+          "he": "Bottom Background",
+          "es": "Bottom Fondo",
+          "fr": "Bottom Arrière-plan",
+          "it": "Bottom Sfondo",
+          "ja": "Bottom 背景",
+          "pt-BR": "Bottom Plano de fundo",
+          "en": "רקע תחתון"
+        },
+        "default": "#f2f2f2"
+      },
+      {
+        "type": "color",
+        "id": "color_footer_text",
+        "label": {
+          "de": "Text",
+          "he": "Text",
+          "es": "Texto",
+          "fr": "Texte",
+          "it": "Testo",
+          "ja": "テキスト",
+          "pt-BR": "Texto",
+          "en": "טקסט"
+        },
+        "default": "#636363"
+      },
+      {
+        "type": "color",
+        "id": "color_footer_social_link",
+        "label": {
+          "de": "Social-Media- und Zahlungs-Symbole",
+          "he": "Social media and payment icons",
+          "es": "Iconos de redes sociales y de pago",
+          "fr": "Icônes de médias sociaux et de paiement",
+          "it": "Icone dei social media e di pagamento",
+          "ja": "SNSと支払いのアイコン",
+          "pt-BR": "Ícones de redes sociais e pagamento",
+          "en": "מדיה חברתית וסמלי תשלום"
+        },
+        "default": "#bbbbbb"
+      }
+    ]
+  },
+  {
+    "name": {
+      "de": "Typografie",
+      "he": "Typography",
+      "es": "Tipografía",
+      "fr": "Typographie",
+      "it": "Caratteri tipografici",
+      "ja": "文字体裁",
+      "pt-BR": "Tipografia",
+      "en": "טיפוגרפיה"
+    },
+    "settings": [
+      {
+        "type": "header",
+        "content": {
+          "de": "Basisstile",
+          "he": "Base styles",
+          "es": "Estilos base",
+          "fr": "Styles de base",
+          "it": "Stile di base",
+          "ja": "基本スタイル",
+          "pt-BR": "Estilos de base",
+          "en": "פונט לגוף האתר"
+        }
+      },
+      {
+        "type": "select",
+        "id": "type_base_font_new",
+        "label": {
+          "de": "Schriftart",
+          "he": "Base Font",
+          "es": "Fuente",
+          "fr": "Police",
+          "it": "Font",
+          "ja": "フォント",
+          "pt-BR": "Fonte",
+          "en": "משפחת הפונט"
+        },
+        "options": [
+          {
+            "value": "Amatic SC, cursive",
+            "label": "Amatic SC, cursive",
+            "group": "עברית"
+          },
+          {
+            "value": "Arial, 'Helvetica Neue', Helvetica, sans-serif",
+            "label": "Arial",
+            "group": "עברית"
+          },
+          {
+            "value": "'Rubik', sans-serif",
+            "label": "Rubik, sans-serif",
+            "group": "עברית"
+          },
+          {
+            "value": "'Assistant', sans-serif;",
+            "label": "Assistant, sans-serif",
+            "group": "עברית"
+          },
+          {
+            "value": "'Arimo', sans-serif;",
+            "label": "Arimo, sans-serif",
+            "group": "עברית"
+          },
+          {
+            "value": "'Heebo', sans-serif;",
+            "label": "Heebo, sans-serif",
+            "group": "עברית"
+          },
+          {
+            "value": "'Varela Round', sans-serif;",
+            "label": "Varela Round, sans-serif",
+            "group": "עברית"
+          },
+          {
+            "value": "'Alef', sans-serif;",
+            "label": "Alef, sans-serif",
+            "group": "עברית"
+          },
+          {
+            "value": "'Cousine', monospace;",
+            "label": "Cousine, monospace",
+            "group": "עברית"
+          },
+          {
+            "value": "'Suez One', serif;",
+            "label": "Suez One, serif",
+            "group": "עברית"
+          },
+          {
+            "value": "'Bellefair', serif;",
+            "label": "Bellefair, serif",
+            "group": "עברית"
+          },
+          {
+            "value": "google, 'Alegreya', Helvetica, Arial, sans-serif",
+            "label": "Alegreya",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Lato', Helvetica, Arial, sans-serif",
+            "label": "Lato",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Open Sans', Helvetica, Arial, sans-serif",
+            "label": "Open Sans",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Roboto', Helvetica, Arial, sans-serif",
+            "label": "Roboto",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Quattrocento Sans', Helvetica, Arial, sans-serif",
+            "label": "Quattrocento Sans",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Source Sans Pro', Helvetica, Arial, sans-serif",
+            "label": "Source Sans Pro",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Droid Sans', Helvetica, Arial, sans-serif",
+            "label": "Droid Sans",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'PT Sans', Helvetica, Arial, sans-serif",
+            "label": "PT Sans",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Dosis', Helvetica, Arial, sans-serif",
+            "label": "Dosis",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Cabin', Helvetica, Arial, sans-serif",
+            "label": "Cabin",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Rosario', Helvetica, Arial, sans-serif",
+            "label": "Rosario",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Muli', Helvetica, Arial, sans-serif",
+            "label": "Muli",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Droid Serif', Georgia, serif",
+            "label": "Droid Serif",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'Merriweather', Georgia, serif",
+            "label": "Merriweather",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'Playfair Display', Georgia, serif",
+            "label": "Playfair Display",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'Quattrocento', Georgia, serif",
+            "label": "Quattrocento",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'Cardo', Georgia, serif",
+            "label": "Cardo",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'EB Garamond', Georgia, serif",
+            "label": "EB Garamond",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'Lustria', Georgia, serif",
+            "label": "Lustria",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'Abel', Georgia, sans-serif",
+            "label": "Abel",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Ovo', Georgia, serif",
+            "label": "Ovo",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'Libre Baskerville', Georgia, serif",
+            "label": "Libre Baskerville",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'Source Code Pro', Georgia, serif",
+            "label": "Source Code Pro",
+            "group": "Serif"
+          }
+        ],
+        "default": "google, 'Merriweather', Georgia, serif"
+      },
+      {
+        "type": "select",
+        "id": "type_base_size",
+        "label": {
+          "de": "Schriftgröße Hauptmenü",
+          "he": "Main menu font size",
+          "es": "Tamaño de fuente del menú principal",
+          "fr": "Taille de la police du menu principal",
+          "it": "Dimensione font menu principale",
+          "ja": "メインメニューのフォントサイズ",
+          "pt-BR": "Tamanho da fonte do menu principal",
+          "en": "גודל פונט בגוף האתר"
+        },
+        "options": [
+          {
+            "value": "14px",
+            "label": {
+              "de": "14px",
+              "he": "14px",
+              "es": "14px",
+              "fr": "14 px",
+              "it": "14 px",
+              "ja": "14ピクセル",
+              "pt-BR": "14px",
+              "en": "14px"
+            }
+          },
+          {
+            "value": "15px",
+            "label": {
+              "de": "15px",
+              "he": "15px",
+              "es": "15px",
+              "fr": "15 px",
+              "it": "15 px",
+              "ja": "15ピクセル",
+              "pt-BR": "15px",
+              "en": "15px"
+            }
+          },
+          {
+            "value": "16px",
+            "label": {
+              "de": "16px",
+              "he": "16px",
+              "es": "16px",
+              "fr": "16 px",
+              "it": "16 px",
+              "ja": "16ピクセル",
+              "pt-BR": "16px",
+              "en": "16px"
+            }
+          },
+          {
+            "value": "17px",
+            "label": {
+              "de": "17px",
+              "he": "17px",
+              "es": "17px",
+              "fr": "17 px",
+              "it": "17 px",
+              "ja": "17ピクセル",
+              "pt-BR": "17px",
+              "en": "17px"
+            }
+          },
+          {
+            "value": "18px",
+            "label": {
+              "de": "18px",
+              "he": "18px",
+              "es": "18px",
+              "fr": "18 px",
+              "it": "18 px",
+              "ja": "18ピクセル",
+              "pt-BR": "18px",
+              "en": "18px"
+            }
+          },
+          {
+            "value": "19px",
+            "label": {
+              "de": "19px",
+              "he": "19px",
+              "es": "19px",
+              "fr": "19 px",
+              "it": "19 px",
+              "ja": "19ピクセル",
+              "pt-BR": "19px",
+              "en": "19px"
+            }
+          },
+          {
+            "value": "20px",
+            "label": {
+              "de": "20px",
+              "he": "20px",
+              "es": "20px",
+              "fr": "20 px",
+              "it": "20 px",
+              "ja": "20ピクセル",
+              "pt-BR": "20px",
+              "en": "20px"
+            }
+          },
+          {
+            "value": "21px",
+            "label": {
+              "de": "21px",
+              "he": "21px",
+              "es": "21px",
+              "fr": "21 px",
+              "it": "21 px",
+              "ja": "21ピクセル",
+              "pt-BR": "21px",
+              "en": "21px"
+            }
+          },
+          {
+            "value": "22px",
+            "label": {
+              "de": "22px",
+              "he": "22px",
+              "es": "22px",
+              "fr": "22 px",
+              "it": "22 px",
+              "ja": "22ピクセル",
+              "pt-BR": "22px",
+              "en": "22px"
+            }
+          },
+          {
+            "value": "23px",
+            "label": {
+              "de": "23px",
+              "he": "23px",
+              "es": "23px",
+              "fr": "23 px",
+              "it": "23 px",
+              "ja": "23ピクセル",
+              "pt-BR": "23px",
+              "en": "23px"
+            }
+          },
+          {
+            "value": "24px",
+            "label": {
+              "de": "24px",
+              "he": "24px",
+              "es": "24px",
+              "fr": "24 px",
+              "it": "24 px",
+              "ja": "24ピクセル",
+              "pt-BR": "24px",
+              "en": "24px"
+            }
+          },
+          {
+            "value": "25px",
+            "label": {
+              "de": "25px",
+              "he": "25px",
+              "es": "25px",
+              "fr": "25 px",
+              "it": "25 px",
+              "ja": "25ピクセル",
+              "pt-BR": "25px",
+              "en": "25px"
+            }
+          },
+          {
+            "value": "26px",
+            "label": {
+              "de": "26px",
+              "he": "26px",
+              "es": "26px",
+              "fr": "26 px",
+              "it": "26 px",
+              "ja": "26ピクセル",
+              "pt-BR": "26px",
+              "en": "26px"
+            }
+          },
+          {
+            "value": "27px",
+            "label": {
+              "de": "27px",
+              "he": "27px",
+              "es": "27px",
+              "fr": "27 px",
+              "it": "27 px",
+              "ja": "27ピクセル",
+              "pt-BR": "27px",
+              "en": "27px"
+            }
+          },
+          {
+            "value": "28px",
+            "label": {
+              "de": "28px",
+              "he": "28px",
+              "es": "28px",
+              "fr": "28 px",
+              "it": "28 px",
+              "ja": "28ピクセル",
+              "pt-BR": "28px",
+              "en": "28px"
+            }
+          },
+          {
+            "value": "29px",
+            "label": {
+              "de": "29px",
+              "he": "29px",
+              "es": "29px",
+              "fr": "29 px",
+              "it": "29 px",
+              "ja": "29ピクセル",
+              "pt-BR": "29px",
+              "en": "29px"
+            }
+          },
+          {
+            "value": "30px",
+            "label": {
+              "de": "30px",
+              "he": "30px",
+              "es": "30px",
+              "fr": "30 px",
+              "it": "30 px",
+              "ja": "30ピクセル",
+              "pt-BR": "30px",
+              "en": "30px"
+            }
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "body_font_weight",
+        "label": "עובי פונט",
+        "default": "400",
+        "options": [
+          {
+            "value": "100",
+            "label": "100"
+          },
+          {
+            "value": "200",
+            "label": "200"
+          },
+          {
+            "value": "300",
+            "label": "300"
+          },
+          {
+            "value": "400",
+            "label": "400"
+          },
+          {
+            "value": "500",
+            "label": "500"
+          },
+          {
+            "value": "600",
+            "label": "600"
+          },
+          {
+            "value": "700",
+            "label": "700"
+          },
+          {
+            "value": "800",
+            "label": "800"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": {
+          "de": "Überschriftstile",
+          "he": "Heading styles",
+          "es": "Estilos de título",
+          "fr": "Styles de titre",
+          "it": "Stile dei titoli",
+          "ja": "見出しのスタイル",
+          "pt-BR": "Estilos de cabeçalho",
+          "en": "פונט תפריט עליון"
+        }
+      },
+      {
+        "type": "select",
+        "id": "type_header_font_new",
+        "label": {
+          "de": "Schriftart",
+          "he": "Special Font",
+          "es": "Fuente",
+          "fr": "Police",
+          "it": "Font",
+          "ja": "フォント",
+          "pt-BR": "Fonte",
+          "en": "משפחת הפונט"
+        },
+        "options": [
+          {
+            "value": "Amatic SC, cursive",
+            "label": "Amatic SC, cursive",
+            "group": "עברית"
+          },
+          {
+            "value": "Arial, 'Helvetica Neue', Helvetica, sans-serif",
+            "label": "Arial",
+            "group": "עברית"
+          },
+          {
+            "value": "'Rubik', sans-serif",
+            "label": "Rubik, sans-serif",
+            "group": "עברית"
+          },
+          {
+            "value": "'Assistant', sans-serif;",
+            "label": "Assistant, sans-serif",
+            "group": "עברית"
+          },
+          {
+            "value": "'Arimo', sans-serif;",
+            "label": "Arimo, sans-serif",
+            "group": "עברית"
+          },
+          {
+            "value": "'Heebo', sans-serif;",
+            "label": "Heebo, sans-serif",
+            "group": "עברית"
+          },
+          {
+            "value": "'Varela Round', sans-serif;",
+            "label": "Varela Round, sans-serif",
+            "group": "עברית"
+          },
+          {
+            "value": "'Alef', sans-serif;",
+            "label": "Alef, sans-serif",
+            "group": "עברית"
+          },
+          {
+            "value": "'Cousine', monospace;",
+            "label": "Cousine, monospace",
+            "group": "עברית"
+          },
+          {
+            "value": "'Suez One', serif;",
+            "label": "Suez One, serif",
+            "group": "עברית"
+          },
+          {
+            "value": "'Bellefair', serif;",
+            "label": "Bellefair, serif",
+            "group": "עברית"
+          },
+          {
+            "value": "google, 'Alegreya', Helvetica, Arial, sans-serif",
+            "label": "Alegreya",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Lato', Helvetica, Arial, sans-serif",
+            "label": "Lato",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Open Sans', Helvetica, Arial, sans-serif",
+            "label": "Open Sans",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Roboto', Helvetica, Arial, sans-serif",
+            "label": "Roboto",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Quattrocento Sans', Helvetica, Arial, sans-serif",
+            "label": "Quattrocento Sans",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Source Sans Pro', Helvetica, Arial, sans-serif",
+            "label": "Source Sans Pro",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Droid Sans', Helvetica, Arial, sans-serif",
+            "label": "Droid Sans",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'PT Sans', Helvetica, Arial, sans-serif",
+            "label": "PT Sans",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Dosis', Helvetica, Arial, sans-serif",
+            "label": "Dosis",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Cabin', Helvetica, Arial, sans-serif",
+            "label": "Cabin",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Rosario', Helvetica, Arial, sans-serif",
+            "label": "Rosario",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Muli', Helvetica, Arial, sans-serif",
+            "label": "Muli",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Droid Serif', Georgia, serif",
+            "label": "Droid Serif",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'Merriweather', Georgia, serif",
+            "label": "Merriweather",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'Playfair Display', Georgia, serif",
+            "label": "Playfair Display",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'Quattrocento', Georgia, serif",
+            "label": "Quattrocento",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'Cardo', Georgia, serif",
+            "label": "Cardo",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'EB Garamond', Georgia, serif",
+            "label": "EB Garamond",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'Lustria', Georgia, serif",
+            "label": "Lustria",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'Abel', Georgia, sans-serif",
+            "label": "Abel",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Ovo', Georgia, serif",
+            "label": "Ovo",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'Libre Baskerville', Georgia, serif",
+            "label": "Libre Baskerville",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'Source Code Pro', Georgia, serif",
+            "label": "Source Code Pro",
+            "group": "Serif"
+          }
+        ],
+        "default": "google, 'Merriweather', Georgia, serif"
+      },
+      {
+        "type": "select",
+        "id": "type_header_size",
+        "label": {
+          "de": "Schriftgröße Hauptmenü",
+          "he": "Header font size",
+          "es": "Tamaño de fuente del menú principal",
+          "fr": "Taille de la police du menu principal",
+          "it": "Dimensione font menu principale",
+          "ja": "メインメニューのフォントサイズ",
+          "pt-BR": "Tamanho da fonte do menu principal",
+          "en": "גודל פונט"
+        },
+        "options": [
+          {
+            "value": "14px",
+            "label": {
+              "de": "14px",
+              "he": "14px",
+              "es": "14px",
+              "fr": "14 px",
+              "it": "14 px",
+              "ja": "14ピクセル",
+              "pt-BR": "14px",
+              "en": "14px"
+            }
+          },
+          {
+            "value": "15px",
+            "label": {
+              "de": "15px",
+              "he": "15px",
+              "es": "15px",
+              "fr": "15 px",
+              "it": "15 px",
+              "ja": "15ピクセル",
+              "pt-BR": "15px",
+              "en": "15px"
+            }
+          },
+          {
+            "value": "16px",
+            "label": {
+              "de": "16px",
+              "he": "16px",
+              "es": "16px",
+              "fr": "16 px",
+              "it": "16 px",
+              "ja": "16ピクセル",
+              "pt-BR": "16px",
+              "en": "16px"
+            }
+          },
+          {
+            "value": "17px",
+            "label": {
+              "de": "17px",
+              "he": "17px",
+              "es": "17px",
+              "fr": "17 px",
+              "it": "17 px",
+              "ja": "17ピクセル",
+              "pt-BR": "17px",
+              "en": "17px"
+            }
+          },
+          {
+            "value": "18px",
+            "label": {
+              "de": "18px",
+              "he": "18px",
+              "es": "18px",
+              "fr": "18 px",
+              "it": "18 px",
+              "ja": "18ピクセル",
+              "pt-BR": "18px",
+              "en": "18px"
+            }
+          },
+          {
+            "value": "19px",
+            "label": {
+              "de": "19px",
+              "he": "19px",
+              "es": "19px",
+              "fr": "19 px",
+              "it": "19 px",
+              "ja": "19ピクセル",
+              "pt-BR": "19px",
+              "en": "19px"
+            }
+          },
+          {
+            "value": "20px",
+            "label": {
+              "de": "20px",
+              "he": "20px",
+              "es": "20px",
+              "fr": "20 px",
+              "it": "20 px",
+              "ja": "20ピクセル",
+              "pt-BR": "20px",
+              "en": "20px"
+            }
+          },
+          {
+            "value": "21px",
+            "label": {
+              "de": "21px",
+              "he": "21px",
+              "es": "21px",
+              "fr": "21 px",
+              "it": "21 px",
+              "ja": "21ピクセル",
+              "pt-BR": "21px",
+              "en": "21px"
+            }
+          },
+          {
+            "value": "22px",
+            "label": {
+              "de": "22px",
+              "he": "22px",
+              "es": "22px",
+              "fr": "22 px",
+              "it": "22 px",
+              "ja": "22ピクセル",
+              "pt-BR": "22px",
+              "en": "22px"
+            }
+          },
+          {
+            "value": "23px",
+            "label": {
+              "de": "23px",
+              "he": "23px",
+              "es": "23px",
+              "fr": "23 px",
+              "it": "23 px",
+              "ja": "23ピクセル",
+              "pt-BR": "23px",
+              "en": "23px"
+            }
+          },
+          {
+            "value": "24px",
+            "label": {
+              "de": "24px",
+              "he": "24px",
+              "es": "24px",
+              "fr": "24 px",
+              "it": "24 px",
+              "ja": "24ピクセル",
+              "pt-BR": "24px",
+              "en": "24px"
+            }
+          },
+          {
+            "value": "25px",
+            "label": {
+              "de": "25px",
+              "he": "25px",
+              "es": "25px",
+              "fr": "25 px",
+              "it": "25 px",
+              "ja": "25ピクセル",
+              "pt-BR": "25px",
+              "en": "25px"
+            }
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "header_font_weight",
+        "label": "עובי פונט",
+        "default": "400",
+        "options": [
+          {
+            "value": "100",
+            "label": "100"
+          },
+          {
+            "value": "200",
+            "label": "200"
+          },
+          {
+            "value": "300",
+            "label": "300"
+          },
+          {
+            "value": "400",
+            "label": "400"
+          },
+          {
+            "value": "500",
+            "label": "500"
+          },
+          {
+            "value": "600",
+            "label": "600"
+          },
+          {
+            "value": "700",
+            "label": "700"
+          },
+          {
+            "value": "800",
+            "label": "800"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": {
+          "de": "Navigations- und Schaltflächenstile",
+          "he": "Navigation and buttons styles",
+          "es": "Estilos de navegación y botones",
+          "fr": "Styles de navigation et de boutons",
+          "it": "Stili di navigazione e pulsanti",
+          "ja": "ナビゲーションとボタンのスタイル",
+          "pt-BR": "Estilos de navegação e botões",
+          "en": "סגנונות ניווט ולחצנים"
+        }
+      },
+      {
+        "type": "select",
+        "id": "type_accent_font_new",
+        "label": {
+          "de": "Schriftart Hauptmenü und Schaltflächen",
+          "he": "Main menu and button font",
+          "es": "Fuente de menú principal y botón",
+          "fr": "Police du menu principal et du bouton",
+          "it": "Menu principale e font pulsante",
+          "ja": "メインメニューとボタンのフォント",
+          "pt-BR": "Fonte do menu principal e botões",
+          "en": "תפריט ראשי וגופן כפתור"
+        },
+        "options": [
+          {
+            "value": "Amatic SC, cursive",
+            "label": "Amatic SC, cursive",
+            "group": "עברית"
+          },
+          {
+            "value": "Arial, 'Helvetica Neue', Helvetica, sans-serif",
+            "label": "Arial",
+            "group": "עברית"
+          },
+          {
+            "value": "'Rubik', sans-serif",
+            "label": "Rubik, sans-serif",
+            "group": "עברית"
+          },
+          {
+            "value": "'Assistant', sans-serif;",
+            "label": "Assistant, sans-serif",
+            "group": "עברית"
+          },
+          {
+            "value": "'Arimo', sans-serif;",
+            "label": "Arimo, sans-serif",
+            "group": "עברית"
+          },
+          {
+            "value": "'Heebo', sans-serif;",
+            "label": "Heebo, sans-serif",
+            "group": "עברית"
+          },
+          {
+            "value": "'Varela Round', sans-serif;",
+            "label": "Varela Round, sans-serif",
+            "group": "עברית"
+          },
+          {
+            "value": "'Alef', sans-serif;",
+            "label": "Alef, sans-serif",
+            "group": "עברית"
+          },
+          {
+            "value": "'Cousine', monospace;",
+            "label": "Cousine, monospace",
+            "group": "עברית"
+          },
+          {
+            "value": "'Suez One', serif;",
+            "label": "Suez One, serif",
+            "group": "עברית"
+          },
+          {
+            "value": "'Bellefair', serif;",
+            "label": "Bellefair, serif",
+            "group": "עברית"
+          },
+          {
+            "value": "google, 'Alegreya', Helvetica, Arial, sans-serif",
+            "label": "Alegreya",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Lato', Helvetica, Arial, sans-serif",
+            "label": "Lato",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Open Sans', Helvetica, Arial, sans-serif",
+            "label": "Open Sans",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Roboto', Helvetica, Arial, sans-serif",
+            "label": "Roboto",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Quattrocento Sans', Helvetica, Arial, sans-serif",
+            "label": "Quattrocento Sans",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Source Sans Pro', Helvetica, Arial, sans-serif",
+            "label": "Source Sans Pro",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Droid Sans', Helvetica, Arial, sans-serif",
+            "label": "Droid Sans",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'PT Sans', Helvetica, Arial, sans-serif",
+            "label": "PT Sans",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Dosis', Helvetica, Arial, sans-serif",
+            "label": "Dosis",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Cabin', Helvetica, Arial, sans-serif",
+            "label": "Cabin",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Rosario', Helvetica, Arial, sans-serif",
+            "label": "Rosario",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Muli', Helvetica, Arial, sans-serif",
+            "label": "Muli",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Droid Serif', Georgia, serif",
+            "label": "Droid Serif",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'Merriweather', Georgia, serif",
+            "label": "Merriweather",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'Playfair Display', Georgia, serif",
+            "label": "Playfair Display",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'Quattrocento', Georgia, serif",
+            "label": "Quattrocento",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'Cardo', Georgia, serif",
+            "label": "Cardo",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'EB Garamond', Georgia, serif",
+            "label": "EB Garamond",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'Lustria', Georgia, serif",
+            "label": "Lustria",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'Abel', Georgia, sans-serif",
+            "label": "Abel",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "google, 'Ovo', Georgia, serif",
+            "label": "Ovo",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'Libre Baskerville', Georgia, serif",
+            "label": "Libre Baskerville",
+            "group": "Serif"
+          },
+          {
+            "value": "google, 'Source Code Pro', Georgia, serif",
+            "label": "Source Code Pro",
+            "group": "Serif"
+          }
+        ],
+        "default": "google, 'Merriweather', Georgia, serif"
+      },
+      {
+        "type": "select",
+        "id": "type_navigation_size",
+        "label": {
+          "de": "Schriftgröße Hauptmenü",
+          "he": "Main menu font size",
+          "es": "Tamaño de fuente del menú principal",
+          "fr": "Taille de la police du menu principal",
+          "it": "Dimensione font menu principale",
+          "ja": "メインメニューのフォントサイズ",
+          "pt-BR": "Tamanho da fonte do menu principal",
+          "en": "גודל פונט בתפריט מובייל"
+        },
+        "options": [
+          {
+            "value": "14px",
+            "label": {
+              "de": "14px",
+              "he": "14px",
+              "es": "14px",
+              "fr": "14 px",
+              "it": "14 px",
+              "ja": "14ピクセル",
+              "pt-BR": "14px",
+              "en": "14px"
+            }
+          },
+          {
+            "value": "15px",
+            "label": {
+              "de": "15px",
+              "he": "15px",
+              "es": "15px",
+              "fr": "15 px",
+              "it": "15 px",
+              "ja": "15ピクセル",
+              "pt-BR": "15px",
+              "en": "15px"
+            }
+          },
+          {
+            "value": "16px",
+            "label": {
+              "de": "16px",
+              "he": "16px",
+              "es": "16px",
+              "fr": "16 px",
+              "it": "16 px",
+              "ja": "16ピクセル",
+              "pt-BR": "16px",
+              "en": "16px"
+            }
+          },
+          {
+            "value": "17px",
+            "label": {
+              "de": "17px",
+              "he": "17px",
+              "es": "17px",
+              "fr": "17 px",
+              "it": "17 px",
+              "ja": "17ピクセル",
+              "pt-BR": "17px",
+              "en": "17px"
+            }
+          },
+          {
+            "value": "18px",
+            "label": {
+              "de": "18px",
+              "he": "18px",
+              "es": "18px",
+              "fr": "18 px",
+              "it": "18 px",
+              "ja": "18ピクセル",
+              "pt-BR": "18px",
+              "en": "18px"
+            }
+          },
+          {
+            "value": "19px",
+            "label": {
+              "de": "19px",
+              "he": "19px",
+              "es": "19px",
+              "fr": "19 px",
+              "it": "19 px",
+              "ja": "19ピクセル",
+              "pt-BR": "19px",
+              "en": "19px"
+            }
+          },
+          {
+            "value": "20px",
+            "label": {
+              "de": "20px",
+              "he": "20px",
+              "es": "20px",
+              "fr": "20 px",
+              "it": "20 px",
+              "ja": "20ピクセル",
+              "pt-BR": "20px",
+              "en": "20px"
+            }
+          },
+          {
+            "value": "21px",
+            "label": {
+              "de": "21px",
+              "he": "21px",
+              "es": "21px",
+              "fr": "21 px",
+              "it": "21 px",
+              "ja": "21ピクセル",
+              "pt-BR": "21px",
+              "en": "21px"
+            }
+          },
+          {
+            "value": "22px",
+            "label": {
+              "de": "22px",
+              "he": "22px",
+              "es": "22px",
+              "fr": "22 px",
+              "it": "22 px",
+              "ja": "22ピクセル",
+              "pt-BR": "22px",
+              "en": "22px"
+            }
+          },
+          {
+            "value": "23px",
+            "label": {
+              "de": "23px",
+              "he": "23px",
+              "es": "23px",
+              "fr": "23 px",
+              "it": "23 px",
+              "ja": "23ピクセル",
+              "pt-BR": "23px",
+              "en": "23px"
+            }
+          },
+          {
+            "value": "24px",
+            "label": {
+              "de": "24px",
+              "he": "24px",
+              "es": "24px",
+              "fr": "24 px",
+              "it": "24 px",
+              "ja": "24ピクセル",
+              "pt-BR": "24px",
+              "en": "24px"
+            }
+          },
+          {
+            "value": "25px",
+            "label": {
+              "de": "25px",
+              "he": "25px",
+              "es": "25px",
+              "fr": "25 px",
+              "it": "25 px",
+              "ja": "25ピクセル",
+              "pt-BR": "25px",
+              "en": "25px"
+            }
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "font_navigation_weight",
+        "label": "עובי פונט",
+        "default": "800",
+        "options": [
+          {
+            "value": "100",
+            "label": "100"
+          },
+          {
+            "value": "200",
+            "label": "200"
+          },
+          {
+            "value": "300",
+            "label": "300"
+          },
+          {
+            "value": "400",
+            "label": "400"
+          },
+          {
+            "value": "500",
+            "label": "500"
+          },
+          {
+            "value": "600",
+            "label": "600"
+          },
+          {
+            "value": "700",
+            "label": "700"
+          },
+          {
+            "value": "800",
+            "label": "800"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "type_button_size",
+        "label": {
+          "de": "Schriftgröße Schaltflächen",
+          "he": "Button font size",
+          "es": "Tamaño de fuente del botón",
+          "fr": "Taille de la police du bouton",
+          "it": "Dimensione font pulsante",
+          "ja": "ボタンのフォントサイズ",
+          "pt-BR": "Tamanho da fonte do botão",
+          "en": "גודל פונט של טקסט בכפתור"
+        },
+        "options": [
+          {
+            "value": "14px",
+            "label": {
+              "de": "14px",
+              "he": "14px",
+              "es": "14px",
+              "fr": "14 px",
+              "it": "14 px",
+              "ja": "14ピクセル",
+              "pt-BR": "14px",
+              "en": "14px"
+            }
+          },
+          {
+            "value": "15px",
+            "label": {
+              "de": "15px",
+              "he": "15px",
+              "es": "15px",
+              "fr": "15 px",
+              "it": "15 px",
+              "ja": "15ピクセル",
+              "pt-BR": "15px",
+              "en": "15px"
+            }
+          },
+          {
+            "value": "16px",
+            "label": {
+              "de": "16px",
+              "he": "16px",
+              "es": "16px",
+              "fr": "16 px",
+              "it": "16 px",
+              "ja": "16ピクセル",
+              "pt-BR": "16px",
+              "en": "16px"
+            }
+          },
+          {
+            "value": "17px",
+            "label": {
+              "de": "17px",
+              "he": "17px",
+              "es": "17px",
+              "fr": "17 px",
+              "it": "17 px",
+              "ja": "17ピクセル",
+              "pt-BR": "17px",
+              "en": "17px"
+            }
+          },
+          {
+            "value": "18px",
+            "label": {
+              "de": "18px",
+              "he": "18px",
+              "es": "18px",
+              "fr": "18 px",
+              "it": "18 px",
+              "ja": "18ピクセル",
+              "pt-BR": "18px",
+              "en": "18px"
+            }
+          },
+          {
+            "value": "30px",
+            "label": {
+              "de": "30px",
+              "he": "30px",
+              "es": "30px",
+              "fr": "30 px",
+              "it": "30 px",
+              "ja": "30ピクセル",
+              "pt-BR": "30px",
+              "en": "30px"
+            }
+          },
+          {
+            "value": "32px",
+            "label": {
+              "de": "32px",
+              "he": "32px",
+              "es": "32px",
+              "fr": "32 px",
+              "it": "32 px",
+              "ja": "32ピクセル",
+              "pt-BR": "32px",
+              "en": "32px"
+            }
+          },
+          {
+            "value": "34px",
+            "label": {
+              "de": "34px",
+              "he": "34px",
+              "es": "34px",
+              "fr": "34 px",
+              "it": "34 px",
+              "ja": "34ピクセル",
+              "pt-BR": "34px",
+              "en": "34px"
+            }
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": {
+          "de": "Basisstile",
+          "he": "Base styles",
+          "es": "Estilos base",
+          "fr": "Styles de base",
+          "it": "Stile di base",
+          "ja": "基本スタイル",
+          "pt-BR": "Estilos de base",
+          "en": "פונט לדף מוצר"
+        }
+      },
+      {
+        "type": "select",
+        "id": "product_title_size",
+        "label": {
+          "de": "Schriftgröße Hauptmenü",
+          "he": "Main menu font size",
+          "es": "Tamaño de fuente del menú principal",
+          "fr": "Taille de la police du menu principal",
+          "it": "Dimensione font menu principale",
+          "ja": "メインメニューのフォントサイズ",
+          "pt-BR": "Tamanho da fonte do menu principal",
+          "en": "גודל כותרת מוצר"
+        },
+        "options": [
+          {
+            "value": "20px",
+            "label": {
+              "de": "20px",
+              "he": "20px",
+              "es": "20px",
+              "fr": "20px",
+              "it": "20px",
+              "ja": "20ピクセル",
+              "pt-BR": "20px",
+              "en": "20px"
+            }
+          },
+          {
+            "value": "24px",
+            "label": {
+              "de": "24px",
+              "he": "24px",
+              "es": "24px",
+              "fr": "24px",
+              "it": "24px",
+              "ja": "24ピクセル",
+              "pt-BR": "24px",
+              "en": "24px"
+            }
+          },
+          {
+            "value": "28px",
+            "label": {
+              "de": "28px",
+              "he": "28px",
+              "es": "28px",
+              "fr": "28px",
+              "it": "28px",
+              "ja": "28ピクセル",
+              "pt-BR": "28px",
+              "en": "28px"
+            }
+          },
+          {
+            "value": "32px",
+            "label": {
+              "de": "32px",
+              "he": "32px",
+              "es": "32px",
+              "fr": "32px",
+              "it": "32px",
+              "ja": "32ピクセル",
+              "pt-BR": "32px",
+              "en": "32px"
+            }
+          },
+          {
+            "value": "36px",
+            "label": {
+              "de": "36px",
+              "he": "36px",
+              "es": "36px",
+              "fr": "36px",
+              "it": "36px",
+              "ja": "36ピクセル",
+              "pt-BR": "36px",
+              "en": "36px"
+            }
+          },
+          {
+            "value": "40px",
+            "label": {
+              "de": "40px",
+              "he": "40px",
+              "es": "40px",
+              "fr": "40px",
+              "it": "40px",
+              "ja": "40ピクセル",
+              "pt-BR": "40px",
+              "en": "40px"
+            }
+          },
+          {
+            "value": "44px",
+            "label": {
+              "de": "44px",
+              "he": "44px",
+              "es": "44px",
+              "fr": "44px",
+              "it": "44px",
+              "ja": "44ピクセル",
+              "pt-BR": "44px",
+              "en": "44px"
+            }
+          },
+          {
+            "value": "48px",
+            "label": {
+              "de": "48px",
+              "he": "48px",
+              "es": "48px",
+              "fr": "48px",
+              "it": "48px",
+              "ja": "48ピクセル",
+              "pt-BR": "48px",
+              "en": "48px"
+            }
+          },
+          {
+            "value": "52px",
+            "label": {
+              "de": "52px",
+              "he": "52px",
+              "es": "52px",
+              "fr": "52px",
+              "it": "52px",
+              "ja": "52ピクセル",
+              "pt-BR": "52px",
+              "en": "52px"
+            }
+          },
+          {
+            "value": "56px",
+            "label": {
+              "de": "56px",
+              "he": "56px",
+              "es": "56px",
+              "fr": "56px",
+              "it": "56px",
+              "ja": "56ピクセル",
+              "pt-BR": "56px",
+              "en": "56px"
+            }
+          },
+          {
+            "value": "60px",
+            "label": {
+              "de": "60px",
+              "he": "60px",
+              "es": "60px",
+              "fr": "60px",
+              "it": "60px",
+              "ja": "60ピクセル",
+              "pt-BR": "60px",
+              "en": "60px"
+            }
+          },
+          {
+            "value": "64px",
+            "label": {
+              "de": "64px",
+              "he": "64px",
+              "es": "64px",
+              "fr": "64px",
+              "it": "64px",
+              "ja": "64ピクセル",
+              "pt-BR": "64px",
+              "en": "64px"
+            }
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "product_title_weight",
+        "label": "עובי פונט",
+        "default": "800",
+        "options": [
+          {
+            "value": "100",
+            "label": "100"
+          },
+          {
+            "value": "200",
+            "label": "200"
+          },
+          {
+            "value": "300",
+            "label": "300"
+          },
+          {
+            "value": "400",
+            "label": "400"
+          },
+          {
+            "value": "500",
+            "label": "500"
+          },
+          {
+            "value": "600",
+            "label": "600"
+          },
+          {
+            "value": "700",
+            "label": "700"
+          },
+          {
+            "value": "800",
+            "label": "800"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "product_price_size",
+        "label": {
+          "de": "Schriftgröße Hauptmenü",
+          "he": "Main menu font size",
+          "es": "Tamaño de fuente del menú principal",
+          "fr": "Taille de la police du menu principal",
+          "it": "Dimensione font menu principale",
+          "ja": "メインメニューのフォントサイズ",
+          "pt-BR": "Tamanho da fonte do menu principal",
+          "en": "גודל מחיר מוצר"
+        },
+        "options": [
+          {
+            "value": "23px",
+            "label": {
+              "de": "23px",
+              "he": "23px",
+              "es": "23px",
+              "fr": "23px",
+              "it": "23px",
+              "ja": "23ピクセル",
+              "pt-BR": "23px",
+              "en": "23px"
+            }
+          },
+          {
+            "value": "25px",
+            "label": {
+              "de": "25px",
+              "he": "25px",
+              "es": "25px",
+              "fr": "25px",
+              "it": "25px",
+              "ja": "25ピクセル",
+              "pt-BR": "25px",
+              "en": "25px"
+            }
+          },
+          {
+            "value": "27px",
+            "label": {
+              "de": "27px",
+              "he": "27px",
+              "es": "27px",
+              "fr": "27px",
+              "it": "27px",
+              "ja": "27ピクセル",
+              "pt-BR": "27px",
+              "en": "27px"
+            }
+          },
+          {
+            "value": "29px",
+            "label": {
+              "de": "29px",
+              "he": "29px",
+              "es": "29px",
+              "fr": "29px",
+              "it": "29px",
+              "ja": "29ピクセル",
+              "pt-BR": "29px",
+              "en": "29px"
+            }
+          },
+          {
+            "value": "31px",
+            "label": {
+              "de": "31px",
+              "he": "31px",
+              "es": "31px",
+              "fr": "31px",
+              "it": "31px",
+              "ja": "31ピクセル",
+              "pt-BR": "31px",
+              "en": "31px"
+            }
+          },
+          {
+            "value": "33px",
+            "label": {
+              "de": "33px",
+              "he": "33px",
+              "es": "33px",
+              "fr": "33px",
+              "it": "33px",
+              "ja": "33ピクセル",
+              "pt-BR": "33px",
+              "en": "33px"
+            }
+          },
+          {
+            "value": "35px",
+            "label": {
+              "de": "35px",
+              "he": "35px",
+              "es": "35px",
+              "fr": "35px",
+              "it": "35px",
+              "ja": "35ピクセル",
+              "pt-BR": "35px",
+              "en": "35px"
+            }
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "product_price_weight",
+        "label": "עובי פונט",
+        "default": "800",
+        "options": [
+          {
+            "value": "100",
+            "label": "100"
+          },
+          {
+            "value": "200",
+            "label": "200"
+          },
+          {
+            "value": "300",
+            "label": "300"
+          },
+          {
+            "value": "400",
+            "label": "400"
+          },
+          {
+            "value": "500",
+            "label": "500"
+          },
+          {
+            "value": "600",
+            "label": "600"
+          },
+          {
+            "value": "700",
+            "label": "700"
+          },
+          {
+            "value": "800",
+            "label": "800"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "product_tab_size",
+        "label": {
+          "de": "Schriftgröße Hauptmenü",
+          "he": "Main menu font size",
+          "es": "Tamaño de fuente del menú principal",
+          "fr": "Taille de la police du menu principal",
+          "it": "Dimensione font menu principale",
+          "ja": "メインメニューのフォントサイズ",
+          "pt-BR": "Tamanho da fonte do menu principal",
+          "en": "גודל פונט טאבים"
+        },
+        "options": [
+          {
+            "value": "23px",
+            "label": {
+              "de": "23px",
+              "he": "23px",
+              "es": "23px",
+              "fr": "23px",
+              "it": "23px",
+              "ja": "23ピクセル",
+              "pt-BR": "23px",
+              "en": "23px"
+            }
+          },
+          {
+            "value": "25px",
+            "label": {
+              "de": "25px",
+              "he": "25px",
+              "es": "25px",
+              "fr": "25px",
+              "it": "25px",
+              "ja": "25ピクセル",
+              "pt-BR": "25px",
+              "en": "25px"
+            }
+          },
+          {
+            "value": "27px",
+            "label": {
+              "de": "27px",
+              "he": "27px",
+              "es": "27px",
+              "fr": "27px",
+              "it": "27px",
+              "ja": "27ピクセル",
+              "pt-BR": "27px",
+              "en": "27px"
+            }
+          },
+          {
+            "value": "29px",
+            "label": {
+              "de": "29px",
+              "he": "29px",
+              "es": "29px",
+              "fr": "29px",
+              "it": "29px",
+              "ja": "29ピクセル",
+              "pt-BR": "29px",
+              "en": "29px"
+            }
+          },
+          {
+            "value": "31px",
+            "label": {
+              "de": "31px",
+              "he": "31px",
+              "es": "31px",
+              "fr": "31px",
+              "it": "31px",
+              "ja": "31ピクセル",
+              "pt-BR": "31px",
+              "en": "31px"
+            }
+          },
+          {
+            "value": "33px",
+            "label": {
+              "de": "33px",
+              "he": "33px",
+              "es": "33px",
+              "fr": "33px",
+              "it": "33px",
+              "ja": "33ピクセル",
+              "pt-BR": "33px",
+              "en": "33px"
+            }
+          },
+          {
+            "value": "35px",
+            "label": {
+              "de": "35px",
+              "he": "35px",
+              "es": "35px",
+              "fr": "35px",
+              "it": "35px",
+              "ja": "35ピクセル",
+              "pt-BR": "35px",
+              "en": "35px"
+            }
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "product_tab_weight",
+        "label": " עובי פונט",
+        "default": "800",
+        "options": [
+          {
+            "value": "100",
+            "label": "100"
+          },
+          {
+            "value": "200",
+            "label": "200"
+          },
+          {
+            "value": "300",
+            "label": "300"
+          },
+          {
+            "value": "400",
+            "label": "400"
+          },
+          {
+            "value": "500",
+            "label": "500"
+          },
+          {
+            "value": "600",
+            "label": "600"
+          },
+          {
+            "value": "700",
+            "label": "700"
+          },
+          {
+            "value": "800",
+            "label": "800"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": {
+      "de": "Favicon",
+      "he": "Favicon",
+      "es": "Favicon",
+      "fr": "Favicon",
+      "it": "Favicon",
+      "ja": "ファビコン",
+      "pt-BR": "Favicon",
+      "en": "סמל"
+    },
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": {
+          "de": "Favicon-Bild",
+          "he": "Favicon image",
+          "es": "Imagen de favicon",
+          "fr": "Image favicon",
+          "it": "Immagine favicon",
+          "ja": "ファビコン画像",
+          "pt-BR": "Imagem favicon",
+          "en": "תמונה Favicon"
+        },
+        "info": {
+          "de": "Wird auf 32 x 32 Pixel verkleinert",
+          "he": "Will be scaled down to 32 x 32px",
+          "es": "Se reducirá a 32 x 32px",
+          "fr": "Sera réduite à 32 x 32 px",
+          "it": "Verrà ridimensionata a 32 x 32 pixel.",
+          "ja": "32×32ピクセルに縮小されます。",
+          "pt-BR": "será reduzida para 32 x 32 pixels",
+          "en": "ניתן לשנות את קנה המידה ל -32 x 32 פיקסלים"
+        }
+      }
+    ]
+  },
+  {
+    "name": {
+      "de": "Warenkorb",
+      "he": "Cart",
+      "es": "Carrito",
+      "fr": "Panier",
+      "it": "Carrello",
+      "ja": "カート",
+      "pt-BR": "Carrinho",
+      "en": "בלוג"
+    },
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "blog_enable",
+        "label": "אפשר תפריט צד",
+        "default": true
+      }
+    ]
+  },
+  {
+    "name": {
+      "de": "Warenkorb",
+      "he": "Cart",
+      "es": "Carrito",
+      "fr": "Panier",
+      "it": "Carrello",
+      "ja": "カート",
+      "pt-BR": "Carrinho",
+      "en": "עגלה"
+    },
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "cart_notes_enable",
+        "label": {
+          "de": "Bestellhinweis aktivieren",
+          "he": "Enable order notes",
+          "es": "Habilitar notas de pedido",
+          "fr": "Activer les notes de commande",
+          "it": "Abilita le note sugli ordini",
+          "ja": "注文メモを有効にする",
+          "pt-BR": "Habilite observações sobre o pedido",
+          "en": "אפשר הערות הזמנה"
+        }
+      },
+      {
+        "type": "checkbox",
+        "id": "cart_terms_enable",
+        "label": {
+          "en": "הצג קיראה והסכמה לתנאי השימוש"
+        },
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "ajax_cart_method",
+        "label": {
+          "de": "Warenkorbstil",
+          "he": "Cart type",
+          "es": "Tipo de carrito",
+          "fr": "Type de panier",
+          "it": "Tipi di carrello",
+          "ja": "カートタイプ",
+          "pt-BR": "Tipo de carrinho",
+          "en": "סוג עגלת הקניות"
+        },
+        "options": [
+          {
+            "value": "drawer",
+            "label": {
+              "de": "Einschub",
+              "he": "Drawer",
+              "es": "Carrito lateral",
+              "fr": "Tiroir",
+              "it": "Finestra",
+              "ja": "ドロワー",
+              "pt-BR": "Caixa registradora",
+              "en": "מגירה"
+            }
+          },
+          {
+            "value": "page",
+            "label": {
+              "de": "Seite",
+              "he": "Page",
+              "es": "Página",
+              "fr": "Page",
+              "it": "Pagina",
+              "ja": "ページ",
+              "pt-BR": "Página",
+              "en": "עמוד"
+            }
+          },
+          {
+            "value": "modal",
+            "label": {
+              "de": "Modal",
+              "he": "Modal",
+              "es": "Modal",
+              "fr": "Fenêtre modale",
+              "it": "Modal",
+              "ja": "モーダル",
+              "pt-BR": "Modal",
+              "en": "פופאפ - חלון קופץ"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": {
+      "de": "Social Media",
+      "he": "Social media",
+      "es": "Redes sociales",
+      "fr": "Médias sociaux",
+      "it": "Social media",
+      "ja": "SNS",
+      "pt-BR": "Redes sociais",
+      "en": "מדיה חברתית"
+    },
+    "settings": [
+      {
+        "type": "header",
+        "content": {
+          "de": "Social-Sharing-Bild",
+          "he": "Social sharing image",
+          "es": "Imagen para redes sociales",
+          "fr": "Image de partage social",
+          "it": "Immagine per condivisione social",
+          "ja": "SNSでシェアする画像",
+          "pt-BR": "Imagem de compartilhamento social",
+          "en": "תמונת שיתוף חברתי"
+        }
+      },
+      {
+        "type": "image_picker",
+        "id": "share_image",
+        "label": {
+          "de": "Foto",
+          "he": "Image",
+          "es": "Imagen",
+          "fr": "Image",
+          "it": "Immagine",
+          "ja": "画像",
+          "pt-BR": "Imagem",
+          "en": "תמונה"
+        },
+        "info": {
+          "de": "Wird angezeigt, wenn ein Link in den sozialen Medien geteilt wird. [Mehr Infos](https:\/\/help.shopify.com\/manual\/using-themes\/troubleshooting\/showing-social-media-thumbnail-images\/) über Bild-Miniaturansichten.",
+          "he": "Shown when sharing a link on social media. [Learn more](https:\/\/help.shopify.com\/manual\/using-themes\/troubleshooting\/showing-social-media-thumbnail-images\/) about image thumbnails.",
+          "es": "Aparece cuando se comparte un enlace en una red social. [Más información](https:\/\/help.shopify.com\/manual\/using-themes\/troubleshooting\/showing-social-media-thumbnail-images\/) acerca de las miniaturas",
+          "fr": "Affichée lorsqu'un lien est partagé sur les réseaux sociaux. [En savoir plus](https:\/\/help.shopify.com\/manual\/using-themes\/troubleshooting\/showing-social-media-thumbnail-images\/) sur les images miniatures.",
+          "it": "Mostrata quando si condivide un link sui social media. [Maggiori informazioni](https:\/\/help.shopify.com\/manual\/using-themes\/troubleshooting\/showing-social-media-thumbnail-images\/) sulle immagini di anteprima.",
+          "ja": "SNSでリンクがシェアされると表示されます。[詳細情報](https:\/\/help.shopify.com\/manual\/using-themes\/troubleshooting\/showing-social-media-thumbnail-images\/)画像のサムネイルについては、上のリンクを参照してください。",
+          "pt-BR": "Apresentada ao compartilhar um link nas redes sociais. [Saiba mais](https:\/\/help.shopify.com\/manual\/using-themes\/troubleshooting\/showing-social-media-thumbnail-images\/) sobre miniaturas de imagens.",
+          "en": "מוצג בעת הוספה של קישור מרשת חברתית [למד עוד](https:\/\/help.shopify.com\/manual\/using-themes\/troubleshooting\/showing-social-media-thumbnail-images\/)."
+        }
+      },
+      {
+        "type": "header",
+        "content": {
+          "de": "Konten",
+          "he": "Accounts",
+          "es": "Cuentas",
+          "fr": "Comptes",
+          "it": "Account",
+          "ja": "アカウント",
+          "pt-BR": "Contas",
+          "en": "חשבונות"
+        }
+      },
+      {
+        "type": "text",
+        "id": "social_twitter_link",
+        "label": {
+          "de": "Twitter",
+          "he": "Twitter",
+          "es": "Twitter",
+          "fr": "Twitter",
+          "it": "Twitter",
+          "ja": "Twitter",
+          "pt-BR": "Twitter",
+          "en": "טוויטר"
+        },
+        "info": {
+          "de": "https:\/\/twitter.com\/shopify",
+          "he": "https:\/\/twitter.com\/shopify",
+          "es": "https:\/\/twitter.com\/shopify",
+          "fr": "https:\/\/twitter.com\/shopify",
+          "it": "https:\/\/twitter.com\/shopify",
+          "ja": "https:\/\/twitter.com\/shopify",
+          "pt-BR": "https:\/\/twitter.com\/shopify",
+          "en": "https:\/\/twitter.com\/shopify"
+        }
+      },
+      {
+        "type": "text",
+        "id": "social_facebook_link",
+        "label": {
+          "de": "Facebook",
+          "he": "Facebook",
+          "es": "Facebook",
+          "fr": "Facebook",
+          "it": "Facebook",
+          "ja": "Facebook",
+          "pt-BR": "Facebook",
+          "en": "Facebook"
+        },
+        "info": {
+          "de": "https:\/\/facebook.com\/shopify",
+          "he": "https:\/\/facebook.com\/shopify",
+          "es": "https:\/\/www.facebook.com\/ShopifyES\/",
+          "fr": "https:\/\/facebook.com\/shopify",
+          "it": "https:\/\/facebook.com\/shopify",
+          "ja": "https:\/\/facebook.com\/shopify",
+          "pt-BR": "https:\/\/facebook.com\/shopify",
+          "en": "https:\/\/facebook.com\/shopify"
+        }
+      },
+      {
+        "type": "text",
+        "id": "social_pinterest_link",
+        "label": {
+          "de": "Pinterest",
+          "he": "Pinterest",
+          "es": "Pinterest",
+          "fr": "Pinterest",
+          "it": "Pinterest",
+          "ja": "Pinterest",
+          "pt-BR": "Pinterest",
+          "en": "Pinterest"
+        },
+        "info": {
+          "de": "https:\/\/pinterest.com\/shopify",
+          "he": "https:\/\/pinterest.com\/shopify",
+          "es": "https:\/\/pinterest.com\/shopify",
+          "fr": "https:\/\/pinterest.com\/shopify",
+          "it": "https:\/\/pinterest.com\/shopify",
+          "ja": "https:\/\/pinterest.com\/shopify",
+          "pt-BR": "https:\/\/pinterest.com\/shopify",
+          "en": "https:\/\/pinterest.com\/shopify"
+        }
+      },
+      {
+        "type": "text",
+        "id": "social_google_plus_link",
+        "label": {
+          "de": "Google+",
+          "he": "Google+",
+          "es": "Google+",
+          "fr": "Google+",
+          "it": "Google+",
+          "ja": "Google+",
+          "pt-BR": "Google+",
+          "en": "Google+"
+        },
+        "info": {
+          "de": "https:\/\/plus.google.com\/+shopify",
+          "he": "https:\/\/plus.google.com\/+shopify",
+          "es": "https:\/\/plus.google.com\/+shopify",
+          "fr": "https:\/\/plus.google.com\/+shopify",
+          "it": "https:\/\/plus.google.com\/+shopify",
+          "ja": "https:\/\/plus.google.com\/+shopify",
+          "pt-BR": "https:\/\/plus.google.com\/+shopify",
+          "en": "https:\/\/plus.google.com\/+shopify"
+        }
+      },
+      {
+        "type": "text",
+        "id": "social_instagram_link",
+        "label": {
+          "de": "Instagram",
+          "he": "Instagram",
+          "es": "Instagram",
+          "fr": "Instagram",
+          "it": "Instagram",
+          "ja": "Instagram",
+          "pt-BR": "Instagram",
+          "en": "Instagram"
+        },
+        "info": {
+          "de": "https:\/\/instagram.com\/shopify",
+          "he": "https:\/\/instagram.com\/shopify",
+          "es": "https:\/\/instagram.com\/shopify",
+          "fr": "https:\/\/instagram.com\/shopify",
+          "it": "https:\/\/instagram.com\/shopify",
+          "ja": "https:\/\/instagram.com\/shopify",
+          "pt-BR": "https:\/\/instagram.com\/shopify",
+          "en": "https:\/\/instagram.com\/shopify"
+        }
+      },
+      {
+        "type": "text",
+        "id": "social_snapchat_link",
+        "label": {
+          "de": "Snapchat",
+          "he": "Snapchat",
+          "es": "Snapchat",
+          "fr": "Snapchat",
+          "it": "Snapchat",
+          "ja": "Snapchat",
+          "pt-BR": "Snapchat",
+          "en": "Snapchat"
+        },
+        "info": {
+          "de": "https:\/\/snapchat.com\/add\/shopify",
+          "he": "https:\/\/snapchat.com\/add\/shopify",
+          "es": "https:\/\/snapchat.com\/add\/shopify",
+          "fr": "https:\/\/snapchat.com\/add\/shopify",
+          "it": "https:\/\/snapchat.com\/add\/shopify",
+          "ja": "https:\/\/snapchat.com\/add\/shopify",
+          "pt-BR": "https:\/\/www.snapchat.com\/add\/shopify",
+          "en": "https:\/\/www.snapchat.com\/add\/shopify"
+        }
+      },
+      {
+        "type": "text",
+        "id": "social_tumblr_link",
+        "label": {
+          "de": "Tumblr",
+          "he": "Tumblr",
+          "es": "Tumblr",
+          "fr": "Tumblr",
+          "it": "Tumblr",
+          "ja": "Tumblr",
+          "pt-BR": "Tumblr",
+          "en": "Tumblr"
+        },
+        "info": {
+          "de": "https:\/\/www.tumblr.com",
+          "he": "https:\/\/www.tumblr.com",
+          "es": "https:\/\/www.tumblr.com",
+          "fr": "https:\/\/www.tumblr.com",
+          "it": "https:\/\/www.tumblr.com",
+          "ja": "https:\/\/www.tumblr.com",
+          "pt-BR": "https:\/\/www.tumblr.com",
+          "en": "https:\/\/www.tumblr.com"
+        }
+      },
+      {
+        "type": "text",
+        "id": "social_youtube_link",
+        "label": {
+          "de": "Youtube",
+          "he": "YouTube",
+          "es": "Youtube",
+          "fr": "YouTube",
+          "it": "YouTube",
+          "ja": "YouTube",
+          "pt-BR": "YouTube",
+          "en": "YouTube"
+        },
+        "info": {
+          "de": "https:\/\/www.youtube.com\/shopify",
+          "he": "https:\/\/www.youtube.com\/shopify",
+          "es": "https:\/\/www.youtube.com\/shopify",
+          "fr": "https:\/\/www.youtube.com\/shopify",
+          "it": "https:\/\/www.youtube.com\/shopify",
+          "ja": "https:\/\/www.youtube.com\/shopify",
+          "pt-BR": "https:\/\/www.youtube.com\/shopify",
+          "en": "https:\/\/www.youtube.com\/shopify"
+        }
+      },
+      {
+        "type": "text",
+        "id": "social_vimeo_link",
+        "label": {
+          "de": "Vimeo",
+          "he": "Vimeo",
+          "es": "Vimeo",
+          "fr": "Vimeo",
+          "it": "Vimeo",
+          "ja": "Vimeo",
+          "pt-BR": "Vimeo",
+          "en": "Vimeo"
+        },
+        "info": {
+          "de": "https:\/\/vimeo.com\/shopify",
+          "he": "https:\/\/vimeo.com\/shopify",
+          "es": "https:\/\/vimeo.com\/shopify",
+          "fr": "https:\/\/vimeo.com\/shopify",
+          "it": "https:\/\/vimeo.com\/shopify",
+          "ja": "https:\/\/vimeo.com\/shopify",
+          "pt-BR": "https:\/\/vimeo.com\/shopify",
+          "en": "https:\/\/vimeo.com\/shopify"
+        }
+      },
+      {
+        "type": "text",
+        "id": "social_fancy_link",
+        "label": {
+          "de": "Fancy",
+          "he": "Fancy",
+          "es": "Fancy",
+          "fr": "Fancy",
+          "it": "Fancy",
+          "ja": "Fancy",
+          "pt-BR": "Fancy",
+          "en": "Fancy"
+        },
+        "info": {
+          "de": "http:\/\/fancy.com\/shopify",
+          "he": "http:\/\/fancy.com\/shopify",
+          "es": "http:\/\/fancy.com\/shopify",
+          "fr": "http:\/\/fancy.com\/shopify",
+          "it": "http:\/\/fancy.com\/shopify",
+          "ja": "http:\/\/fancy.com\/shopify",
+          "pt-BR": "http:\/\/fancy.com\/shopify",
+          "en": "http:\/\/fancy.com\/shopify"
+        }
+      },
+      {
+        "type": "header",
+        "content": {
+          "de": "Teilen",
+          "he": "Sharing",
+          "es": "Compartir",
+          "fr": "Partage",
+          "it": "Condivisione",
+          "ja": "シェアする",
+          "pt-BR": "Compartilhamento",
+          "en": "שיתוף"
+        }
+      },
+      {
+        "type": "select",
+        "id": "social_sharing_style",
+        "label": {
+          "de": "Schaltflächenstil",
+          "he": "Button style",
+          "es": "Estilo de botón",
+          "fr": "Style de bouton",
+          "it": "Stile pulsante",
+          "ja": "ボタンのスタイル",
+          "pt-BR": "סגנון הלחצנים",
+          "en": "סגנון הלחצן"
+        },
+        "options": [
+          {
+            "value": "is-default",
+            "label": {
+              "de": "Normal",
+              "he": "Normal",
+              "es": "Normal",
+              "fr": "Normal",
+              "it": "Normale",
+              "ja": "ノーマル",
+              "pt-BR": "Normal",
+              "en": "רגיל"
+            }
+          },
+          {
+            "value": "is-large",
+            "label": {
+              "de": "Groß",
+              "he": "Large",
+              "es": "Grande",
+              "fr": "Grande",
+              "it": "Large",
+              "ja": "大",
+              "pt-BR": "Grande",
+              "en": "גדול"
+            }
+          },
+          {
+            "value": "is-clean",
+            "label": {
+              "de": "Clean",
+              "he": "Clean",
+              "es": "Limpio",
+              "fr": "Clean",
+              "it": "Pulito",
+              "ja": "クリーン",
+              "pt-BR": "Clean",
+              "en": "נקי"
+            }
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "share_facebook",
+        "label": {
+          "de": "Auf Facebook teilen",
+          "he": "Share on Facebook",
+          "es": "Compartir en Facebook",
+          "fr": "Partager sur Facebook",
+          "it": "Condividi su Facebook",
+          "ja": "Facebookでシェアする",
+          "pt-BR": "Compartilhar no Facebook",
+          "en": "שתף בפייסבוק"
+        }
+      },
+      {
+        "type": "checkbox",
+        "id": "share_twitter",
+        "label": {
+          "de": "Auf Twitter twittern",
+          "he": "Tweet on Twitter",
+          "es": "Tuitear en Twitter",
+          "fr": "Tweeter sur Twitter",
+          "it": "Twitta su Twitter",
+          "ja": "Twitterに投稿する",
+          "pt-BR": "Tweetar",
+          "en": "ציוץ בטוויטר"
+        }
+      },
+      {
+        "type": "checkbox",
+        "id": "share_pinterest",
+        "label": {
+          "de": "Auf Pinterest pinnen",
+          "he": "Pin on Pinterest",
+          "es": "Pinear en Pinterest",
+          "fr": "Épingler sur Pinterest",
+          "it": "Pinna su Pinterest",
+          "ja": "Pinterestでピンする",
+          "pt-BR": "Pin no Pinterest",
+          "en": "פין על פינטרסט"
+        }
+      }
+    ]
+  },
+  {
+    "name": {
+      "de": "Semmelbrösel",
+      "he": "breadcrumbs",
+      "es": "migas de pan",
+      "fr": "chapelure",
+      "it": "briciole di pane",
+      "ja": "パン粉",
+      "pt-BR": "pão ralado",
+      "en": "פרורי לחם"
+    },
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "breadcrumbs",
+        "label": "אפשר פרורי לחם",
+        "default": false
+      }
+    ]
+  },
+  {
+    "name": {
+      "de": "Produktgitterelement",
+      "he": "product grid-item",
+      "es": "elemento de la rejilla del producto",
+      "fr": "élément de la grille de produits",
+      "it": "elemento della griglia del prodotto",
+      "ja": "製品グリッド明細",
+      "pt-BR": "item de grade do produto",
+      "en": "תצוגת מוצר"
+    },
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "wishlist_ok",
+        "label": "הצג מועדפים - WISHLIST",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "align_price",
+        "label": {
+          "de": "Warenkorbstil",
+          "he": "Cart type",
+          "es": "Tipo de carrito",
+          "fr": "Type de panier",
+          "it": "Tipi di carrello",
+          "ja": "カートタイプ",
+          "pt-BR": "Tipo de carrinho",
+          "en": "יישור המחיר"
+        },
+        "options": [
+          {
+            "value": "right",
+            "label": {
+              "de": "Einschub",
+              "he": "Drawer",
+              "es": "Carrito lateral",
+              "fr": "Tiroir",
+              "it": "Finestra",
+              "ja": "ドロワー",
+              "pt-BR": "Caixa registradora",
+              "en": "ימינה"
+            }
+          },
+          {
+            "value": "center",
+            "label": {
+              "de": "Seite",
+              "he": "Page",
+              "es": "Página",
+              "fr": "Page",
+              "it": "Pagina",
+              "ja": "ページ",
+              "pt-BR": "Página",
+              "en": "מרכז"
+            }
+          },
+          {
+            "value": "left",
+            "label": {
+              "de": "Modal",
+              "he": "Modal",
+              "es": "Modal",
+              "fr": "Fenêtre modale",
+              "it": "Modal",
+              "ja": "モーダル",
+              "pt-BR": "Modal",
+              "en": "שמאלה"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

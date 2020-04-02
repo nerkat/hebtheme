@@ -1,0 +1,222 @@
+{% assign display_map = false %}
+{%- if section.settings.api_key2 != blank and section.settings.map_address2 -%}
+{% assign display_map = true %}
+{%- endif -%}
+
+{% if section.settings.display_map %}
+<div class="map-section map-section--display-map" data-section-id="{{ section.id }}" data-section-type="map-section" data-api-key="{{ section.settings.api_key2 }}">
+  <div class="map-section__wrapper">
+    <div class="map-section__content map-section__background-wrapper">
+      {% if section.settings.display_map %}
+      <div class="map-section__container"
+           id="Map-{{ section.id }}"
+           data-address-setting="{{ section.settings.map_address2 | escape }}">
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+
+{% schema %}
+{
+"name": {
+"de": "Karte",
+"he": "Map",
+"en": "מפה",
+"es": "Mapa",
+"fr": "Carte",
+"it": "Mappa",
+"ja": "マップ",
+"pt-BR": "Mapa"
+},
+
+"class": "index-section",
+"settings": [
+
+{
+"id": "display_map",
+"type": "checkbox",
+"label": {
+"de": "Pin anzeigen",
+"he": "Show map",
+"en": "הצג מפה",
+"es": "Ver pin",
+"fr": "Afficher l'épingle",
+"it": "Mostra pin",
+"ja": "ピンを表示する",
+"pt-BR": "Exibir pin"
+},
+"default": true
+},
+{
+"type": "text",
+"id": "heading2",
+"label": {
+"de": "Titel",
+"he": "Heading",
+"en": "כותרת",
+"es": "Título",
+"fr": "Titre",
+"it": "Heading",
+"ja": "見出し",
+"pt-BR": "Título"
+},
+"default": {
+"de": "Unser Laden",
+"he": "Our store",
+"en": "החנות שלנו",
+"es": "Nuestra tienda",
+"fr": "Notre boutique",
+"it": "Il nostro negozio",
+"ja": "私たちのストア",
+"pt-BR": "Nossa loja"
+}
+},
+{
+"type": "richtext",
+"id": "address2",
+"label": {
+"de": "Adresse und Öffnungszeiten",
+"he": "Address and hours",
+"en": "כתובת ושעות פתיחות",
+"es": "Dirección y horario",
+"fr": "Adresse et heures d'ouverture",
+"it": "Indirizzo e orari",
+"ja": "住所と営業時間",
+"pt-BR": "Endereço e horário"
+},
+"default": {
+"de": "<p>Musterstraße 123<br>12345 Musterstadt</p><p>Mo - Fr, 10 - 21 Uhr<br>Samstag, 11 - 21 Uhr<br>Sonntag, Ruhetag</p>",
+"he": "<p>123 Fake St.<br>Toronto, Canada</p><p>Mon - Fri, 10am - 9pm<br>Saturday, 11am - 9pm<br>Sunday, 11am - 5pm</p>",
+"en": "<p>רחוב מזוייף 123<br>תל-אביב, ישראל</p><p>ראשון-חמישי 09:00-22:00<br>שישי, 11:00-21:00<br>שבת, 19:00-00:00</p> ",
+"es": "<p>123 Fake St. <br> Toronto, Canadá</p><p>Lun - Vie, 10 a.m. - 9 p.m. <br> Sábados, de 11:00am a 09:00pm <br> Domingos, de 11:00am a 05:00pm</p>",
+"fr": "<p>123 rue inventée<br>Paris, France</p><p>Lun. - ven., 10 h - 21 h<br>Samedi, 11 h - 21 h<br>Dimanche, 11 h - 17 h</p>",
+"it": "<p>123 Fake St.<br>Toronto, Canada</p><p>Lun-Ven, 10:00 - 21:00<br>Sabato, 11:00 - 21:00<br>Domenica, 11:00 - 17:00</p>",
+"ja": "<p>123 Fake St.<br>Toronto, Canada</p><p>月曜日～金曜日、午前10時〜午後9時<br>土曜日、午前11時〜午後9時<br>日曜日、午前11時〜午後5時</p>",
+"pt-BR": "<p>123 Rua Inventada<br> São Paulo, Brasil</p><p>Seg. - Sex., 10h às 21h <br> Sábado, 11h às 21h <br> Domingo, 11h às 17h</p>"
+}
+},
+{
+"id": "map_address2",
+"type": "text",
+"label": {
+"de": "Adresse",
+"he": "Map address",
+"en": "כתובת",
+"es": "Dirección en el mapa",
+"fr": "Adresse sur la carte",
+"it": "Indirizzo su mappa",
+"ja": "マップアドレス",
+"pt-BR": "Endereço no mapa"
+},
+"info": {
+"de": "Google Maps findet die richtige Adresse",
+"he": "Google Maps will find the exact location",
+"en": "Google Maps יאתר את המיקום המדוייק של הכתובת",
+"es": "Google Maps encontrará la ubicación exacta",
+"fr": "Google Maps trouvera l'adresse exacte",
+"it": "Google Maps troverà l'esatta posizione",
+"ja": "Googleマップが正確な位置を見つけます。",
+"pt-BR": "O Google Maps encontrará a localização exata"
+},
+"default": {
+"de": "80 Spadina Ave, Toronto",
+"he": "80 Spadina Ave, Toronto",
+"en": "שדרות רוטשילד 80, תל אביב",
+"es": "80 Spadina Ave, Toronto",
+"fr": "80 Spadina Ave, Toronto",
+"it": "80 Spadina Ave, Toronto",
+"ja": "80 Spadina Ave, Toronto",
+"pt-BR": "Av. Paulista, 1234, São Paulo"
+}
+},
+{
+"type": "text",
+"id": "button2",
+"label": {
+"de": "Link auf der Karte",
+"he": "Map link label",
+"en": "טקסט ללחצן",
+"es": "Etiqueta de enlace de mapa",
+"fr": "Texte du lien de la carte",
+"it": "Etichetta del link alla mappa",
+"ja": "マップリンクラベル",
+"pt-BR": "Etiqueta de link do mapa"
+},
+"default": {
+"de": "Wegbeschreibung",
+"he": "Directions",
+"en": "דרכי הגעה",
+"es": "Instrucciones",
+"fr": "Itinéraire",
+"it": "Direzioni",
+"ja": "道順",
+"pt-BR": "Direções"
+}
+},
+{
+"type": "header",
+"content": {
+"de": "Hintergrund",
+"he": "Background",
+"en": "רקע",
+"es": "Fondo",
+"fr": "Arrière-plan",
+"it": "Sfondo",
+"ja": "背景",
+"pt-BR": "Plano de fundo"
+}
+},
+{
+"id": "api_key2",
+"type": "text",
+"label": {
+"de": "Google Maps API Key",
+"he": "Google Maps API key",
+"en": "מפתח גישה (API) של Google Maps",
+"es": "Registrar una clave API de Google Maps",
+"fr": "Clé d'API Google Maps",
+"it": "Chiave API di Google Maps",
+"ja": "GoogleマップのAPIキー",
+"pt-BR": "Chave da API do Google Maps"
+},
+"info": {
+"de": "Sie müssen [einen Google Maps API Key registrieren](https://help.shopify.com/manual/using-themes/troubleshooting/map-section-api-key) zum Anzeigen der Karte",
+"he": "You’ll need to [register a Google Maps API Key](https://help.shopify.com/manual/using-themes/troubleshooting/map-section-api-key) to display the map",
+"en": "עליך [לספק מפתח גישה לשירותי Google Maps](https://help.shopify.com/manual/using-themes/troubleshooting/map-section-api-key) to display the map",
+"es": "Debes [registrar una clave de API de Google Maps](https://help.shopify.com/manual/using-themes/troubleshooting/map-section-api-key) para mostrar el mapa",
+"fr": "Vous devez obtenir une [clé d'API pour Google Maps](https://help.shopify.com/manual/using-themes/troubleshooting/map-section-api-key)",
+"it": "Dovrai [registrare una chiave API di Google Maps](https://help.shopify.com/manual/using-themes/troubleshooting/map-section-api-key) per visualizzare la mappa",
+"ja": "マップを表示するには[GoogleマップのAPIキーを登録する](https://help.shopify.com/manual/using-themes/troubleshooting/map-section-api-key)必要があります",
+"pt-BR": "Você vai precisar [registrar uma chave de API do Google Maps](https://help.shopify.com/manual/using-themes/troubleshooting/map-section-api-key) para exibir o mapa"
+}
+}
+],
+"presets": [
+{
+"name": {
+"de": "Karte",
+"he": "Map",
+"en": "מפה",        
+"es": "Mapa",
+"fr": "Carte",
+"it": "Mappa",
+"ja": "マップ",
+"pt-BR": "Mapa"
+},
+"category": {
+"de": "Laden-Info",
+"he": "Store Information",
+"en": "מידע אודות החנות", 
+"es": "Información sobre tu tienda",
+"fr": "Informations sur la boutique",
+"it": "Informazioni del negozio",
+"ja": "ストア情報",
+"pt-BR": "Informações da loja"
+}
+}
+]
+}
+{% endschema %}

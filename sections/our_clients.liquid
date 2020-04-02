@@ -1,0 +1,83 @@
+  <style>
+  .client--section{
+    background-color:{{ section.settings.bg_color }} !important;
+  }
+  .our_clients img{max-height:{{section.settings.max_height}};}
+</style>
+
+{% if section.settings.display_logos %}
+<div class="ourclients-block ourclients-block--{{ section.id }} wrapper">
+  {% for block in section.blocks %}
+  {% if block.settings.image != blank %}
+  <div class="our_clients" align="center">
+    <a href="{{ block.settings.logo_url}}">
+      <img src="{{ block.settings.image | img_url:'300x' }}" /></a> 
+    {{ block.settings.logo_name}}
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>{%endif%}
+
+{% schema %}
+
+{
+"name": "לוגו מותגים", 
+"max_blocks": 10,
+"class": "index-section client--section",
+"settings": [
+{
+"type": "header",
+"content": "לקוחותינו"
+},
+{
+"type": "checkbox",
+"id": "display_logos",
+"label": {"en": "הצג לוגואים"
+}
+},
+{
+"type": "color",
+"id": "bg_color",
+"label":"צבע רקע",
+"default" : "#ebe621"
+}, 
+{
+"type" : "text",
+"id" : "max_height",
+"label" : "Logo max height",
+"default" : "150px"
+}
+],
+
+"blocks": [
+{
+"type": "image",
+"name": "לוגו",
+"settings": [
+{
+"type": "image_picker",
+"id": "image",
+"label":"תמונה "
+},
+{
+"type": "url",
+"id": "logo_url",
+"label":"קישור לתמונה"
+},
+{
+"type": "text",
+"id": "logo_name",
+"label":"שם מתחת ללוגו"
+}
+]
+}
+],
+
+"presets": [
+{
+"name": "לקוחותינו",       
+"category":"לקוחותינו"
+}
+]
+}
+{% endschema %}

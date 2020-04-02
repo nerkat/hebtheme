@@ -1,0 +1,1050 @@
+<footer class="site-footer small--text-center" role="contentinfo">
+  <div class="wrapper">
+	{% capture theme_settings_link %}<a href="/admin/themes/{{ theme.id }}/settings">{{ 'layout.footer.theme_settings' | t }}</a>{% endcapture %}
+    <div class="grid">
+      {% for block in section.blocks %}
+      {% assign block_size = section.blocks.size %}
+      {% case block.settings.width %}
+      {% when '16%' %}
+      {%- assign block_width = 'small--one-whole two-twelfths' -%}
+      {% when '25%' %}
+      {%- assign block_width = 'small--one-whole one-quarter' -%}
+      {% when '33%' %}
+      {%- assign block_width = 'small--one-whole one-third' -%}
+      {% when '50%' %}
+      {%- assign block_width = 'small--one-whole one-half' -%}
+      {% when '66%' %}
+      {%- assign block_width = 'small--one-whole two-thirds' -%}
+      {% when '75%' %}
+      {%- assign block_width = 'small--one-whole three-quarters' -%}
+      {% when '100%' %}
+      {%- assign block_width = 'one-whole' -%}
+      {% endcase %}
+
+
+      <div class="small--one-whole grid-item text-direction {% if section.settings.enable_condition == true %} {% if block_size==4 %}one-quarter {% else %} one-third {% endif %} {% else %}{{ block_width }}{% endif %}">
+        {% if block.settings.title %}
+        <h3>{{ block.settings.title | escape }}</h3>
+        {% endif %}
+
+        {% case block.type %}
+
+        {% when 'menu' %}
+        <ul>
+          {% for link in linklists[block.settings.menu].links %}
+          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+
+        {% when 'text' %}
+
+        {% if block.settings.richtext != blank %}
+        {{ block.settings.richtext }}
+        {% else %}
+        <p>{{ 'layout.footer.instructions_for_text_content_html' | t: theme_settings_link: theme_settings_link }}</p>
+        {% endif %}
+
+        {% when 'textarea' %}
+        <div>
+          <h3>{{ block.settings.time_period_heading}}</h3>
+        </div>
+
+        <div>
+          <span>{{ block.settings.first_time_period}}</span><br/>
+          <span>{{ block.settings.second_time_period}}</span>
+        </div>
+
+
+        {% when 'url' %}
+
+        <div class="cover">
+          
+          {%- if section.settings.show_payment_icons -%}
+          {%- unless shop.enabled_payment_types == empty -%}
+          <div class="">
+            <span class="visually-hidden">{{ 'general.payment.method' | t }}</span>
+            <ul class="inline-list payment-icons">
+              {%- for type in shop.enabled_payment_types -%}
+              <li>
+                {{ type | payment_type_svg_tag: class: 'icon' }}
+              </li>
+              {%- endfor -%}
+            </ul>
+          </div>
+          {%- endunless -%}
+          {%- endif -%}
+          
+          {% if block.settings.payment_icon != blank %}
+          <img src ="{{ block.settings.payment_icon | img_url : "medium" }}">
+          {% else %}
+          <img src ="{{ 'Payment_logos.png' | asset_url }}">
+          {% endif %}
+        </div>
+
+        {% when 'newsletter' %}
+        <div class="site-footer__newsletter-subtext">
+          {% if block.settings.subtext != blank %}
+          {{ block.settings.subtext }}
+          {% endif %}
+        </div>
+        {% include 'newsletter-form' with button: 'secondary' %}
+        {% endcase %}
+
+
+      </div>
+      {% endfor %}
+
+    </div>
+
+    {% if section.settings.social_enabled or section.settings.legal_menu != blank %}
+    <hr class="hr--small">
+    {% endif %}
+
+    <div class="grid">
+      {% if section.settings.legal_menu != blank %}
+      <div class="small--one-whole grid-item{% if section.settings.social_enabled %} large--two-fifths{% else %} one-whole text-center{% endif %}">
+
+        <ul class="legal-links inline-list">
+          {% for link in linklists[section.settings.legal_menu].links %}
+          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+      {% if section.settings.social_enabled %}
+      <div class="small--one-whole grid-item{% if section.settings.legal_menu != blank %} large--three-fifths text-right{% else %} one-whole text-center{% endif %}">
+        <ul class="inline-list social-icons">
+          {% if settings.social_twitter_link != blank %}
+          <li>
+            <a class="icon-fallback-text" href="{{ settings.social_twitter_link | escape }}" title="{{ 'layout.footer.store_on_social_network' | t: store_name: shop.name, social_network: 'Twitter' | escape }}">
+              <span class="icon icon-twitter" aria-hidden="true"></span>
+              <span class="fallback-text">Twitter</span>
+            </a>
+          </li>
+          {% endif %}
+          {% if settings.social_facebook_link != blank %}
+          <li>
+            <a class="icon-fallback-text" href="{{ settings.social_facebook_link | escape }}" title="{{ 'layout.footer.store_on_social_network' | t: store_name: shop.name, social_network: 'Facebook' | escape }}">
+              <span class="icon icon-facebook" aria-hidden="true"></span>
+              <span class="fallback-text">Facebook</span>
+            </a>
+          </li>
+          {% endif %}
+          {% if settings.social_pinterest_link != blank %}
+          <li>
+            <a class="icon-fallback-text" href="{{ settings.social_pinterest_link | escape }}" title="{{ 'layout.footer.store_on_social_network' | t: store_name: shop.name, social_network: 'Pinterest' | escape }}">
+              <span class="icon icon-pinterest" aria-hidden="true"></span>
+              <span class="fallback-text">Pinterest</span>
+            </a>
+          </li>
+          {% endif %}
+          {% if settings.social_google_plus_link != blank %}
+          <li>
+            <a class="icon-fallback-text" href="{{ settings.social_google_plus_link | escape }}" title="{{ 'layout.footer.store_on_social_network' | t: store_name: shop.name, social_network: 'Google' | escape }}" rel="publisher">
+              <span class="icon icon-google_plus" aria-hidden="true"></span>
+              <span class="fallback-text">Google</span>
+            </a>
+          </li>
+          {% endif %}
+          {% if settings.social_instagram_link != blank %}
+          <li>
+            <a class="icon-fallback-text" href="{{ settings.social_instagram_link | escape }}" title="{{ 'layout.footer.store_on_social_network' | t: store_name: shop.name, social_network: 'Instagram' | escape }}">
+              <span class="icon icon-instagram" aria-hidden="true"></span>
+              <span class="fallback-text">Instagram</span>
+            </a>
+          </li>
+          {% endif %}
+          {% if settings.social_snapchat_link != blank %}
+          <li>
+            <a class="icon-fallback-text" href="{{ settings.social_snapchat_link }}" title="{{ 'layout.footer.store_on_social_network' | t: store_name: shop.name, social_network: 'Snapchat' | escape }}">
+              <span class="icon icon-snapchat" aria-hidden="true"></span>
+              <span class="fallback-text">Snapchat</span>
+            </a>
+          </li>
+          {% endif %}
+          {% if settings.social_tumblr_link != blank %}
+          <li>
+            <a class="icon-fallback-text" href="{{ settings.social_tumblr_link | escape }}" title="{{ 'layout.footer.store_on_social_network' | t: store_name: shop.name, social_network: 'Tumblr' | escape }}">
+              <span class="icon icon-tumblr" aria-hidden="true"></span>
+              <span class="fallback-text">Tumblr</span>
+            </a>
+          </li>
+          {% endif %}
+          {% if settings.social_youtube_link != blank %}
+          <li>
+            <a class="icon-fallback-text" href="{{ settings.social_youtube_link | escape }}" title="{{ 'layout.footer.store_on_social_network' | t: store_name: shop.name, social_network: 'YouTube' | escape }}">
+              <span class="icon icon-youtube" aria-hidden="true"></span>
+              <span class="fallback-text">YouTube</span>
+            </a>
+          </li>
+          {% endif %}
+          {% if settings.social_vimeo_link != blank %}
+          <li>
+            <a class="icon-fallback-text" href="{{ settings.social_vimeo_link | escape }}" title="{{ 'layout.footer.store_on_social_network' | t: store_name: shop.name, social_network: 'Vimeo' | escape }}">
+              <span class="icon icon-vimeo" aria-hidden="true"></span>
+              <span class="fallback-text">Vimeo</span>
+            </a>
+          </li>
+          {% endif %}
+          {% if settings.social_fancy_link != blank %}
+          <li>
+            <a class="icon-fallback-text" href="{{ settings.social_fancy_link | escape }}" title="{{ 'layout.footer.store_on_social_network' | t: store_name: shop.name, social_network: 'Fancy' | escape }}">
+              <span class="icon icon-fancy" aria-hidden="true"></span>
+              <span class="fallback-text">Fancy</span>
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="wrapper">
+      <div class="grid">
+        <div class="grid-item{% unless shop.enabled_payment_types == empty %} large--one-whole{% endunless %}">
+        <ul class="legal-links inline-list text-center">
+          <li>
+            {% comment %}
+            &copy; {{ 'now' | date: "%Y" }} {{ shop.name | link_to: '/' }}
+            {% endcomment %}
+            <a href="https://www.zissultd.com/" target="_blank"> ZISSU-LTD</a> '"מופעל ע
+          </li>
+
+        </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+</footer>{% schema %}
+{
+"name": {
+"de": "Fußzeile",
+"he": "תפריט תחתון",
+"en": "תפריט תחתון",
+"es": "Pie de página",
+"fr": "Pied de page",
+"it": "Footer",
+"ja": "フッター",
+"pt-BR": "Rodapé"
+},
+"class": "footer-section",
+"settings": [
+{
+"type": "checkbox",
+"id": "enable_condition",
+"label": "אפשר תצוגה בשורה"
+},
+{
+"type": "checkbox",
+"id": "social_enabled",
+"label": {
+"de": "Social-Media-Symbole anzeigen",
+"he": "Show social media icons",
+"en": "הצג סמלים של רשתות חברתיות",
+"es": "Mostrar iconos de redes sociales",
+"fr": "Afficher les icônes des médias sociaux",
+"it": "Mostra icone social media",
+"ja": "ソーシャルメディアのアイコンを表示する",
+"pt-BR": "Exibir ícones de redes sociais"
+},
+"info": {
+"de": "Konten im Social-Media-Abschnitt hinzufügen",
+"he": "Add accounts in Social media section",
+"en": "ניתן להוסיף חשבונות בסעיף רשתות חברתיות",
+"es": "Agregar cuentas en la sección de redes sociales",
+"fr": "Ajouter les comptes dans la section Médias sociaux",
+"it": "Aggiungi account nella sezione Social media",
+"ja": "ソーシャルメディアのセクションにアカウントを追加する",
+"pt-BR": "Adicionar contas na seção Redes sociais"
+}
+},
+{
+"type": "checkbox",
+"id": "show_payment_icons",
+"label": {
+"de": "Zahlungssymbole anzeigen",
+"he": "Show payment icons",
+"en": "הצג סמלים של אמצעי תשלום",
+"es": "Mostrar iconos de pago",
+"fr": "Afficher les icônes de paiement",
+"it": "Mostra le icone di pagamento",
+"ja": "支払いアイコンを表示する",
+"pt-BR": "Exibir ícones de pagamento"
+},
+"default": true
+},
+{
+"type": "link_list",
+"id": "legal_menu",
+"label": {
+"de": "Rechtliches Menü",
+"he": "Legal menu",
+"en": "תפריט משפטי",
+"es": "Menú legal",
+"fr": "Menu juridique",
+"it": "Menu legale",
+"ja": "リーガルメニュー",
+"pt-BR": "Menu Aviso legal"
+}
+}
+],
+"max_blocks": 4,
+"blocks": [
+{
+"type": "menu",
+"name": {
+"de": "Menü",
+"he": "Menu",
+"en": "תפריט",
+"es": "Menú",
+"fr": "Menu",
+"it": "Menu",
+"ja": "メニュー",
+"pt-BR": "Menu"
+},
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": {
+"de": "Titel",
+"he": "Heading",
+"en": "כותרת",
+"es": "Título",
+"fr": "Titre",
+"it": "Heading",
+"ja": "見出し",
+"pt-BR": "Título"
+},
+"default": {
+"de": "Quick-Links",
+"he": "Quick links",
+"en": "קישורים מהירים",
+"es": "Enlaces rápidos",
+"fr": "Liens rapides",
+"it": "Link rapidi",
+"ja": "クイックリンク",
+"pt-BR": "Links rápidos"
+}
+},
+{
+"type": "link_list",
+"id": "menu",
+"label": {
+"de": "Menü",
+"en": "תפריט",
+"he": "Menu",
+"es": "Menú",
+"fr": "Menu",
+"it": "Menu",
+"ja": "メニュー",
+"pt-BR": "Menu"
+}
+},
+{
+"type": "select",
+"id": "width",
+"label": {
+"de": "Breite des Elements",
+"he": "Container width",
+"en": "רוחב",
+"es": "Ancho del contenedor",
+"fr": "Largeur du conteneur",
+"it": "Larghezza contenitore",
+"ja": "コンテナーの幅",
+"pt-BR": "Largura do recipiente"
+},
+"default": "16%",
+"options": [
+{
+"value": "16%",
+"label": {
+"de": "16 %",
+"he": "16%",
+"en": "16%",
+"es": "16%",
+"fr": "16 %",
+"it": "16%",
+"ja": "16％",
+"pt-BR": "16%"
+}
+},
+{
+"value": "25%",
+"label": {
+"de": "25%",
+"he": "25%",
+"en": "25%",
+"es": "25%",
+"fr": "25 %",
+"it": "25%",
+"ja": "25%",
+"pt-BR": "25%"
+}
+},
+{
+"value": "33%",
+"label": {
+"de": "33%",
+"he": "33%",
+"en": "33%",
+"es": "33%",
+"fr": "33 %",
+"it": "33%",
+"ja": "33%",
+"pt-BR": "33%"
+}
+},
+{
+"value": "50%",
+"label": {
+"de": "50%",
+"he": "50%",
+"en": "50%",
+"es": "50%",
+"fr": "50 %",
+"it": "50%",
+"ja": "50%",
+"pt-BR": "50%"
+}
+},
+{
+"value": "66%",
+"label": {
+"de": "66%",
+"he": "66%",
+"en": "66%",
+"es": "66%",
+"fr": "66 %",
+"it": "66%",
+"ja": "66%",
+"pt-BR": "66%"
+}
+},
+{
+"value": "75%",
+"label": {
+"de": "75%",
+"he": "75%",
+"en": "75%",
+"es": "75%",
+"fr": "75 %",
+"it": "75%",
+"ja": "75%",
+"pt-BR": "75%"
+}
+},
+{
+"value": "100%",
+"label": {
+"de": "100%",
+"he": "100%",
+"en": "100%",
+"es": "100%",
+"fr": "100 %",
+"it": "100%",
+"ja": "100%",
+"pt-BR": "100%"
+}
+}
+]
+}
+]
+},
+{
+"type": "url",
+"name": "סמל אמצעי תשלום",
+"settings": [ 
+{
+"type": "image_picker", 
+"id": "payment_icon",
+"label": "סמל אמצעי תשלום"
+},
+{
+"type": "select",
+"id": "width",
+"label": {
+"de": "Breite des Elements",
+"he": "Container width",
+"en": "רוחב",
+"es": "Ancho del contenedor",
+"fr": "Largeur du conteneur",
+"it": "Larghezza contenitore",
+"ja": "コンテナーの幅",
+"pt-BR": "Largura do recipiente"
+},
+"default": "50%",
+"options": [
+{
+"value": "16%",
+"label": {
+"de": "16 %",
+"he": "16%",
+"en": "16%",
+"es": "16%",
+"fr": "16 %",
+"it": "16%",
+"ja": "16％",
+"pt-BR": "16%"
+}
+},
+{
+"value": "25%",
+"label": {
+"de": "25%",
+"he": "25%",
+"en": "25%",
+"es": "25%",
+"fr": "25 %",
+"it": "25%",
+"ja": "25%",
+"pt-BR": "25%"
+}
+},
+{
+"value": "33%",
+"label": {
+"de": "33%",
+"he": "33%",
+"en": "33%",
+"es": "33%",
+"fr": "33 %",
+"it": "33%",
+"ja": "33%",
+"pt-BR": "33%"
+}
+},
+{
+"value": "50%",
+"label": {
+"de": "50%",
+"he": "50%",
+"en": "50%",
+"es": "50%",
+"fr": "50 %",
+"it": "50%",
+"ja": "50%",
+"pt-BR": "50%"
+}
+},
+{
+"value": "66%",
+"label": {
+"de": "66%",
+"he": "66%",
+"en": "66%",
+"es": "66%",
+"fr": "66 %",
+"it": "66%",
+"ja": "66%",
+"pt-BR": "66%"
+}
+},
+{
+"value": "75%",
+"label": {
+"de": "75%",
+"he": "75%",
+"en": "75%",
+"es": "75%",
+"fr": "75 %",
+"it": "75%",
+"ja": "75%",
+"pt-BR": "75%"
+}
+},
+{
+"value": "100%",
+"label": {
+"de": "100%",
+"he": "100%",
+"en": "100%",
+"es": "100%",
+"fr": "100 %",
+"it": "100%",
+"ja": "100%",
+"pt-BR": "100%"
+}
+}
+]
+}
+]
+},
+
+{
+"type": "textarea",
+"name": "שעות פעילות/פתיחה",
+"settings": [ 
+{
+"type": "text", 
+"id": "time_period_heading",
+"label": "כותרת"
+},
+{
+"type": "text", 
+"id": "first_time_period",
+"label": "פירוט זמנים"
+},
+{
+"type": "text", 
+"id": "second_time_period",
+"label": "פירוט זמנים נוסף"
+},
+{
+"type": "select",
+"id": "width",
+"label": {
+"de": "Breite des Elements",
+"he": "Container width",
+"en": "רוחב",
+"es": "Ancho del contenedor",
+"fr": "Largeur du conteneur",
+"it": "Larghezza contenitore",
+"ja": "コンテナーの幅",
+"pt-BR": "Largura do recipiente"
+},
+"default": "16%",
+"options": [
+{
+"value": "16%",
+"label": {
+"de": "16 %",
+"he": "16%",
+"en": "16%",
+"es": "16%",
+"fr": "16 %",
+"it": "16%",
+"ja": "16％",
+"pt-BR": "16%"
+}
+},
+{
+"value": "25%",
+"label": {
+"de": "25%",
+"he": "25%",
+"en": "25%",
+"es": "25%",
+"fr": "25 %",
+"it": "25%",
+"ja": "25%",
+"pt-BR": "25%"
+}
+},
+{
+"value": "33%",
+"label": {
+"de": "33%",
+"he": "33%",
+"en": "33%",
+"es": "33%",
+"fr": "33 %",
+"it": "33%",
+"ja": "33%",
+"pt-BR": "33%"
+}
+},
+{
+"value": "50%",
+"label": {
+"de": "50%",
+"he": "50%",
+"en": "50%",
+"es": "50%",
+"fr": "50 %",
+"it": "50%",
+"ja": "50%",
+"pt-BR": "50%"
+}
+},
+{
+"value": "66%",
+"label": {
+"de": "66%",
+"he": "66%",
+"en": "66%",
+"es": "66%",
+"fr": "66 %",
+"it": "66%",
+"ja": "66%",
+"pt-BR": "66%"
+}
+},
+{
+"value": "75%",
+"label": {
+"de": "75%",
+"he": "75%",
+"en": "75%",
+"es": "75%",
+"fr": "75 %",
+"it": "75%",
+"ja": "75%",
+"pt-BR": "75%"
+}
+},
+{
+"value": "100%",
+"label": {
+"de": "100%",
+"he": "100%",
+"en": "100%",
+"es": "100%",
+"fr": "100 %",
+"it": "100%",
+"ja": "100%",
+"pt-BR": "100%"
+}
+}
+]
+}
+]
+}, 
+
+{
+"type": "text",
+"name": {
+"de": "Rich Text",
+"he": "Rich text",
+"en": "טקסט",
+"es": "Texto enriquecido",
+"fr": "Texte enrichi",
+"it": "Rich text",
+"ja": "リッチテキスト",
+"pt-BR": "Rich text"
+},
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": {
+"de": "Titel",
+"he": "Heading",
+"en": "כותרת",
+"es": "Título",
+"fr": "Titre",
+"it": "Heading",
+"ja": "見出し",
+"pt-BR": "Título"
+},
+"default": {
+"de": "Kontakt aufnehmen",
+"he": "Get in touch",
+"en": "צור קשר",
+"es": "Ponerse en contacto",
+"fr": "Entrer en contact",
+"it": "Contattaci",
+"ja": "お問い合わせはこちらから",
+"pt-BR": "Entre em contato"
+}
+},
+{
+"type": "richtext",
+"id": "richtext",
+"label": {
+"de": "Text",
+"he": "Text",
+"en": "טקסט",
+"es": "Texto",
+"fr": "Texte",
+"it": "Testo",
+"ja": "テキスト",
+"pt-BR": "Texto"
+},
+"default": {
+"de": "<p>Mit diesem Text können Sie Ihre Kunden über Ihre Marke informieren.</p>",
+"he": "<p>Use this text to share information about your brand with your customers.</p>",
+"en": "<p>ניתן להשתמש בחלק זה על מנת לשתף מידע נוסף אודות המותג שלך עם לקוחותיך</p> ",
+"es": "<p>Usa este texto para compartir información sobre tu marca con tus clientes.</p>",
+"fr": "<p>Utilisez ce texte pour partager des informations sur votre marque avec vos clients.</p>",
+"it": "<p>Utilizza questo spazio per condividere informazioni sul tuo brand con i clienti.</p>",
+"ja": "<p>このテキストを使用して、あなたのブランドに関する情報をお客様と共有します。</p>",
+"pt-BR": "<p>Use este texto para compartilhar informações sobre sua marca com seus clientes.</p>"
+}
+},
+{
+"type": "select",
+"id": "width",
+"label": {
+"de": "Breite des Elements",
+"he": "Container width",
+"en": "רוחב",
+"es": "Ancho del contenedor",
+"fr": "Largeur du conteneur",
+"it": "Larghezza contenitore",
+"ja": "コンテナーの幅",
+"pt-BR": "Largura do recipiente"
+},
+"default": "50%",
+"options": [
+{
+"value": "16%",
+"label": {
+"de": "16 %",
+"he": "16%",
+"en": "16%",
+"es": "16%",
+"fr": "16 %",
+"it": "16%",
+"ja": "16％",
+"pt-BR": "16%"
+}
+},
+{
+"value": "25%",
+"label": {
+"de": "25%",
+"he": "25%",
+"en": "25%",
+"es": "25%",
+"fr": "25 %",
+"it": "25%",
+"ja": "25%",
+"pt-BR": "25%"
+}
+},
+{
+"value": "33%",
+"label": {
+"de": "33%",
+"he": "33%",
+"en": "33%",
+"es": "33%",
+"fr": "33 %",
+"it": "33%",
+"ja": "33%",
+"pt-BR": "33%"
+}
+},
+{
+"value": "50%",
+"label": {
+"de": "50%",
+"he": "50%",
+"en": "50%",
+"es": "50%",
+"fr": "50 %",
+"it": "50%",
+"ja": "50%",
+"pt-BR": "50%"
+}
+},
+{
+"value": "66%",
+"label": {
+"de": "66%",
+"he": "66%",
+"en": "66%",
+"es": "66%",
+"fr": "66 %",
+"it": "66%",
+"ja": "66%",
+"pt-BR": "66%"
+}
+},
+{
+"value": "75%",
+"label": {
+"de": "75%",
+"he": "75%",
+"en": "75%",
+"es": "75%",
+"fr": "75 %",
+"it": "75%",
+"ja": "75%",
+"pt-BR": "75%"
+}
+},
+{
+"value": "100%",
+"label": {
+"de": "100%",
+"he": "100%",
+"en": "100%",
+"es": "100%",
+"fr": "100 %",
+"it": "100%",
+"ja": "100%",
+"pt-BR": "100%"
+}
+}
+]
+}
+]
+},
+{
+"type": "newsletter",
+"name": {
+"de": "Newsletter-Anmeldung",
+"he": "Newsletter signup",
+"en": "ניוזלטר",
+"es": "Suscripción al boletín",
+"fr": "Inscription",
+"it": "Iscrizione newsletter",
+"ja": "メールマガジンの登録",
+"pt-BR": "Assinatura da newsletter"
+},
+"limit": 1,
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": {
+"de": "Titel",
+"he": "Heading",
+"en": "כותרת",
+"es": "Título",
+"fr": "Titre",
+"it": "Heading",
+"ja": "見出し",
+"pt-BR": "Título"
+},
+"default": {
+"de": "Newsletter",
+"he": "Newsletter",
+"en": "ניוזלטר",
+"es": "Boletín",
+"fr": "Newsletter",
+"it": "Newsletter",
+"ja": "メールマガジン",
+"pt-BR": "Newsletter"
+}
+},
+{
+"type": "richtext",
+"id": "subtext",
+"label": {
+"de": "Subtext",
+"he": "Subtext",
+"en": "טקסט",
+"es": "Subtexto",
+"fr": "Sous-texte",
+"it": "Sottotesto",
+"ja": "サブテキスト",
+"pt-BR": "Subtexto"
+},
+"default": {
+"de": "<p>Werbeaktionen, neue Produkte und Sonderangebote. Direkt in Ihrem Posteingang.</p>",
+"he": "<p>Promotions, new products and sales. Directly to your inbox.</p>",
+"en": "<p>מבצעים, מוצרים חדשים ומכירות. ישירות לתיבת הדואר שלך.</p> ",
+"es": "<p>Promociones, nuevos productos y ventas. Directamente a tu bandeja de entrada.</p>",
+"fr": "<p>Promotions, nouveaux produits et soldes. Directement dans votre boîte de réception.</p>",
+"it": "<p>Promozioni, nuovi prodotti e offerte. Direttamente nella tua inbox.</p>",
+"ja": "<p>プロモーション、新商品、セールについて、あなたの受信箱に直接知らせる。</p>",
+"pt-BR": "<p>Promoções, novos produtos e ofertas, diretamente em sua caixa de entrada.</p>"
+}
+},
+{
+"type": "paragraph",
+"content": {
+"de": "Alle Kunden, die sich eintragen, bekommen ein Konto in Shopify. [Kunden ansehen](/admin/customers?query=&accepts_marketing=1)",
+"he": "Any customers who sign up will have an account created for them in Shopify. [View customers](/admin/customers?query=&accepts_marketing=1)",
+"en": "לכל הלקוחות שיירשמו יווצר חשבון ב-Shopify. [צפה בלקוחות](/admin/customers?query=&accepts_marketing=1)",
+"es": "Todos los clientes que se registren tendrán una cuenta creada para ellos en Shopify. [Ver clientes](/admin/customers?query=&accepts_marketing=1)",
+"fr": "Tous les clients qui s'inscrivent auront un compte créé pour eux sur Shopify. [Voir les clients](/admin/customers?query=&accepts_marketing=1)",
+"it": "Qualsiasi cliente che si iscrive avrà un account creato appositamente su Shopify. [Visualizza clienti](/admin/customers?query=&accepts_marketing=1)",
+"ja": "サインアップしたお客様は、Shopifyでアカウントが作成されます。[お客様を表示](/admin/customers?query=&accepts_marketing=1)",
+"pt-BR": "Todos os clientes que se inscreverem terão uma conta criada para eles na Shopify. [Ver clientes](/admin/customers?query=&accepts_marketing=1)"
+}
+},
+{
+"type": "select",
+"id": "width",
+"label": {
+"de": "Breite des Elements",
+"he": "Container width",
+"en": "רוחב",
+"es": "Ancho del contenedor",
+"fr": "Largeur du conteneur",
+"it": "Larghezza contenitore",
+"ja": "コンテナーの幅",
+"pt-BR": "Largura do recipiente"
+},
+"default": "33%",
+"options": [
+{
+"value": "25%",
+"label": {
+"de": "25%",
+"he": "25%",
+"en": "25%",
+"es": "25%",
+"fr": "25 %",
+"it": "25%",
+"ja": "25%",
+"pt-BR": "25%"
+}
+},
+{
+"value": "33%",
+"label": {
+"de": "33%",
+"he": "33%",
+"en": "33%",
+"es": "33%",
+"fr": "33 %",
+"it": "33%",
+"ja": "33%",
+"pt-BR": "33%"
+}
+},
+{
+"value": "50%",
+"label": {
+"de": "50%",
+"he": "50%",
+"en": "50%",
+"es": "50%",
+"fr": "50 %",
+"it": "50%",
+"ja": "50%",
+"pt-BR": "50%"
+}
+},
+{
+"value": "66%",
+"label": {
+"de": "66%",
+"he": "66%",
+"en": "66%",
+"es": "66%",
+"fr": "66 %",
+"it": "66%",
+"ja": "66%",
+"pt-BR": "66%"
+}
+},
+{
+"value": "75%",
+"label": {
+"de": "75%",
+"he": "75%",
+"en": "75%",
+"es": "75%",
+"fr": "75 %",
+"it": "75%",
+"ja": "75%",
+"pt-BR": "75%"
+}
+},
+{
+"value": "100%",
+"label": {
+"de": "100%",
+"he": "100%",
+"en": "100%",
+"es": "100%",
+"fr": "100 %",
+"it": "100%",
+"ja": "100%",
+"pt-BR": "100%"
+}
+}
+]
+}
+]
+}
+]
+}
+{% endschema %}

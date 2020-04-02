@@ -1,0 +1,236 @@
+{% assign count = 0 %}
+<div id="collection-rows--{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="collection-row-section">
+  {% assign featured_row = section.settings.home_featured_row %}
+  {% assign row_limit_setting = section.settings.grid %}
+  {% case section.settings.grid %}
+  {% when 2 %}
+  {%- assign grid_item_width = 'medium--one-half large--one-half' -%}
+  {%- assign image_size = '540x' -%}
+  {% assign width = '540' %}
+  {% assign height = '600' %}
+  {% when 3 %}
+  {%- assign grid_item_width = 'small--one-half medium--one-third large--one-third' -%}
+  {%- assign image_size = '345x' -%}
+  {% assign width = '345' %}
+  {% assign height = '550' %}
+  {% when 4 %}
+  {%- assign grid_item_width = 'small--one-half medium--one-quarter large--one-quarter' -%}
+  {%- assign image_size = '250x' -%}
+  {% assign width = '250' %}
+  {% assign height = '225' %}
+  {% when 5 %}
+  {%- assign grid_item_width = 'small--one-half medium--one-fifth large--one-fifth' -%}
+  {%- assign image_size = '195x' -%}
+  {% assign width = '195' %}
+  {% assign height = '175' %}
+  {% endcase %}
+  
+  {% assign header_title = collections[featured_row].title %}
+  {%- assign more_link = collections[featured_row].url -%}
+  {% assign product_limit = section.settings.range %}
+  {% if collections[featured_row].all_products_count != 0 and section.settings.home_featured_row != blank %}
+
+  {% if section.settings.title != blank %}
+  <div class="section-header">
+    <h1 class="h1{% if more_link %} section-header--left{% endif %} text-center header--color">{{ section.settings.title | escape }}</h1>
+
+    {% comment %}
+    {% if more_link %}
+    <div class="section-header--right">
+      {% assign header_title = header_title | downcase %}
+      <a href="{{ more_link }}">{{ 'homepage.featured_collection_rows.more_in_collection' | t: collection_title: header_title }} &rsaquo;</a>
+    </div>
+    {% endif %}
+    {% endcomment %}
+  </div>
+  {% endif %}
+  <div class="wrapper">
+        <div class="carousel-wrap flexy-carousel">
+      <div class="owl-carousel owl-theme">
+        {% for product in collections[featured_row].products limit: product_limit %}
+        {% assign current_collection = collections[featured_row] %}
+        {% include 'product-grid-item_home' %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% else %}
+  
+  <!-- For feature collection  -->
+  <div class="wrapper text-center">
+    <div class="section-header">
+      <p class="h1 section-header--left">{{ section.settings.title | escape }}</p>
+    </div>
+    
+    <div class="owl-carousel owl-theme">
+      {% for i in (1..product_limit) %}
+      <div class="{{ grid_item_width }} text-center">
+        {% capture current %}{% cycle 1, 2, 3, 4 %}{% endcapture %}
+        {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+        <p><a href="/admin/products">{{ 'homepage.onboarding.product_title' | t }}</a> $19.99</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</div>
+<style>
+  .featured-collection{
+    background:{{ section.settings.bg_color }} !important;
+  }
+  .header--color{
+    color:{{ section.settings.heading_color }}!important;
+  }
+  .quick_view{
+    display:none !imprtant;
+  }
+</style>
+<script>
+  $(document).ready(function(){
+    $(".product-grid-item").mouseover(function(){
+      $(this).find(".quick_view").css("display","block");
+    });
+    $(".product-grid-item").mouseleave(function(){
+      $(".quick_view").css("display","none");
+    });
+
+  }); 
+
+
+</script>
+
+
+{% schema %}
+{
+"name": {
+"de": "Featured Kategorie",
+"he": "Featured collection",
+"en": "קולקציה מקודמת", 
+"es": "Colección destacada",
+"fr": "Collection en vedette",
+"it": "Collezione in evidenza",
+"ja": "特集コレクション",
+"pt-BR": "Coleção em destaque"
+},
+"class": "clearfix featured-collection",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": {
+"de": "Titel",
+"he": "Heading",
+"en": "כותרת",
+"es": "Título",
+"fr": "Titre",
+"it": "Heading",
+"ja": "見出し",
+"pt-BR": "Título"
+},
+"default": {
+"de": "Featured Kategorie",
+"he": "Featured collection",
+"en": "קולקציה מקודמת",
+"es": "Colección destacada",
+"fr": "Collection en vedette",
+"it": "Collezione in evidenza",
+"ja": "特集コレクション",
+"pt-BR": "Coleção em destaque"
+}
+},
+{
+"type": "collection",
+"id": "home_featured_row",
+"label": {
+"de": "Kategorie",
+"he": "Collection",
+"en": "קולקציה",
+"es": "Colección",
+"fr": "Collection",
+"it": "Collezione",
+"ja": "コレクション",
+"pt-BR": "Coleção"
+}
+},
+{
+"id": "bg_color",
+"type": "color",
+"label": "צבע רקע"
+},
+{
+"id": "heading_color",
+"type": "color",
+"label": "צבע הכותרת"
+},
+{
+"type": "text",
+"id": "range",
+"label": {
+"de": "Produkte per Reihe",
+"he": "Products per row",
+"en": "מספר מוצרים בשורה",
+"es": "Productos por fila",
+"fr": "Produits par rangée",
+"it": "Prodotti per riga",
+"ja": "行あたりの商品数",
+"pt-BR": "Produtos por linha"
+},
+"default": "10"
+},
+{
+"type": "checkbox",
+"id": "product_show_saved_amount",
+"label": {
+"de": "Gesparten Betrag anzeigen",
+"he": "Show saved amount",
+"en": "הצגת סכום חסכון",
+"es": "Mostrar monto ahorrado",
+"fr": "Afficher le montant économisé",
+"it": "Mostra importo risparmiato",
+"ja": "保存された金額を表示",
+"pt-BR": "Exibir valor salvo"
+},
+"default": true
+},
+{
+"type": "checkbox",
+"id": "product_show_compare_at_price",
+"label": {
+"de": "Vergleich zum Preis anzeigen",
+"he": "Show compare at price",
+"en": "הצגת מחיר לפני הנחה",
+"es": "Mostrar precio de comparación",
+"fr": "Afficher le prix normal",
+"it": "Mostra Confronta al prezzo",
+"ja": "価格比較を表示する",
+"pt-BR": "Exibir comparação de preço"
+},
+"default": false
+}
+],
+"presets": [
+{
+"name": {
+"de": "Featured Kategorie",
+"he": "Featured collection",
+"en": "קולקציה מקודמת",
+"es": "Colección destacada",
+"fr": "Collection en vedette",
+"it": "Collezione in evidenza",
+"ja": "特集コレクション",
+"pt-BR": "Coleção em destaque"
+},
+"category": {
+"de": "Sammlungen",
+"he": "Collections",
+"en": "קולקציות",
+"es": "Colecciones",
+"fr": "Collections",
+"it": "Collezioni",
+"ja": "コレクション",
+"pt-BR": "Coleções"
+}
+}
+]
+}
+{% endschema %}

@@ -1,0 +1,622 @@
+<div class="flexslider" id="heroSlider--{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="slideshow-section" data-slider-home-auto="{{ section.settings.slider_home_auto }}" data-slider-home-rate="{{ section.settings.slider_home_rate }}">
+  <ul class="slides">
+    {% for block in section.blocks %}
+
+    <li id="slide--{{ block.id }}" data-flexslider-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+
+      {% if block.settings.slide != blank %}
+      {% if block.settings.link %}
+      <a href="{{ block.settings.link }}" class="slide-link">
+        {% endif %}
+        {%- assign image = block.settings.slide -%}
+        {%- assign mobile_slide_image = block.settings.mobile_slide -%}
+        {%- capture img_wrapper_id -%}slideShowImageWrapper-{{ section.id }}-{{ image.id }}{%- endcapture -%}
+        {%- assign max_width =  -%}
+        {%- assign max_height = 1500 -%}
+
+        {%- include 'image-logic' with width: max_width, height: max_height -%}
+
+        {%- assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+        <img class="desktop_slide_image" src="{{ image | img_url: 'master' }}"/>
+        <img class="mobile_slide_image" src="{{ mobile_slide_image | img_url: 'master' }}"/>
+        <div class="slider-info">
+          <div class="text1" style="color:{{ block.settings.first_text_color}}; font-size: {{ block.settings.text1_size}};">{{block.settings.text1}}</div>
+          <div class="text2" style="color:{{ block.settings.second_text_color}}; font-size: {{ block.settings.text2_size}};">{{block.settings.text2}}</div>
+          {% if block.settings.button != blank %}
+          <button class="btn">{{ block.settings.button }}</button>
+          {% endif %}
+        </div>
+
+        {% if block.settings.link %}
+      </a>
+      {% endif %}
+
+      {% else %}
+      {% capture current %}{% cycle 1, 2 %}{% endcapture %}
+      {% capture svg_tag_class %}placeholder-noblocks slide-link slide-link--{{ block.id }}{% endcapture %}
+      {%- assign placeholder = 'placeholder-lifestyle-' | append: current -%}
+      {{ 'lifestyle-' | append: current | placeholder_svg_tag: svg_tag_class }}
+      {% endif %}
+
+
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% schema %}
+{
+"name": {
+"de": "Slideshow",
+"he": "תמונות מתחלפות",
+"en": "סליידר תמונות",
+"es": "Diapositivas",
+"fr": "Diaporama",
+"it": "Presentazione",
+"ja": "スライドショー",
+"pt-BR": "Apresentação de slides"
+},
+"class": "slider-section",
+"max_blocks": 6,
+"settings": [
+{
+"type": "checkbox",
+"id": "slider_home_auto",
+"label": {
+"de": "Auto-rotieren der Slides",
+"he": "Auto-rotate slides",
+"en": "סובב שקפים אוטומטית",
+"es": "Rotar las diapositivas automáticamente",
+"fr": "Rotation automatique des diapositives",
+"it": "Ruota slide automaticamente",
+"ja": "スライドの自動切り替え",
+"pt-BR": "Rodar os slides automaticamente"
+}
+},
+{
+"type": "select",
+"id": "slider_home_rate",
+"label": {
+"de": "Übergangszeit",
+"he": "Transition time",
+"en": "זמן מעבר",
+"es": "Tiempo de transición",
+"fr": "Temps de transition",
+"it": "Tempo transizione",
+"ja": "トランジション時間",
+"pt-BR": "Tempo da transição"
+},
+"options": [
+{
+"value": "5000",
+"label": {
+"de": "5 Sekunden",
+"he": "5 seconds",
+"en": "5 שניות",
+"es": "5 segundos",
+"fr": "5 secondes",
+"it": "5 secondi",
+"ja": "5秒",
+"pt-BR": "5 segundos"
+}
+},
+{
+"value": "7000",
+"label": {
+"de": "7 Sekunden",
+"he": "7 seconds",
+"en": "7 שניות",
+"es": "7 segundos",
+"fr": "7 secondes",
+"it": "7 secondi",
+"ja": "7秒",
+"pt-BR": "7 segundos"
+}
+},
+{
+"value": "10000",
+"label": {
+"de": "10 Sekunden",
+"he": "10 seconds",
+"en": "10 שניות",
+"es": "10 segundos",
+"fr": "10 secondes",
+"it": "10 secondi",
+"ja": "10秒",
+"pt-BR": "10 segundos"
+}
+},
+{
+"value": "15000",
+"label": {
+"de": "15 Sekunden",
+"he": "15 seconds",
+"en": "15 שניות",
+"es": "15 segundos",
+"fr": "15 secondes",
+"it": "15 secondi",
+"ja": "15秒",
+"pt-BR": "15 segundos"
+}
+}
+]
+}
+],
+"presets": [
+{
+"name": {
+"de": "Slideshow",
+"he": "Slideshow",
+"en": "סליידר תמונות",
+"es": "Diapositivas",
+"fr": "Diaporama",
+"it": "Presentazione",
+"ja": "スライドショー",
+"pt-BR": "Apresentação de slides"
+},
+"category": {
+"de": "Foto",
+"he": "Image",
+"en": "תמונה",
+"es": "Imagen",
+"fr": "Image",
+"it": "Immagine",
+"ja": "画像",
+"pt-BR": "Imagem"
+},
+"blocks": [
+{
+"type": "image"
+}
+]
+}
+],
+"blocks": [
+{
+"type": "image",
+"name": {
+"de": "Foto",
+"he": "Image",
+"en": "שקופית",
+"es": "Imagen",
+"fr": "Image",
+"it": "Immagine",
+"ja": "画像",
+"pt-BR": "Imagem"
+},
+"settings": [
+{
+"type": "image_picker",
+"id": "slide",
+"label": {
+"de": "Foto",
+"he": "Image",
+"en": "תמונה",
+"es": "Imagen",
+"fr": "Image",
+"it": "Immagine",
+"ja": "画像",
+"pt-BR": "Imagem"
+},"info": {
+"de": "1000 x 500px empfohlen",
+"he": "1920 x 1024px recommended",
+"en": "גודל מומלץ: 1920X1024px",
+"es": "1000 x 500px recomendado",
+"fr": "1000 x 500 px recommandé",
+"it": "Dimensione consigliata: 1000 x 500 pixel",
+"ja": "1000 x 500ピクセルを推奨",
+"pt-BR": "1.000 x 500 px recomendado"
+}
+},
+{
+"type": "image_picker",
+"id": "mobile_slide",
+"label": {
+"de": "Foto",
+"he": "Mobile Image",
+"en": "תמונה מותאמת למובייל",
+"es": "Imagen",
+"fr": "Image",
+"it": "Immagine",
+"ja": "画像",
+"pt-BR": "Imagem"
+},
+"info": {
+"de": "1000 x 500px empfohlen",
+"he": "1000 x 500px recommended",
+"en": "גודל מומלץ: 1000X500px",
+"es": "1000 x 500px recomendado",
+"fr": "1000 x 500 px recommandé",
+"it": "Dimensione consigliata: 1000 x 500 pixel",
+"ja": "1000 x 500ピクセルを推奨",
+"pt-BR": "1.000 x 500 px recomendado"
+}
+},
+{
+"type": "textarea",
+"id": "text1",
+"label":"טקסט 1" 
+},
+      {
+        "type": "select",
+        "id": "text1_size",
+        "label": {
+          "de": "Schriftgröße Hauptmenü",
+          "he": "Main menu font size",
+          "es": "Tamaño de fuente del menú principal",
+          "fr": "Taille de la police du menu principal",
+          "it": "Dimensione font menu principale",
+          "ja": "メインメニューのフォントサイズ",
+          "pt-BR": "Tamanho da fonte do menu principal",
+          "en": "גודל טקסט 1"
+        },
+        "options": [
+          {
+            "value": "45px",
+            "label": {
+              "de": "14px",
+              "he": "14px",
+              "es": "14px",
+              "fr": "14 px",
+              "it": "14 px",
+              "ja": "14ピクセル",
+              "pt-BR": "14px",
+              "en": "45px"
+            }
+          },
+          {
+            "value": "50px",
+            "label": {
+              "de": "15px",
+              "he": "15px",
+              "es": "15px",
+              "fr": "15 px",
+              "it": "15 px",
+              "ja": "15ピクセル",
+              "pt-BR": "15px",
+              "en": "50px"
+            }
+          },
+          {
+            "value": "55px",
+            "label": {
+              "de": "16px",
+              "he": "16px",
+              "es": "16px",
+              "fr": "16 px",
+              "it": "16 px",
+              "ja": "16ピクセル",
+              "pt-BR": "16px",
+              "en": "55px"
+            }
+          },
+          {
+            "value": "60px",
+            "label": {
+              "de": "17px",
+              "he": "17px",
+              "es": "17px",
+              "fr": "17 px",
+              "it": "17 px",
+              "ja": "17ピクセル",
+              "pt-BR": "17px",
+              "en": "60px"
+            }
+          },
+          {
+            "value": "65px",
+            "label": {
+              "de": "18px",
+              "he": "18px",
+              "es": "18px",
+              "fr": "18 px",
+              "it": "18 px",
+              "ja": "18ピクセル",
+              "pt-BR": "18px",
+              "en": "65px"
+            }
+          },
+          {
+            "value": "70px",
+            "label": {
+              "de": "19px",
+              "he": "19px",
+              "es": "19px",
+              "fr": "19 px",
+              "it": "19 px",
+              "ja": "19ピクセル",
+              "pt-BR": "19px",
+              "en": "70px"
+            }
+          },
+          {
+            "value": "75px",
+            "label": {
+              "de": "20px",
+              "he": "20px",
+              "es": "20px",
+              "fr": "20 px",
+              "it": "20 px",
+              "ja": "20ピクセル",
+              "pt-BR": "20px",
+              "en": "75px"
+            }
+          },
+          {
+            "value": "80px",
+            "label": {
+              "de": "21px",
+              "he": "21px",
+              "es": "21px",
+              "fr": "21 px",
+              "it": "21 px",
+              "ja": "21ピクセル",
+              "pt-BR": "21px",
+              "en": "80px"
+            }
+          },
+          {
+            "value": "85px",
+            "label": {
+              "de": "22px",
+              "he": "22px",
+              "es": "22px",
+              "fr": "22 px",
+              "it": "22 px",
+              "ja": "22ピクセル",
+              "pt-BR": "22px",
+              "en": "85px"
+            }
+          },
+          {
+            "value": "90px",
+            "label": {
+              "de": "23px",
+              "he": "23px",
+              "es": "23px",
+              "fr": "23 px",
+              "it": "23 px",
+              "ja": "23ピクセル",
+              "pt-BR": "23px",
+              "en": "90px"
+            }
+          },
+          {
+            "value": "100px",
+            "label": {
+              "de": "24px",
+              "he": "24px",
+              "es": "24px",
+              "fr": "24 px",
+              "it": "24 px",
+              "ja": "24ピクセル",
+              "pt-BR": "24px",
+              "en": "100px"
+            }
+          },
+          {
+            "value": "110px",
+            "label": {
+              "de": "25px",
+              "he": "25px",
+              "es": "25px",
+              "fr": "25 px",
+              "it": "25 px",
+              "ja": "25ピクセル",
+              "pt-BR": "25px",
+              "en": "110px"
+            }
+          }
+        ]
+      },
+{
+"type": "textarea",
+"id": "text2",
+"label":"טקסט 2" 
+},
+ {
+        "type": "select",
+        "id": "text2_size",
+        "label": {
+          "de": "Schriftgröße Hauptmenü",
+          "he": "Main menu font size",
+          "es": "Tamaño de fuente del menú principal",
+          "fr": "Taille de la police du menu principal",
+          "it": "Dimensione font menu principale",
+          "ja": "メインメニューのフォントサイズ",
+          "pt-BR": "Tamanho da fonte do menu principal",
+          "en": "גודל טקסט 2"
+        },
+        "options": [
+          {
+            "value": "55px",
+            "label": {
+              "de": "14px",
+              "he": "14px",
+              "es": "14px",
+              "fr": "14 px",
+              "it": "14 px",
+              "ja": "14ピクセル",
+              "pt-BR": "14px",
+              "en": "55px"
+            }
+          },
+          {
+            "value": "60px",
+            "label": {
+              "de": "15px",
+              "he": "15px",
+              "es": "15px",
+              "fr": "15 px",
+              "it": "15 px",
+              "ja": "15ピクセル",
+              "pt-BR": "15px",
+              "en": "60px"
+            }
+          },
+          {
+            "value": "65px",
+            "label": {
+              "de": "16px",
+              "he": "16px",
+              "es": "16px",
+              "fr": "16 px",
+              "it": "16 px",
+              "ja": "16ピクセル",
+              "pt-BR": "16px",
+              "en": "65px"
+            }
+          },
+          {
+            "value": "70px",
+            "label": {
+              "de": "17px",
+              "he": "17px",
+              "es": "17px",
+              "fr": "17 px",
+              "it": "17 px",
+              "ja": "17ピクセル",
+              "pt-BR": "17px",
+              "en": "70px"
+            }
+          },
+          {
+            "value": "80px",
+            "label": {
+              "de": "18px",
+              "he": "18px",
+              "es": "18px",
+              "fr": "18 px",
+              "it": "18 px",
+              "ja": "18ピクセル",
+              "pt-BR": "18px",
+              "en": "80px"
+            }
+          },
+          {
+            "value": "90px",
+            "label": {
+              "de": "19px",
+              "he": "19px",
+              "es": "19px",
+              "fr": "19 px",
+              "it": "19 px",
+              "ja": "19ピクセル",
+              "pt-BR": "19px",
+              "en": "90px"
+            }
+          },
+          {
+            "value": "100px",
+            "label": {
+              "de": "20px",
+              "he": "20px",
+              "es": "20px",
+              "fr": "20 px",
+              "it": "20 px",
+              "ja": "20ピクセル",
+              "pt-BR": "20px",
+              "en": "100px"
+            }
+          },
+          {
+            "value": "110px",
+            "label": {
+              "de": "21px",
+              "he": "21px",
+              "es": "21px",
+              "fr": "21 px",
+              "it": "21 px",
+              "ja": "21ピクセル",
+              "pt-BR": "21px",
+              "en": "110px"
+            }
+          },
+          {
+            "value": "120px",
+            "label": {
+              "de": "22px",
+              "he": "22px",
+              "es": "22px",
+              "fr": "22 px",
+              "it": "22 px",
+              "ja": "22ピクセル",
+              "pt-BR": "22px",
+              "en": "120px"
+            }
+          },
+          {
+            "value": "130px",
+            "label": {
+              "de": "23px",
+              "he": "23px",
+              "es": "23px",
+              "fr": "23 px",
+              "it": "23 px",
+              "ja": "23ピクセル",
+              "pt-BR": "23px",
+              "en": "130px"
+            }
+          },
+          {
+            "value": "140px",
+            "label": {
+              "de": "24px",
+              "he": "24px",
+              "es": "24px",
+              "fr": "24 px",
+              "it": "24 px",
+              "ja": "24ピクセル",
+              "pt-BR": "24px",
+              "en": "140px"
+            }
+          },
+          {
+            "value": "150px",
+            "label": {
+              "de": "25px",
+              "he": "25px",
+              "es": "25px",
+              "fr": "25 px",
+              "it": "25 px",
+              "ja": "25ピクセル",
+              "pt-BR": "25px",
+              "en": "150px"
+            }
+          }
+        ]
+      },
+{
+"type": "color",
+"id": "first_text_color",
+"label":"צבע טקסט 1" 
+},
+{
+"type": "color",
+"id": "second_text_color",
+"label":"צבע טקסט 2" 
+},
+{
+"type": "text",
+"id": "button",
+"label":"טקסט לכפתור" 
+},
+{
+"type": "url",
+"id": "link",
+"label": {
+"de": "Link URL",
+"he": "Link URL",
+"en": "קישור",
+"es": "URL del enlace",
+"fr": "Lien URL",
+"it": "Link URL",
+"ja": "リンクURL",
+"pt-BR": "URL do link"
+}
+}
+]
+}
+]
+}
+{% endschema %}

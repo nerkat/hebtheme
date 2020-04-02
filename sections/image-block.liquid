@@ -1,0 +1,324 @@
+{% assign count = 0 %}
+<div class="image-feature-block image-feature-block--{{ section.id }} grid-uniform">
+  {% for block in section.blocks %}
+  {% assign block_size = section.blocks.size %}
+  {% if block_size == 3 %}
+  {% assign count = count | plus: 1 %}
+  {% if count>0 and count<3  %}
+  <div class="half-block one-half small-one-whole grid-item for-three">
+    {% if forloop.first %}
+    <a href="{% if block.settings.button_link != blank %}{{ block.settings.button_link }}{% else %}/{% endif %}" class="block-first-image" style="{% if block.settings.image != blank %}background-image: url({{ block.settings.image | img_url:'original' }});{% else %}background-image: url({{ "placeholder.jpg" | asset_url }});{% endif %}">
+     {% if block.settings.title != blank %}<h3 class="text" style="color:{{ block.settings.text_color }}; font-size: {{ block.settings.title_size }};">{{ block.settings.title }}</h3>{% endif %}
+    </a>
+    {% endif %}
+    {% endif %}
+   
+    {% if count>1 %}
+    
+    <a href="{% if block.settings.button_link != blank %}{{ block.settings.button_link }}{% else %}/{% endif %}" class="fouth-block" style="{% if block.settings.image != blank %}background-image: url({{ block.settings.image | img_url:'original' }});{% else %}background-image: url({{ "placeholder.jpg" | asset_url }});{% endif %}">
+    {% endif  %}
+    {% if count>1  %}
+   {% if block.settings.title != blank %}<h3 class="text" style="color:{{ block.settings.text_color }}; font-size: {{ block.settings.title_size }};">{{ block.settings.title }}</h3>{% endif %}
+ 
+    </a>
+    {% endif  %}
+    {% if forloop.first or forloop.last  %}</div>{% endif %}
+    {% else %}
+    <div class="half-block one-half small-one-whole grid-item {% if block_size == 2%}for-two{% elsif block_size == 4 %}for-four{% endif%}">
+      <a href="{% if block.settings.button_link != blank %}{{ block.settings.button_link }}{% else %}/{% endif %}" class="block-first-image" style="{% if block.settings.image != blank %}background-image: url({{ block.settings.image | img_url:'original' }});{% else %}background-image: url({{ "placeholder.jpg" | asset_url }});{% endif %}">
+        {% if block.settings.title != blank %}<h3 class="text" style="color:{{ block.settings.text_color }}; font-size: {{ block.settings.title_size }} !important;font-family:{{settings.type_base_font_new}}">{{ block.settings.title }}</h3>{% endif %}
+      </a>
+    </div>
+    {% endif %}
+  {% endfor %}
+  
+</div>
+
+
+{% schema %}
+{
+  "name": "קולז' קולקציות",    
+  "max_blocks": 4,
+  "class": "index-section image--block",
+
+ "blocks": [
+      {
+        "type": "image",
+        "name": "תמונה",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label":"תמונה "
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label":"טקסט",
+            "default": "Lorem ipsum"
+          },
+{
+        "type": "select",
+        "id": "title_size",
+        "label": {
+          "de": "Schriftgröße Hauptmenü",
+          "he": "Main menu font size",
+          "es": "Tamaño de fuente del menú principal",
+          "fr": "Taille de la police du menu principal",
+          "it": "Dimensione font menu principale",
+          "ja": "メインメニューのフォントサイズ",
+          "pt-BR": "Tamanho da fonte do menu principal",
+          "en": "גודל טקסט 1"
+        },
+        "options": [
+{
+            "value": "20px",
+            "label": {
+              "de": "14px",
+              "he": "14px",
+              "es": "14px",
+              "fr": "14 px",
+              "it": "14 px",
+              "ja": "14ピクセル",
+              "pt-BR": "14px",
+              "en": "20px"
+            }
+          },{
+            "value": "25px",
+            "label": {
+              "de": "14px",
+              "he": "14px",
+              "es": "14px",
+              "fr": "14 px",
+              "it": "14 px",
+              "ja": "14ピクセル",
+              "pt-BR": "14px",
+              "en": "25px"
+            }
+          },{
+            "value": "30px",
+            "label": {
+              "de": "14px",
+              "he": "14px",
+              "es": "14px",
+              "fr": "14 px",
+              "it": "14 px",
+              "ja": "14ピクセル",
+              "pt-BR": "14px",
+              "en": "30px"
+            }
+          },{
+            "value": "35px",
+            "label": {
+              "de": "14px",
+              "he": "14px",
+              "es": "14px",
+              "fr": "14 px",
+              "it": "14 px",
+              "ja": "14ピクセル",
+              "pt-BR": "14px",
+              "en": "35px"
+            }
+          },{
+            "value": "40px",
+            "label": {
+              "de": "14px",
+              "he": "14px",
+              "es": "14px",
+              "fr": "14 px",
+              "it": "14 px",
+              "ja": "14ピクセル",
+              "pt-BR": "14px",
+              "en": "40px"
+            }
+          },
+          {
+            "value": "45px",
+            "label": {
+              "de": "14px",
+              "he": "14px",
+              "es": "14px",
+              "fr": "14 px",
+              "it": "14 px",
+              "ja": "14ピクセル",
+              "pt-BR": "14px",
+              "en": "45px"
+            }
+          },
+          {
+            "value": "50px",
+            "label": {
+              "de": "15px",
+              "he": "15px",
+              "es": "15px",
+              "fr": "15 px",
+              "it": "15 px",
+              "ja": "15ピクセル",
+              "pt-BR": "15px",
+              "en": "50px"
+            }
+          },
+          {
+            "value": "55px",
+            "label": {
+              "de": "16px",
+              "he": "16px",
+              "es": "16px",
+              "fr": "16 px",
+              "it": "16 px",
+              "ja": "16ピクセル",
+              "pt-BR": "16px",
+              "en": "55px"
+            }
+          },
+          {
+            "value": "60px",
+            "label": {
+              "de": "17px",
+              "he": "17px",
+              "es": "17px",
+              "fr": "17 px",
+              "it": "17 px",
+              "ja": "17ピクセル",
+              "pt-BR": "17px",
+              "en": "60px"
+            }
+          },
+          {
+            "value": "65px",
+            "label": {
+              "de": "18px",
+              "he": "18px",
+              "es": "18px",
+              "fr": "18 px",
+              "it": "18 px",
+              "ja": "18ピクセル",
+              "pt-BR": "18px",
+              "en": "65px"
+            }
+          },
+          {
+            "value": "70px",
+            "label": {
+              "de": "19px",
+              "he": "19px",
+              "es": "19px",
+              "fr": "19 px",
+              "it": "19 px",
+              "ja": "19ピクセル",
+              "pt-BR": "19px",
+              "en": "70px"
+            }
+          },
+          {
+            "value": "75px",
+            "label": {
+              "de": "20px",
+              "he": "20px",
+              "es": "20px",
+              "fr": "20 px",
+              "it": "20 px",
+              "ja": "20ピクセル",
+              "pt-BR": "20px",
+              "en": "75px"
+            }
+          },
+          {
+            "value": "80px",
+            "label": {
+              "de": "21px",
+              "he": "21px",
+              "es": "21px",
+              "fr": "21 px",
+              "it": "21 px",
+              "ja": "21ピクセル",
+              "pt-BR": "21px",
+              "en": "80px"
+            }
+          },
+          {
+            "value": "85px",
+            "label": {
+              "de": "22px",
+              "he": "22px",
+              "es": "22px",
+              "fr": "22 px",
+              "it": "22 px",
+              "ja": "22ピクセル",
+              "pt-BR": "22px",
+              "en": "85px"
+            }
+          },
+          {
+            "value": "90px",
+            "label": {
+              "de": "23px",
+              "he": "23px",
+              "es": "23px",
+              "fr": "23 px",
+              "it": "23 px",
+              "ja": "23ピクセル",
+              "pt-BR": "23px",
+              "en": "90px"
+            }
+          },
+          {
+            "value": "95px",
+            "label": {
+              "de": "24px",
+              "he": "24px",
+              "es": "24px",
+              "fr": "24 px",
+              "it": "24 px",
+              "ja": "24ピクセル",
+              "pt-BR": "24px",
+              "en": "95px"
+            }
+          },
+          {
+            "value": "100px",
+            "label": {
+              "de": "25px",
+              "he": "25px",
+              "es": "25px",
+              "fr": "25 px",
+              "it": "25 px",
+              "ja": "25ピクセル",
+              "pt-BR": "25px",
+              "en": "100px"
+            }
+          }
+        ]
+      },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label":"לינק"
+          },
+          {
+          "type": "color",
+          "id": "text_color",
+          "label":"צבע טקסט",
+          "default" : "#ffffff"
+          }
+        ]
+      }
+    ],
+
+  "presets": [
+    {
+      "name": "קולז' קולקציות",       
+       "category": {
+        "de": "Foto",
+        "he": "Image",
+"en": "תמונה",
+"es": "Imagen",
+        "fr": "Image",
+        "it": "Immagine",
+        "ja": "画像",
+        "pt-BR": "Imagem"
+      }
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,299 @@
+<div class="announcement-bar" style="background:{{ section.settings.bg_color }}">
+    {% if section.settings.show_announcement %}
+    {% if section.settings.announcement_link != blank %}
+    <a href="{{ section.settings.announcement_link }}">
+      {% endif %}
+
+      <p>{{ section.settings.announcement_text | escape }}</p>
+      {% if section.settings.announcement_link != blank %}
+    </a>
+    {% endif %}
+    {% endif %}
+</div>
+
+<header class="site-header" role="banner" data-section-id="{{ section.id }}" data-section-type="header-section">
+  <div class="wrapper">  
+    <div class="grid--full display-table">
+      <div class="grid-item large--one-third small--one-quarter display-table-cell">
+        <a href="/cart" class="header-cart-btn cart-toggle">
+<!--           <span class="icon icon-cart"></span> -->
+          <span class="cart-count cart-badge--desktop {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</span>
+        </a>
+        {% if shop.customer_accounts_enabled %}
+          <div class="site-header--text-links">
+            {% if shop.customer_accounts_enabled %}
+            <div class="account__icon">
+              <a href="{{ shop.url }}/account" class="account--section" ></a>
+            {% comment %}
+            <img src="{{ 'user-512.png' | asset_url}}"  style="max-width:25px;" >
+            {% endcomment %}
+            </div>
+            
+
+            
+            {% comment %}
+              <span class="site-header--meta-links medium-down--hide">
+                {% if customer %}
+                  {% capture first_name %}<a href="/account">{{ customer.first_name }}</a>{% endcapture %}
+                  {{ 'layout.customer.logged_in_as_html' | t: first_name: first_name }} &middot; {{ 'layout.customer.log_out' | t | customer_logout_link }}
+                {% else %}
+                  {{ 'layout.customer.sign_in' | t | customer_login_link }}
+                  <span class="site-header--spacer" style="background-color:#333;">{{ 'layout.customer.or' | t }}</span>
+                  {{ 'layout.customer.create_account' | t | customer_register_link }}
+                {% endif %}
+              </span>
+            {% endcomment %}
+            {% endif %}
+          </div>
+        {% endif %}
+
+  
+      </div>
+      <div class="grid-item large--one-third small--one-half text-center display-table-cell logo-sec">
+        {% if template.name == 'index' %}
+        <div class="header-logo1" itemscope itemtype="http://schema.org/Organization"></div>
+        {% else %}
+          <div class="header-logo" itemscope itemtype="http://schema.org/Organization">
+        {% endif %}
+            
+          
+          {% if section.settings.logo_type =='svg' %}
+          {% if section.settings.logo %}
+            <a href="/" itemprop="url">
+           {{section.settings.textarea}}
+          </a>
+          {% else %}
+            <a href="/" itemprop="url">{{ shop.name }}</a>
+          {% endif %}
+          {% elsif  section.settings.logo_type == 'png' %}
+             {% if section.settings.logo_image %}
+            <a href="/" itemprop="url">
+              <img src="{{ section.settings.logo_image | img_url: 'master' }}" style="max-width:{{ section.settings.logo_max_width }}px" class="logo" />
+            </a>
+            {% else %}
+            <a href="/" itemprop="url">{{ shop.name }}</a>
+            {% endif %}
+          {% endif %}
+      
+        {% if template.name == 'index' %}
+          
+        {% else %}
+          </div>
+        {% endif %}
+      </div>
+      <div class="grid-item large--one-third small--one-quarter text-right display-table-cell ">
+      
+       {% include 'search-bar' %}
+        {% if section.settings.show_wishlist %}
+        <a href="javascript:void(0)" class="swym-wishlist myBtn">
+          <i aria-hidden="true" focusable="false" role="presentation" class="icon icon-swym-wishlist"></i>
+        </a>
+        {% endif%}
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<div id="mobileNavBar">
+  <div class="display-table-cell">
+    <button class="menu-toggle mobileNavBar-link" aria-controls="navBar" aria-expanded="false"><span class="icon icon-hamburger" aria-hidden="true"></span>{{ 'layout.navigation.mobile_menu' | t }}</button>
+  </div>
+  <div class="display-table-cell">
+    <a href="/cart" class="cart-toggle mobileNavBar-link">
+      <span class="icon icon-cart"></span>
+      {{ 'layout.cart.cart' | t }} <span class="cart-count {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</span>
+    </a>
+  </div>
+</div>
+
+
+
+<nav class="nav-bar" id="navBar" role="navigation">
+  <div class="wrapper">
+    {% include 'search-bar' %}
+    {% include 'mobile-nav' %}
+    {% include 'site-nav' %}
+  </div>
+</nav>
+
+
+
+{% schema %}
+{
+  "name": {
+    "de": "Titel",
+    "he": "Header",
+"en": "תפריט עליון",
+    "es": "Encabezado",
+    "fr": "En-tête",
+    "it": "Header",
+    "ja": "ヘッダー",
+    "pt-BR": "Cabeçalho"
+  },
+  "class": "header-section",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": {
+        "de": "Menü",
+        "he": "Menu",
+"en": "תפריט",
+        "es": "Menú",
+        "fr": "Menu",
+        "it": "Menu",
+        "ja": "メニュー",
+        "pt-BR": "Menu"
+      }      
+    },
+    {
+      "type": "header",
+      "content": {
+        "de": "Logo",
+        "he": "Logo",
+"en": "לוגו",
+        "es": "Logotipo",
+        "fr": "Logo",
+        "it": "Logo",
+        "ja": "ロゴ",
+        "pt-BR": "Logotipo"
+      }
+    },
+    {
+   "type":      "radio",
+   "id":        "logo_type",
+   "label":     "בחר בפורמט הלוגו",
+   "options": [
+     { "value": "png", "label": "png" },
+     { "value": "svg", "label": "svg" }
+   ],
+   "default":   "png"
+    },
+    {
+      "type": "textarea",
+      "id": "logo",
+      "label":"לוגו בפורמט SVG"       
+      
+    },
+
+    {
+    "type": "image_picker",
+    "id": "logo_image",
+    "label":"לוגו בפורמט PNG"       
+
+    },
+    {
+      "type": "text",
+      "id": "logo_max_width",
+      "label": {
+        "de": "Logobreite",
+        "he": "Custom logo width",
+"en": "רוחב לוגו מותאם אישית",
+        "es": "Ancho del logotipo personalizado",
+        "fr": "Largeur personnalisée du logo",
+        "it": "Larghezza logo personalizzato",
+        "ja": "ロゴの幅をカスタムする",
+        "pt-BR": "Largura do logotipo personalizado"
+      }
+    },
+    {
+      "type": "header",
+      "content": {
+        "de": "Ankündigungsbereich",
+        "he": "Announcement bar",
+"en": "סרגל ההודעות",
+        "es": "Barra de anuncios",
+        "fr": "Barre d'annonces",
+        "it": "Barra degli annunci",
+        "ja": "告知バー",
+        "pt-BR": "Barra de anúncios"
+      }
+    },
+{
+      "type": "checkbox",
+      "id": "show_wishlist",
+      "label": {
+        "de": "Ankündigung anzeigen",
+        "he": "Show announcement",
+"en": "הצג מועדפים - wishlist",
+        "es": "Mostrar anuncio",
+        "fr": "Afficher l'annonce",
+        "it": "Mostra annuncio",
+        "ja": "告知を表示する",
+        "pt-BR": "Exibir anúncio"
+      },
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_announcement",
+      "label": {
+        "de": "Ankündigung anzeigen",
+        "he": "Show announcement",
+"en": "הצג הודעה בבר עליון",
+        "es": "Mostrar anuncio",
+        "fr": "Afficher l'annonce",
+        "it": "Mostra annuncio",
+        "ja": "告知を表示する",
+        "pt-BR": "Exibir anúncio"
+      },
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "announcement_text",
+      "label": {
+        "de": "Text",
+        "he": "Text",
+"en": "טקסט",
+        "es": "Texto",
+        "fr": "Texte",
+        "it": "Testo",
+        "ja": "テキスト",
+        "pt-BR": "Texto"
+      },
+      "default": {
+        "de": "Hier etwas ankündigen",
+        "he": "Announce something here",
+"en": "הכרז על משהו כאן",
+        "es": "Anuncia algo aquí",
+        "fr": "Annoncez quelque chose ici",
+        "it": "Annuncia qualcosa qui",
+        "ja": "ここで告知してください",
+        "pt-BR": "Anuncie algo aqui"
+      }
+    },
+    {
+      "type": "url",
+      "id": "announcement_link",
+      "label": {
+        "de": "Link",
+        "he": "Link",
+"en": "קישור",
+        "es": "Enlace",
+        "fr": "Lien",
+        "it": "Link",
+        "ja": "リンク",
+        "pt-BR": "Link"
+      },
+      "info": {
+        "de": "Optional",
+        "he": "Optional",
+"en": "שדה רשות",
+        "es": "Opcional",
+        "fr": "Facultatif",
+        "it": "Facoltativo",
+        "ja": "選択させる",
+        "pt-BR": "Opcional"
+      }
+    },
+{
+        "type": "color",
+        "id": "bg_color",
+        "label": "צבע רקע",
+        "default": "#f3f3f3"
+      }
+  ]
+}
+{% endschema %}

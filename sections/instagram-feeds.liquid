@@ -1,0 +1,201 @@
+{{ 'slick-update.js' | asset_url | script_tag }}
+<div class="wrapper">
+  {% if section.settings.instagram_text !=  blank %}
+  <div class="instagram_text">
+    <h3>{{ section.settings.instagram_text }}</h3>
+  </div>
+  {% endif %}
+
+  {% if section.settings.instagram_pic != blank %}
+  <div class="instagram_image">
+    <img src="{{ section.settings.instagram_pic | img_url }}" alt="{{ section.settings.instagram_text }}"/>
+  </div>
+  {%else%}
+  <div class="instagram_image">
+  <img src="{{ 'insta-logo_small_1.png' | asset_url }}" alt="{{ section.settings.instagram_text }}"/>
+    </div>
+  {% endif %}
+
+  <div class="container insta-cover wrap" id="container">
+    {% if section.settings.user_id != blank and section.settings.access_token != blank %}
+      <div id="instafeed" class="slider"></div>
+    {% else %}
+    <ul>
+      <div class="instagram__blocks">
+      {% for i in (1..6) %}
+      <div class="text-center">
+        {% capture current %}{% cycle 1, 2, 3, 4 %}{% endcapture %}
+        {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+      </div>
+      {% endfor %}
+      </div>
+    </ul> 
+    {% endif %}
+  </div>
+</div>
+
+<script>
+  var feed = new Instafeed({
+    get:"user",
+    userId:"{{ section.settings.user_id }}",
+    accessToken:"{{ section.settings.access_token }}",
+    template: {% raw %}"<div class='item'><a href='{{link}}'><img src='{{image}}' /></a></div>"{% endraw %},
+    limit : 14,
+    after : function(){
+      $('#instafeed').slick({
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        arrows : true,
+        dots : true,
+        centerMode: true,
+        variableWidth: true,
+        infinite: true,
+        focusOnSelect: true,
+        cssEase: 'linear',
+        touchMove: true,
+        responsive: [
+        {
+          breakpoint: 1025,
+            settings: {
+            dots : false,
+            arrows : true
+          }
+        },
+        {
+          breakpoint: 768,
+            settings: {
+              dots : false,               
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              arrows : true              
+          }
+        },
+        {
+          breakpoint: 480,
+            settings: {
+              dots : false,               
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              arrows : true               
+          }
+        }
+       ]
+     });
+  var imgs = $('.slider img');
+  imgs.each(function(){
+  var item = $(this).closest('.item');
+  item.css({
+    'background-image': 'url(' + $(this).attr('src') + ')', 
+    'background-position': 'center',            
+    '-webkit-background-size': 'cover',
+    'background-size': 'cover', 
+  });
+  $(this).hide();
+});
+    }
+  });
+  feed.run();  
+</script>
+<style>
+  .instagram-section{
+    background-color:{{ section.settings.background_color }}!important;
+  }
+  .instagram_text h3{
+    color:{{ section.settings.heading_color }};
+  }
+
+</style>
+{% schema %}
+{
+"name": {
+"de": "Bild",
+"he": "3D אינסטגרם",
+"en": "3D אינסטגרם",
+"es": "Imagen",
+"fr": "Image",
+"it": "Immagine",
+"ja": "テキスト付き画像",
+"pt-BR": "Imagem"
+},
+"class": "index-section instagram-section",
+"settings": [
+{
+"type": "text",
+"id": "access_token",
+"label":"קוד גישה",
+    "info": {
+        "de": "finde deinen [access token](https://www.maestrooo.com/instagram)",
+        "he": "find your access token [access token](https://www.maestrooo.com/instagram).",
+        "en": "למציאת [access token](https://www.maestrooo.com/instagram)",        
+        "es": "Encuentra tu [access token](https://www.maestrooo.com/instagram)",
+        "fr": "trouver votre [access token](https://www.maestrooo.com/instagram)",
+        "it": "trova il tuo [access token](https://www.maestrooo.com/instagram)",
+        "ja": "あなたを見つける[access token](https://www.maestrooo.com/instagram)",
+        "pt-BR": "encontre seu [access token](https://www.maestrooo.com/instagram)"
+        }
+
+},
+
+{
+"type": "text",
+"id": "user_id",
+"label":"מזהה משתמש",
+"info": {
+    "de": "Finden Sie Ihre Benutzer-ID [user id](https://codeofaninja.com/tools/find-instagram-user-id)",
+    "he": "find your user id [user id](https://codeofaninja.com/tools/find-instagram-user-id)",
+    "en": "למציאת [user id](https://codeofaninja.com/tools/find-instagram-user-id) ",        
+    "es": "encuentra tu id de usuario [user id](https://codeofaninja.com/tools/find-instagram-user-id)",
+    "fr": "trouver votre identifiant [user id](https://codeofaninja.com/tools/find-instagram-user-id)",
+    "it": "trova il tuo ID utente [user id](https://codeofaninja.com/tools/find-instagram-user-id)",
+    "ja": "あなたのユーザーIDを探す[商品レビュー](https://apps.shopify.com/product-reviews)をインストールしてください商品レビューを追加するためのアプリです。",
+    "pt-BR": "encontre seu id de usuário [user id](https://codeofaninja.com/tools/find-instagram-user-id)"
+    }
+},
+{
+"type": "text",
+"id": "instagram_text",
+"label":"טקסט"
+},
+{
+"type": "image_picker",
+"id": "instagram_pic",
+"label":"לוגו אינסטגרם"
+},
+{
+"type": "color",
+"id": "background_color",
+"label":"תמונת רקע"
+},
+{
+"type": "color",
+"id": "heading_color",
+"label":"צבע הכותרת"
+}
+
+],
+"presets": [
+{
+"name": {
+"de": "Instagram Feeds",
+"he": "אינסטגרם תלת מימד",
+"en": "עדכונים מהאינסטגרם",
+"es": "Imagen con texto",
+"fr": "Image avec texte",
+"it": "Immagine con testo",
+"ja": "テキスト付き画像",
+"pt-BR": "Imagem com texto"
+},
+"category": {
+"de": "Foto",
+"he": "Instagram Feeds",
+"en": "עדכונים מהאינסטגרם",
+"es": "Imagen",
+"fr": "Image",
+"it": "Immagine",
+"ja": "画像",
+"pt-BR": "Imagem"
+}
+}
+]
+}
+{% endschema %}

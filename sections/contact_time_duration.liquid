@@ -1,0 +1,64 @@
+<div class="wrap_contact_time">
+  <div class="contact_time_duration">
+    <h3>{{ section.settings.our_time_heading }}</h3>
+    <p>{{ section.settings.text_area }}</p>
+  </div>
+
+</div>
+<style>
+  {% if section.settings.contact_form_image != blank %}
+  .form-wrapper{
+    background: url({{ section.settings.contact_form_image | img_url:'master' }}) no-repeat center center;
+     background-size: cover;
+  }
+  {% endif %}
+  .wrap_contact_time{
+    background:{{ section.settings.text_area_bg_color }};
+  }
+</style>
+{% if section.settings.contact_form_image == blank %}
+<script>
+  $(document).ready(function(){
+   $('.form-wrapper').addClass('no-image');
+  })
+</script>
+{% endif %}
+{% schema %}
+  {
+    "name": "טופס יצירת קשר",
+    "settings": [
+
+    {
+       "type": "image_picker",
+       "id": "contact_form_image",
+       "label":"תמונת רקע",
+       "info":"גודל מומלץ: 1920 x 1080PX"
+     },
+ 
+     {
+       "type": "text",
+       "id": "our_time_heading",
+       "label":"כותרת"
+     },
+     {
+       "type": "textarea",
+       "id": "text_area",
+       "label":"הסבר"
+     },
+     {
+       "type": "color",
+       "id": "text_area_bg_color",
+       "label":"צבע רקע"
+     }
+ 
+
+
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

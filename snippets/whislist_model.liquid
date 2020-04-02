@@ -1,0 +1,27 @@
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+   <div class="full-width-container wishlist-container">
+  <!-- Hero Banner -->
+  <div class="wishlist-hero">
+    <h1 class="wishlist-hero--title"></h1>
+  </div>
+     
+     <div class="whislist--empty-msg"></div>
+  <!-- Product Tile Grid -->
+  <div class="wishlist-grid flex grid">
+    {% for product in collections.all.products %}
+      {% include 'product-tile' %}
+    {% endfor %}
+   </div>
+</div>
+  </div>
+</div>
+<style>
+  .media-link--image{
+  max-width:100px;
+  }
+</style>
