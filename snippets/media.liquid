@@ -7,7 +7,8 @@
               {%- include 'image-logic' with width: max_width, height: max_height -%}
 
               {%- assign img_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-              <div id="{{ img_wrapper_id }}" class="lazyload__image-wrapper{% unless media.src == featured_image.src %} hide{% endunless %}" data-image-id="{{ media.id }}" style="max-width: {{ max_width }}px">
+              {%- assign index = forloop.index | minus: 1 -%}
+              <div id="{{ img_wrapper_id }}" class="lazyload__image-wrapper {% unless media.src == featured_image.src %} hide{% endunless %}" data-image-id="{{ product.images[index].id  }}" style="max-width: {{ max_width }}px">
                 <div class="no-js product__image-wrapper" style="padding-top:{{ 1 | divided_by: media.aspect_ratio | times: 100}}%;">
                   <img id="{{ img_id }}"
                        {% if forloop.first == true %}
@@ -30,19 +31,21 @@
               </noscript>
               {% endif %}
       {% when 'external_video' %}
-        <divid="{{ img_wrapper_id }}" class="lazyload__image-wrapper{% unless media.src == featured_image.src %} hide{% endunless %}" data-image-id="{{ media.id }}" style="max-width: {{ max_width }}px" style="padding-top: {{ 1 | divided_by: media.aspect_ratio | times: 100}}%;" data-media-id="{{ media.id }}">
+        <div id="{{ img_wrapper_id }}" class="lazyload__image-wrapper{% unless media.src == featured_image.src %} hide{% endunless %}" data-image-id="{{ media.id }}" style="max-width: {{ max_width }}px" style="padding-top: {{ 1 | divided_by: media.aspect_ratio | times: 100}}%;" data-media-id="{{ media.id }}">
           {{ media | external_video_tag }}
         </div>
       {% when 'video' %}
-        <divid="{{ img_wrapper_id }}" class="lazyload__image-wrapper{% unless media.src == featured_image.src %} hide{% endunless %}" data-image-id="{{ media.id }}" style="max-width: {{ max_width }}px" data-media-id="{{ media.id }}">
+        <div id="{{ img_wrapper_id }}" class="lazyload__image-wrapper{% unless media.src == featured_image.src %} hide{% endunless %}" data-image-id="{{ media.id }}" style="max-width: {{ max_width }}px" data-media-id="{{ media.id }}">
           {{ media | video_tag: controls: true }}
         </div>
       {% when 'model' %}
-        <divid="{{ img_wrapper_id }}" class="lazyload__image-wrapper{% unless media.src == featured_image.src %} hide{% endunless %}" data-image-id="{{ media.id }}" style="max-width: {{ max_width }}px" data-media-id="{{ media.id }}">
-          {{ media | model_viewer_tag }}
+        <div id="{{ img_wrapper_id }}" class="lazyload__image-wrapper{% unless media.src == featured_image.src %} hide{% endunless %}" data-image-id="{{ media.id }}" style="max-width: {{ max_width }}px" data-media-id="{{ media.id }}">
+        <div class="model-viewer-wrapper">
+        {{ media | model_viewer_tag }}
+        </div>
         </div>
       {% else %}
-        <divid="{{ img_wrapper_id }}" class="lazyload__image-wrapper{% unless media.src == featured_image.src %} hide{% endunless %}" data-image-id="{{ media.id }}" style="max-width: {{ max_width }}px" data-media-id="{{ media.id }}">
+        <div id="{{ img_wrapper_id }}" class="lazyload__image-wrapper{% unless media.src == featured_image.src %} hide{% endunless %}" data-image-id="{{ media.id }}" style="max-width: {{ max_width }}px" data-media-id="{{ media.id }}">
           {{ media | media_tag }}
         </div>
     {% endcase %}

@@ -47,14 +47,19 @@
           <div class="grid-item two-fifths">
             {% if product.media.size > 1 %}
             <ul class="product-photo-thumbs" id="productThumbs-{{ section.id }}">
+              
+                  {% for media in product.media %}
 
-
-              {% for media in product.media %}
-             
-                <a data-thumbnail-id="{{ media.id }}" href="{{ media | img_url: '1024x1024', scale: 2 }}" class="product-photo-thumb product-photo-thumb-{{ section.id }}" data-image-id="{{ media.id }}">
+                      {% case media.media_type %}
+                    {% when 'image' %}
+                    {%- assign index = forloop.index | minus: 1 -%}
+                    {%- assign data_image_id = product.images[index].id -%}
+                  {% else %}
+                      {%- assign data_image_id = media.id -%}
+                {% endcase %}
+                <a href="{{ media | img_url: '1024x1024', scale: 2 }}" class="product-photo-thumb product-photo-thumb-{{ section.id }}" data-image-id="{{ data_image_id  }}">
                   <img src="{{ media | img_url: 'compact' }}" alt="{{ media.alt | escape }}">
                 </a>
-             
               {% endfor %}
 
             </ul>

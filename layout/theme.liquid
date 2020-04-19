@@ -371,7 +371,7 @@
           $(".social_button").toggle();
         });
 
-$(document).ready(function() {
+{% comment %} $(document).ready(function() {
   thumbnails = $('img[src*="/products/"]');
   if (thumbnails.length > 1) {
     thumbnails.bind('click', function() {
@@ -389,7 +389,7 @@ $(document).ready(function() {
       }
     });
   }
-});
+}); {% endcomment %}
   </script>
 <!--  replace small picture with the main one in product gallery  -->
   <script>

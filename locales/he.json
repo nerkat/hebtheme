@@ -93,7 +93,9 @@
         },
         "breadcrumb": "פירורי לחם",
         "pay_now_button_label": "שלם עכשיו",
-        "expand_notice_label": "צפה בעוד"
+        "expand_notice_label": "צפה בעוד",
+        "error_page_title": "שגיאה",
+        "tooltip_accessibility_label": "מידע נוסף"
       },
       "contact": {
         "title": "מידע ללקוחות",
@@ -245,7 +247,10 @@
           "accessible_separator": "עבור",
           "content_html": "{{ price }}{{ accessible_separator }}{{ per_unit }}"
         },
-        "estimated_taxes_label": "מע\"מ (משוערך)"
+        "estimated_taxes_label": "מע\"מ (משוערך)",
+        "pickup_label": "איסוף עצמי",
+        "calculating_shipping": "מחשב...",
+        "no_pickup_location": "לא ניתן לאסוף את ההזמנה שלך באיסוף עצמי. אנא הכנס כתובת למשלוח"
       },
       "review": {
         "title": "סקור הזמנה",
@@ -372,7 +377,14 @@
         "billing_address_description_no_shipping_address": "הכנס את הכתובת התואמת את אמצעי התשלום",
         "ideal_label": "iDEAL",
         "bank_picker_label": "בנק",
-        "subscription_agreement_label": "אני מסכים שפרטיי ישמרו לצורך תשלום דמי מנוי"
+        "subscription_agreement_label": "אני מסכים שפרטיי ישמרו לצורך תשלום דמי מנוי",
+        "credit_card_start_year": "שנת התחלה",
+        "credit_card_start_month": "חודש התחלה",
+        "card_expiration_month_label": "חודש סיום תוקף",
+        "card_expiration_year_label": "שנת סיום התוקף",
+        "klarna_pay_later_label": "שלם מאוחר יותר עם Klarna",
+        "klarna_pay_now_label": "שלם כעת עם Klarna",
+        "change_currency_section_description": "בחר סוג מטבע"
       },
       "payment_summary": {
         "gift_card_current_balance_notice": "{{amount}}יתרה נוכחית ",
@@ -696,7 +708,17 @@
       },
       "delivery_options": {
         "ship": "משלוח",
-        "pick_up": "איסוף עצמי"
+        "pick_up": "איסוף עצמי",
+        "pick_up_next_day": "יהיה מוכן לאיסוף עצמי מחר",
+        "pick_up_immediately": "מוכן כעת לאיסוף עצמי",
+        "pick_up_in_zero_to_two_hours": "יהיה מוכן לאיסוף עצמי בעוד שעתיים",
+        "pick_up_in_two_to_four_hours": "יהיה מוכן לאיסוף עצמי בעוד 4 שעות",
+        "pick_up_in_one_hour": "יהיה מוכן לאיסוף עצמי בעוד שעה",
+        "pick_up_in_two_hours": "יהיה מוכן לאיסוף עצמי בעוד שעתיים",
+        "pick_up_in_four_hours": "יהיה מוכן לאיסוף עצמי בעוד 4 שעות",
+        "pick_up_in_twenty_four_hours": "יהיה מוכן לאיסוף עצמי מחר",
+        "pick_up_in_two_to_four_days": "יהיה מוכן לאיסוף עצמי בעוד יומיים עד 4 ימים",
+        "pick_up_in_five_or_more_days": "יהיה מוכן לאיסוף עצמי בעוד יותר מחמישה ימים"
       },
       "landed_cost": {
         "duties_taxes_value": "+ {{ amount }} מע\"מ",
@@ -708,6 +730,16 @@
         "payment_not_processed_title": "לא ניתן היה לעבד את התשלום",
         "return_to_cart_button_label": "חזור לעגלה",
         "payment_not_processed_text": "לא חויבת. חזור לעגלה להמשיך את הרכישה"
+      },
+      "tips": {
+        "preset_label": "{{ tip_percent }}%",
+        "add_tip": "הוסף טיפ",
+        "update_tip": "עדכן טיפ",
+        "message": "תודה לך, אנחנו מעריכים זאת",
+        "custom_label": "הוסף טיפ בעריכה אישית",
+        "presets_description": "בחר אחוז לטיפ",
+        "title": "הוסף טיפ",
+        "description": "הראה את ההערכה שלך לצוות החנות"
       }
     },
     "page_titles": {
@@ -948,6 +980,17 @@
       "reset_password_html": "This email address is already associated with an account. If this account is yours, you can <a href=\"\/account\/login#recover\">reset your password<\/a>",
       "verify_email": "We have sent an email to {{ customer_email }}, please click the link included to verify your email address.",
       "bad_domain": "מכיל דומיין לא תקין"
+    },
+    "checkpoint": {
+      "error": "בדיקת הקפצ'ה נכשלה",
+      "message": "פתור את הקפצ'ה כדי להמשיך"
+    },
+    "email_marketing": {
+      "subscribed": {
+        "unsubscribe": "הסר מרשימת התפוצה",
+        "disclaimer": "תוכל להסיר את עצמך מרשימת התפוצה בכל הזדמנות",
+        "confirmation": "תודה על ההצטרפות לניוזלטר שלנו"
+      }
     }
   },
   "products": {
