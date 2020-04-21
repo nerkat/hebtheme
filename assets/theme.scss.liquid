@@ -6401,11 +6401,11 @@ img {max-width:100%}
     @include at-query ($max, $mobile) {font-size:38px}
     margin: 0;}
   >div.text-centre {padding:45px 0; background-repeat:no-repeat; background-size:cover;
-    .input-group {background:#f0f0f0; border-radius:25px; border:none; outline:none; overflow:hidden;
+    .input-group {background:#f0f0f0; border-radius:25px; border:none; outline:none; overflow:hidden; display: flex; flex-direction: row-reverse;
       .input-group-field { direction:rtl; text-align:right; padding-right:$gutter/2; border:none; outline:none; height:55px; line-height:55px; background:#f0f0f0; }
 
-      .input-group-btn { background:transparent; border-radius:25px; overflow:hidden;
-        .btn{border:none; height:55px; line-height:1; border-radius:25px;}
+      .input-group-btn { background:transparent; border-radius:25px; overflow:hidden; width: 33%;
+        .btn{border:none; height:55px; line-height:1; border-radius:25px; width: 100%;}
       }
 
     }
@@ -6710,7 +6710,9 @@ body.wishlist{
         span{font-size:23px}
 
       }
-
+      display: flex;
+      align-items: center;
+      justify-content: center;
       /*height:51px;min-height:51px;*/ border-radius:5px;border:none;
     }
 
@@ -7669,6 +7671,10 @@ ul.site-nav--dropdown li {
     overflow: hidden;
  
     background-color: #333333;
+    .wrapper{
+      flex-direction: row-reverse;
+      display: flex;
+    }
 }
 
 /* Style the buttons inside the tab */
@@ -7681,6 +7687,10 @@ ul.site-nav--dropdown li {
     padding: 14px 0;
     transition: 0.3s;
   font-size: {{settings.product_tab_size}}; color:#fff; line-height:1;font-weight:{{settings.product_tab_weight}}; position:relative; margin-left:60px;
+  @media only screen and (max-width: 600px) {  
+    white-space: nowrap;
+    margin-left: 20px;
+    }
 }
 .tab button.active:after{
 content:"";
