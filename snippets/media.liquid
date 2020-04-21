@@ -7,7 +7,8 @@
               {%- include 'image-logic' with width: max_width, height: max_height -%}
 
               {%- assign img_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-              <div id="{{ img_wrapper_id }}" class="lazyload__image-wrapper{% unless media.src == featured_image.src %} hide{% endunless %}" data-image-id="{{ media.id }}" style="max-width: {{ max_width }}px">
+              {%- assign index = forloop.index | minus: 1 -%}
+              <div id="{{ img_wrapper_id }}" class="lazyload__image-wrapper {% unless media.src == featured_image.src %} hide{% endunless %}" data-image-id="{{ product.images[index].id  }}" style="max-width: {{ max_width }}px">
                 <div class="no-js product__image-wrapper" style="padding-top:{{ 1 | divided_by: media.aspect_ratio | times: 100}}%;">
                   <img id="{{ img_id }}"
                        {% if forloop.first == true %}
