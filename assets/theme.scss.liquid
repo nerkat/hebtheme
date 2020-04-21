@@ -4089,9 +4089,10 @@ $innerFilterIconWidth: 6px;
 /*============================================================================
 #Breadcrumbs
 ==============================================================================*/
-.breadcrumb {
+.breadcrumb {    display: flex;
+
   font-size: 30px; font-weight:bold; direction:rtl;
-  @media(max-width:640px) {font-size:20px; white-space:nowrap}
+  @media(max-width:640px) {font-size:20px;}
   /*   border-bottom: 1px solid $colorBorder; */
   margin-bottom: $gutter;
   // margin-top: -$gutter; // offset .main-content padding
@@ -4125,7 +4126,7 @@ $innerFilterIconWidth: 6px;
     display: inline-block;
     padding: $gutter/2 0px $gutter/2 0;
     margin-right: 0px;
-    overflow: hidden;
+    text-align: right;
 
     &:first-child {
       padding-left: 0;
